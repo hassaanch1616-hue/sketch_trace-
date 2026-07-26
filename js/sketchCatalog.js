@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SketchTrace - HD Authentic Anime Names Catalog
  */
 
@@ -897,7 +897,7 @@ const AIRCRAFT_PRESETS = [
     tags: ['aircraft', 'f-5', 'tiger', 'fighter jet'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/aircraft/aircraft-7.jpg'
+    imageUrl: './assets/aircraft/aircraft-7.webp'
   },
   {
     id: 'aircraft-supersonic-jet',
@@ -924,7 +924,7 @@ const AIRCRAFT_PRESETS = [
     tags: ['aircraft', 'monoplane', 'vintage', 'classic'],
     difficulty: 'Medium',
     popularity: 93,
-    imageUrl: './assets/aircraft/aircraft-10.webp'
+    imageUrl: './assets/aircraft/aircraft-10.jpg'
   }
 ];
 
@@ -990,7 +990,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'mickey mouse', 'disney', 'classic'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-7.webp'
+    imageUrl: './assets/cartoon/cartoon-7.jpg'
   },
   {
     id: 'cartoon-dancing-minion',
@@ -1017,7 +1017,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'shizuka', 'doraemon', 'anime'],
     difficulty: 'Medium',
     popularity: 97,
-    imageUrl: './assets/cartoon/cartoon-10.jpg'
+    imageUrl: './assets/cartoon/cartoon-10.webp'
   },
   {
     id: 'cartoon-gian-gouda',
@@ -1026,7 +1026,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'gian', 'takeshi gouda', 'doraemon'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cartoon/cartoon-11.webp'
+    imageUrl: './assets/cartoon/cartoon-11.jpg'
   },
   {
     id: 'cartoon-doraemon',
@@ -1044,7 +1044,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'carl', 'up', 'pixar', 'disney', 'balloons'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-13.webp'
+    imageUrl: './assets/cartoon/cartoon-13.jpg'
   },
   {
     id: 'cartoon-homer-simpson',
@@ -1071,7 +1071,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'robin', 'teen titans', 'teen titans go', 'dc'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-16.jpg'
+    imageUrl: './assets/cartoon/cartoon-16.webp'
   },
   {
     id: 'cartoon-dekisugi',
@@ -1080,7 +1080,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'dekisugi', 'hidetoshi', 'doraemon'],
     difficulty: 'Medium',
     popularity: 95,
-    imageUrl: './assets/cartoon/cartoon-17.jpg'
+    imageUrl: './assets/cartoon/cartoon-17.webp'
   },
   {
     id: 'cartoon-suneo',
@@ -1089,7 +1089,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'suneo', 'honekawa', 'doraemon'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cartoon/cartoon-18.jpg'
+    imageUrl: './assets/cartoon/cartoon-18.webp'
   },
   {
     id: 'cartoon-boss-baby',
@@ -1125,7 +1125,7 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'duckling', 'duck', 'raincoat', 'cute'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/cartoon/cartoon-22.webp'
+    imageUrl: './assets/cartoon/cartoon-22.jpg'
   }
 ];
 
@@ -1266,7 +1266,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'steam train', 'choo choo', 'puffing'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/trains/train-4.webp'
+    imageUrl: './assets/trains/train-4.jpg'
   },
   {
     id: 'train-modern-monorail',
@@ -1275,7 +1275,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'monorail', 'subway', 'metro', 'modern'],
     difficulty: 'Easy',
     popularity: 95,
-    imageUrl: './assets/trains/train-5.webp'
+    imageUrl: './assets/trains/train-5.jpg'
   },
   {
     id: 'train-thomas-tank-engine',
@@ -1302,7 +1302,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'toy train', 'kids', 'cute', 'choo choo'],
     difficulty: 'Easy',
     popularity: 96,
-    imageUrl: './assets/trains/train-8.jpg'
+    imageUrl: './assets/trains/train-8.webp'
   },
   {
     id: 'train-modern-metro-station',
@@ -1311,7 +1311,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'metro', 'station', 'subway', 'passenger'],
     difficulty: 'Medium',
     popularity: 97,
-    imageUrl: './assets/trains/train-9.jpg'
+    imageUrl: './assets/trains/train-9.webp'
   },
   {
     id: 'train-long-express-steam',
@@ -1320,7 +1320,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'express', 'steam train', 'passenger train'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/trains/train-10.jpg'
+    imageUrl: './assets/trains/train-10.webp'
   },
   {
     id: 'train-electric-intercity',
@@ -1356,7 +1356,7 @@ const TRAIN_PRESETS = [
     tags: ['trains', 'diesel', 'locomotive', 'express', 'railway'],
     difficulty: 'Medium',
     popularity: 95,
-    imageUrl: './assets/trains/train-14.webp'
+    imageUrl: './assets/trains/train-14.jpg'
   }
 ];
 
@@ -1368,7 +1368,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'batman', 'dark knight', 'dc'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-1.webp'
+    imageUrl: './assets/superheroes/superhero-1.jpg'
   },
   {
     id: 'superhero-thanos-gauntlet',
@@ -1395,7 +1395,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'spiderman', 'spidey', 'ghost spider', 'miles morales'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-4.webp'
+    imageUrl: './assets/superheroes/superhero-4.jpg'
   },
   {
     id: 'superhero-ironman-repulsor',
@@ -1404,7 +1404,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'iron man', 'tony stark', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-5.jpg'
+    imageUrl: './assets/superheroes/superhero-5.webp'
   },
   {
     id: 'superhero-venom-symbiote',
@@ -1413,7 +1413,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'venom', 'symbiote', 'spiderman', 'marvel'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-6.webp'
+    imageUrl: './assets/superheroes/superhero-6.jpg'
   },
   {
     id: 'superhero-lego-batman',
@@ -1440,7 +1440,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'batman', 'bat emblem', 'logo', 'dc'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-9.webp'
+    imageUrl: './assets/superheroes/superhero-9.jpg'
   },
   {
     id: 'superhero-lego-spiderman',
@@ -1449,7 +1449,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'lego', 'spiderman', 'minifigure', 'marvel'],
     difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-10.webp'
+    imageUrl: './assets/superheroes/superhero-10.jpg'
   },
   {
     id: 'superhero-flash-logo',
@@ -1458,7 +1458,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'the flash', 'flash', 'lightning', 'dc'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-11.webp'
+    imageUrl: './assets/superheroes/superhero-11.jpg'
   },
   {
     id: 'superhero-black-panther-mask',
@@ -1467,7 +1467,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'black panther', 'mask', 'wakanda', 'marvel'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-12.jpg'
+    imageUrl: './assets/superheroes/superhero-12.webp'
   },
   {
     id: 'superhero-nebula-batons',
@@ -1476,7 +1476,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'nebula', 'guardians of the galaxy', 'marvel'],
     difficulty: 'Hard',
     popularity: 95,
-    imageUrl: './assets/superheroes/superhero-13.jpg'
+    imageUrl: './assets/superheroes/superhero-13.webp'
   },
   {
     id: 'superhero-superman-heroic',
@@ -1485,7 +1485,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'man of steel', 'clark kent', 'dc'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-14.webp'
+    imageUrl: './assets/superheroes/superhero-14.jpg'
   },
   {
     id: 'superhero-superman-logo',
@@ -1494,7 +1494,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'emblem', 'logo', 'dc'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-15.webp'
+    imageUrl: './assets/superheroes/superhero-15.jpg'
   },
   {
     id: 'superhero-thor-odinson',
@@ -1503,7 +1503,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'thor', 'god of thunder', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-16.webp'
+    imageUrl: './assets/superheroes/superhero-16.jpg'
   },
   {
     id: 'superhero-thor-hammer-icon',
@@ -1512,7 +1512,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'mjolnir', 'thor', 'hammer', 'icon'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/superheroes/superhero-17.jpg'
+    imageUrl: './assets/superheroes/superhero-17.webp'
   },
   {
     id: 'superhero-spiderman-chest-logo',
@@ -1521,7 +1521,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'spiderman', 'spider emblem', 'logo', 'marvel'],
     difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-18.jpg'
+    imageUrl: './assets/superheroes/superhero-18.webp'
   }
 ];
 
@@ -1623,7 +1623,7 @@ const SHIP_PRESETS = [
     tags: ['ships', 'frigate', 'wooden ship', 'sailing', 'masts'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/ships/ship-11.jpg'
+    imageUrl: './assets/ships/ship-11.webp'
   },
   {
     id: 'ship-stormy-sea-sailing',
@@ -1650,7 +1650,7 @@ const SHIP_PRESETS = [
     tags: ['ships', 'sailboat', 'lifebuoy', 'single mast', 'boat'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/ships/ship-14.webp'
+    imageUrl: './assets/ships/ship-14.jpg'
   },
   {
     id: 'ship-three-masted-schooner',
@@ -1659,7 +1659,7 @@ const SHIP_PRESETS = [
     tags: ['ships', 'schooner', 'three masted', 'sailing ship', 'vintage'],
     difficulty: 'Hard',
     popularity: 96,
-    imageUrl: './assets/ships/ship-15.jpg'
+    imageUrl: './assets/ships/ship-15.webp'
   },
   {
     id: 'ship-fishing-trawler',
@@ -1668,7 +1668,7 @@ const SHIP_PRESETS = [
     tags: ['ships', 'fishing boat', 'trawler', 'ocean', 'boat'],
     difficulty: 'Medium',
     popularity: 95,
-    imageUrl: './assets/ships/ship-16.jpg'
+    imageUrl: './assets/ships/ship-16.webp'
   },
   {
     id: 'ship-vintage-caravel',
@@ -1677,7 +1677,7 @@ const SHIP_PRESETS = [
     tags: ['ships', 'caravel', 'vintage', 'wooden ship', 'explorer'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/ships/ship-17.webp'
+    imageUrl: './assets/ships/ship-17.jpg'
   },
   {
     id: 'ship-titanic-sunny-sky',
@@ -1797,7 +1797,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'angelfish', 'tropical', 'cartoon'],
     difficulty: 'Easy',
     popularity: 95,
-    imageUrl: './assets/fish/fish-12.jpg'
+    imageUrl: './assets/fish/fish-12.webp'
   },
   {
     id: 'fish-spouting-blue-whale',
@@ -1806,7 +1806,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'blue whale', 'whale', 'spout', 'ocean'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/fish/fish-13.jpg'
+    imageUrl: './assets/fish/fish-13.webp'
   },
   {
     id: 'fish-great-white-shark',
@@ -1815,7 +1815,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'great white shark', 'shark', 'underwater'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/fish/fish-14.webp'
+    imageUrl: './assets/fish/fish-14.jpg'
   },
   {
     id: 'fish-baby-dolphin-seaweed',
@@ -1824,7 +1824,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'baby dolphin', 'dolphin', 'seaweed'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/fish/fish-15.webp'
+    imageUrl: './assets/fish/fish-15.jpg'
   },
   {
     id: 'fish-playful-dolphin',
@@ -1842,7 +1842,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'goldfish', 'fishbowl', 'aquarium'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/fish/fish-17.jpg'
+    imageUrl: './assets/fish/fish-17.webp'
   },
   {
     id: 'fish-bass-salmon',
@@ -1851,7 +1851,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'bass', 'salmon', 'river fish', 'detailed'],
     difficulty: 'Hard',
     popularity: 95,
-    imageUrl: './assets/fish/fish-18.jpg'
+    imageUrl: './assets/fish/fish-18.webp'
   },
   {
     id: 'fish-veiltail-goldfish',
@@ -1869,7 +1869,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'dolphin', 'simple', 'outline'],
     difficulty: 'Easy',
     popularity: 95,
-    imageUrl: './assets/fish/fish-20.jpg'
+    imageUrl: './assets/fish/fish-20.webp'
   },
   {
     id: 'fish-seahorse-bubbles',
@@ -1896,7 +1896,7 @@ const FISH_PRESETS = [
     tags: ['fish', 'carp', 'pond fish', 'scaled'],
     difficulty: 'Medium',
     popularity: 94,
-    imageUrl: './assets/fish/fish-23.webp'
+    imageUrl: './assets/fish/fish-23.jpg'
   },
   {
     id: 'fish-striped-clownfish',
@@ -2283,7 +2283,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'tulip', 'potted plant', 'pot'],
     difficulty: 'Easy',
     popularity: 96,
-    imageUrl: './assets/flowers/flower-5.jpg'
+    imageUrl: './assets/flowers/flower-5.webp'
   },
   {
     id: 'flower-blooming-lily-bud',
@@ -2301,7 +2301,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'hibiscus', 'tropical', 'branch', 'blossoms'],
     difficulty: 'Medium',
     popularity: 99,
-    imageUrl: './assets/flowers/flower-7.webp'
+    imageUrl: './assets/flowers/flower-7.jpg'
   },
   {
     id: 'flower-garden-floral-bunch',
@@ -2319,7 +2319,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'potted', 'spring blossoms', 'pot'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/flowers/flower-9.jpg'
+    imageUrl: './assets/flowers/flower-9.webp'
   },
   {
     id: 'flower-quilting-stencil',
@@ -2328,7 +2328,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'stencil', 'geometric', 'quilting'],
     difficulty: 'Easy',
     popularity: 95,
-    imageUrl: './assets/flowers/flower-10.jpg'
+    imageUrl: './assets/flowers/flower-10.webp'
   },
   {
     id: 'flower-plumeria-frangipani',
@@ -2346,7 +2346,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'sakura', 'cherry blossom', 'japan', 'petal'],
     difficulty: 'Easy',
     popularity: 100,
-    imageUrl: './assets/flowers/flower-12.webp'
+    imageUrl: './assets/flowers/flower-12.jpg'
   },
   {
     id: 'flower-floral-corner-border',
@@ -2355,7 +2355,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'corner', 'border', 'vines', 'decorative'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/flowers/flower-13.webp'
+    imageUrl: './assets/flowers/flower-13.jpg'
   },
   {
     id: 'flower-simple-tulip-bud',
@@ -2364,7 +2364,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'tulip', 'bud', 'kids', 'simple'],
     difficulty: 'Easy',
     popularity: 95,
-    imageUrl: './assets/flowers/flower-14.webp'
+    imageUrl: './assets/flowers/flower-14.jpg'
   },
   {
     id: 'flower-bouquet-vase',
@@ -2409,7 +2409,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'rose', 'single rose', 'stem', 'love'],
     difficulty: 'Easy',
     popularity: 100,
-    imageUrl: './assets/flowers/flower-19.webp'
+    imageUrl: './assets/flowers/flower-19.jpg'
   },
   {
     id: 'flower-blooming-rose-leaves',
@@ -2418,7 +2418,7 @@ const FLOWER_PRESETS = [
     tags: ['flowers', 'rose', 'blooming rose', 'leaves', 'romantic'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/flowers/flower-20.jpg'
+    imageUrl: './assets/flowers/flower-20.webp'
   }
 ];
 
