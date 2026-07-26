@@ -3,11 +3,12 @@
  * Caches application shell, assets, icons, and sketches for 100% offline usage on GitHub Pages.
  */
 
-const CACHE_NAME = 'sketchtrace-v7.0.0';
+const CACHE_NAME = 'sketchtrace-v8.0.0';
 
 const APP_SHELL = [
   './',
   './index.html',
+  './favicon.ico',
   './css/styles.css',
   './js/app.js',
   './js/sketchCatalog.js',
@@ -17,6 +18,8 @@ const APP_SHELL = [
   './js/screenLock.js',
   './js/admin.js',
   './manifest.json',
+  './manifest.webmanifest',
+  './assets/icons/apple-touch-icon.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/maskable-icon-512.png'
