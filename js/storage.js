@@ -1,10 +1,24 @@
 /**
- * SketchTrace Storage Service
+ * SketchTrace Storage Service with robust serialization & error handling
  */
 
 window.SketchTrace = window.SketchTrace || {};
 
 class StorageService {
+  _cleanSketch(sketch) {
+    if (!sketch) return null;
+    return {
+      id: String(sketch.id || `sketch-${Date.now()}`),
+      name: String(sketch.name || 'Untitled Sketch'),
+      category: String(sketch.category || 'General'),
+      difficulty: String(sketch.difficulty || 'Medium'),
+      popularity: Number(sketch.popularity || 95),
+      imageUrl: sketch.imageUrl ? String(sketch.imageUrl) : '',
+      dataUrl: sketch.dataUrl ? String(sketch.dataUrl) : '',
+      svgPath: sketch.svgPath ? String(sketch.svgPath) : ''
+    };
+  }
+
   getUser() {
     try {
       const u = localStorage.getItem('sketchtrace_user');
@@ -14,7 +28,9 @@ class StorageService {
   }
 
   setUser(u) {
-    localStorage.setItem('sketchtrace_user', JSON.stringify(u));
+    try {
+      localStorage.setItem('sketchtrace_user', JSON.stringify(u));
+    } catch (e) {}
   }
 
   getTheme() {
@@ -22,7 +38,9 @@ class StorageService {
   }
 
   setTheme(t) {
-    localStorage.setItem('sketchtrace_theme', t);
+    try {
+      localStorage.setItem('sketchtrace_theme', t);
+    } catch (e) {}
     document.documentElement.setAttribute('data-theme', t);
     document.documentElement.className = t;
     if (['dark', 'crimson', 'cyberpunk', 'emerald', 'violet', 'ocean', 'amber', 'oled'].includes(t)) {
@@ -43,22 +61,29 @@ class StorageService {
 
   async isFavorite(id) {
     const favs = await this.getFavorites();
-    return favs.some(f => f.id === id);
+    return favs.some(f => String(f.id) === String(id));
   }
 
   async toggleFavorite(sketch) {
+    const clean = this._cleanSketch(sketch);
+    if (!clean) return false;
+
     const favs = await this.getFavorites();
-    const idx = favs.findIndex(f => f.id === sketch.id);
+    const idx = favs.findIndex(f => String(f.id) === String(clean.id));
     let added = false;
 
     if (idx >= 0) {
       favs.splice(idx, 1);
     } else {
-      favs.unshift(sketch);
+      favs.unshift(clean);
       added = true;
     }
 
-    localStorage.setItem('sketchtrace_favs', JSON.stringify(favs));
+    try {
+      localStorage.setItem('sketchtrace_favs', JSON.stringify(favs));
+    } catch (e) {
+      console.error('[Storage] Error saving favorites:', e);
+    }
     return added;
   }
 
@@ -72,23 +97,29 @@ class StorageService {
   }
 
   async addRecent(sketch) {
+    const clean = this._cleanSketch(sketch);
+    if (!clean) return;
+
     let recent = await this.getRecent();
-    recent = recent.filter(r => r.id !== sketch.id);
-    recent.unshift(sketch);
+    recent = recent.filter(r => String(r.id) !== String(clean.id));
+    recent.unshift(clean);
     if (recent.length > 20) recent = recent.slice(0, 20);
-    localStorage.setItem('sketchtrace_recent', JSON.stringify(recent));
+    try {
+      localStorage.setItem('sketchtrace_recent', JSON.stringify(recent));
+    } catch (e) {}
   }
 
   async saveDownload(sketch) {
-    let downloads = [];
-    try {
-      const str = localStorage.getItem('sketchtrace_downloads');
-      if (str) downloads = JSON.parse(str);
-    } catch (e) {}
+    const clean = this._cleanSketch(sketch);
+    if (!clean) return;
 
-    if (!downloads.some(d => d.id === sketch.id)) {
-      downloads.unshift(sketch);
+    let downloads = await this.getDownloads();
+    downloads = downloads.filter(d => String(d.id) !== String(clean.id));
+    downloads.unshift(clean);
+    try {
       localStorage.setItem('sketchtrace_downloads', JSON.stringify(downloads));
+    } catch (e) {
+      console.error('[Storage] Error saving download:', e);
     }
   }
 
@@ -102,32 +133,50 @@ class StorageService {
   }
 
   async saveUpload(sketch) {
-    let uploads = [];
+    const clean = this._cleanSketch(sketch);
+    if (!clean) return;
+
+    let uploads = await this.getUploads();
+    uploads = uploads.filter(u => String(u.id) !== String(clean.id));
+    uploads.unshift(clean);
+    try {
+      localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
+    } catch (e) {
+      console.error('[Storage] Error saving upload:', e);
+    }
+  }
+
+  async getUploads() {
     try {
       const str = localStorage.getItem('sketchtrace_uploads');
-      if (str) uploads = JSON.parse(str);
-    } catch (e) {}
-
-    uploads.unshift(sketch);
-    localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
+      return str ? JSON.parse(str) : [];
+    } catch (e) {
+      return [];
+    }
   }
 
   async deleteUpload(id) {
     let uploads = await this.getUploads();
-    uploads = uploads.filter(u => u.id !== id);
-    localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
+    uploads = uploads.filter(u => String(u.id) !== String(id));
+    try {
+      localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
+    } catch (e) {}
   }
 
   async deleteFavorite(id) {
     let favs = await this.getFavorites();
-    favs = favs.filter(f => f.id !== id);
-    localStorage.setItem('sketchtrace_favs', JSON.stringify(favs));
+    favs = favs.filter(f => String(f.id) !== String(id));
+    try {
+      localStorage.setItem('sketchtrace_favs', JSON.stringify(favs));
+    } catch (e) {}
   }
 
   async deleteDownload(id) {
     let downloads = await this.getDownloads();
-    downloads = downloads.filter(d => d.id !== id);
-    localStorage.setItem('sketchtrace_downloads', JSON.stringify(downloads));
+    downloads = downloads.filter(d => String(d.id) !== String(id));
+    try {
+      localStorage.setItem('sketchtrace_downloads', JSON.stringify(downloads));
+    } catch (e) {}
   }
 }
 
