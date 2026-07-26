@@ -290,7 +290,7 @@ class SketchTraceApp {
           ${isLibrary ? `
             <div class="mt-3 flex items-center gap-2">
               <button class="start-trace-btn flex-1 py-2 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-1">
-                📷 Trace
+                👁️ View & Trace
               </button>
               <button class="delete-library-btn px-2.5 py-2 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center" title="Delete Image">
                 🗑️
@@ -298,7 +298,7 @@ class SketchTraceApp {
             </div>
           ` : `
             <button class="start-trace-btn mt-3 w-full py-2 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-1">
-              📷 Start Trace
+              👁️ View & Trace
             </button>
           `}
         </div>
@@ -329,11 +329,8 @@ class SketchTraceApp {
           return;
         }
 
-        if (e.target.closest('.start-trace-btn')) {
-          this.switchView('cameraTrace', { sketch });
-        } else {
-          this.openSketchDetailModal(sketch);
-        }
+        // Always open the detail modal first (where Favorite, Download & Start Trace options are present)
+        this.openSketchDetailModal(sketch);
       };
     });
   }
