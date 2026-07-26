@@ -660,7 +660,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'bugatti', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-1.jpg'
+    imageUrl: './assets/cars/car-v2-1.jpg'
   },
   {
     id: 'car-lamborghini-huracan',
@@ -669,7 +669,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'lamborghini', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/cars/car-2.webp'
+    imageUrl: './assets/cars/car-v2-2.webp'
   },
   {
     id: 'car-mclaren-p1',
@@ -678,7 +678,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'mclaren', 'hypercar', 'line art'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/cars/car-3.webp'
+    imageUrl: './assets/cars/car-v2-3.webp'
   },
   {
     id: 'car-audi-sportback',
@@ -687,7 +687,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'audi', 'sedan', 'line art'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cars/car-4.webp'
+    imageUrl: './assets/cars/car-v2-4.webp'
   },
   {
     id: 'car-audi-r8-concept',
@@ -696,7 +696,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'audi', 'sports car', 'line art'],
     difficulty: 'Medium',
     popularity: 95,
-    imageUrl: './assets/cars/car-5.webp'
+    imageUrl: './assets/cars/car-v2-5.webp'
   },
   {
     id: 'car-bmw-m8-csl',
@@ -705,7 +705,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'bmw', 'coupe', 'line art'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/cars/car-6.webp'
+    imageUrl: './assets/cars/car-v2-6.webp'
   },
   {
     id: 'car-sports-coupe',
@@ -714,7 +714,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'sports car', 'printable', 'line art'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/cars/car-7.jpg'
+    imageUrl: './assets/cars/car-v2-7.jpg'
   },
   {
     id: 'car-audi-a3-cabriolet',
@@ -723,7 +723,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'audi', 'cabriolet', 'line art'],
     difficulty: 'Medium',
     popularity: 93,
-    imageUrl: './assets/cars/car-8.jpg'
+    imageUrl: './assets/cars/car-v2-8.jpg'
   },
   {
     id: 'car-bugatti-veyron',
@@ -732,7 +732,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'bugatti', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-9.jpg'
+    imageUrl: './assets/cars/car-v2-9.jpg'
   },
   {
     id: 'car-ferrari-f40',
@@ -741,7 +741,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'ferrari', 'supercar', 'classic'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-10.webp'
+    imageUrl: './assets/cars/car-v2-10.webp'
   },
   {
     id: 'car-pagani-zonda',
@@ -750,7 +750,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'pagani', 'hypercar', 'line art'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/cars/car-11.jpg'
+    imageUrl: './assets/cars/car-v2-11.jpg'
   },
   {
     id: 'car-nissan-skyline-r34',
@@ -759,7 +759,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'nissan', 'jdm', 'skyline'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/cars/car-12.webp'
+    imageUrl: './assets/cars/car-v2-12.webp'
   },
   {
     id: 'car-race-car-gt',
@@ -768,7 +768,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'race car', 'gt', 'line art'],
     difficulty: 'Easy',
     popularity: 92,
-    imageUrl: './assets/cars/car-13.webp'
+    imageUrl: './assets/cars/car-v2-13.webp'
   },
   {
     id: 'car-rolls-royce-ghost',
@@ -777,7 +777,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'rolls royce', 'luxury', 'line art'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cars/car-14.jpg'
+    imageUrl: './assets/cars/car-v2-14.jpg'
   },
   {
     id: 'car-porsche-gt3-rs',
@@ -786,7 +786,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'porsche', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/cars/car-15.png'
+    imageUrl: './assets/cars/car-v2-15.png'
   },
   {
     id: 'car-classic-muscle',
@@ -795,7 +795,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'muscle car', 'vintage', 'line art'],
     difficulty: 'Medium',
     popularity: 94,
-    imageUrl: './assets/cars/car-16.webp'
+    imageUrl: './assets/cars/car-v2-16.webp'
   },
   {
     id: 'car-supercar-outline',
@@ -804,7 +804,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'supercar', 'outline', 'line art'],
     difficulty: 'Medium',
     popularity: 93,
-    imageUrl: './assets/cars/car-17.webp'
+    imageUrl: './assets/cars/car-v2-17.webp'
   },
   {
     id: 'car-modern-drift',
@@ -813,7 +813,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'drift', 'sports car', 'line art'],
     difficulty: 'Medium',
     popularity: 92,
-    imageUrl: './assets/cars/car-18.webp'
+    imageUrl: './assets/cars/car-v2-18.webp'
   },
   {
     id: 'car-track-racing',
@@ -822,7 +822,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'racing', 'track', 'line art'],
     difficulty: 'Medium',
     popularity: 91,
-    imageUrl: './assets/cars/car-19.jpg'
+    imageUrl: './assets/cars/car-v2-19.jpg'
   },
   {
     id: 'car-toyota-supra-mk4',
@@ -831,7 +831,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'toyota', 'supra', 'jdm'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-20.png'
+    imageUrl: './assets/cars/car-v2-20.png'
   }
 ];
 
@@ -1368,7 +1368,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'batman', 'dark knight', 'dc'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-1.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-1.jpg'
   },
   {
     id: 'superhero-thanos-gauntlet',
@@ -1377,7 +1377,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'thanos', 'infinity gauntlet', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-2.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-2.jpg'
   },
   {
     id: 'superhero-deadpool-heart',
@@ -1386,7 +1386,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'deadpool', 'marvel', 'wadewilson', 'cute'],
     difficulty: 'Medium',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-3.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-3.jpg'
   },
   {
     id: 'superhero-chibi-spidey-friends',
@@ -1395,7 +1395,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'spiderman', 'spidey', 'ghost spider', 'miles morales'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-4.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-4.jpg'
   },
   {
     id: 'superhero-ironman-repulsor',
@@ -1404,7 +1404,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'iron man', 'tony stark', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-5.webp'
+    imageUrl: './assets/superheroes/superhero-v2-5.webp'
   },
   {
     id: 'superhero-venom-symbiote',
@@ -1413,7 +1413,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'venom', 'symbiote', 'spiderman', 'marvel'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-6.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-6.jpg'
   },
   {
     id: 'superhero-lego-batman',
@@ -1422,7 +1422,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'lego', 'batman', 'dc', 'lego superhero'],
     difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-7.webp'
+    imageUrl: './assets/superheroes/superhero-v2-7.webp'
   },
   {
     id: 'superhero-thor-hammer',
@@ -1431,7 +1431,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'thor', 'mjolnir', 'hammer', 'marvel'],
     difficulty: 'Medium',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-8.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-8.jpg'
   },
   {
     id: 'superhero-batman-logo',
@@ -1440,7 +1440,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'batman', 'bat emblem', 'logo', 'dc'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-9.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-9.jpg'
   },
   {
     id: 'superhero-lego-spiderman',
@@ -1449,7 +1449,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'lego', 'spiderman', 'minifigure', 'marvel'],
     difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-10.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-10.jpg'
   },
   {
     id: 'superhero-flash-logo',
@@ -1458,7 +1458,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'the flash', 'flash', 'lightning', 'dc'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-11.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-11.jpg'
   },
   {
     id: 'superhero-black-panther-mask',
@@ -1467,7 +1467,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'black panther', 'mask', 'wakanda', 'marvel'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-12.webp'
+    imageUrl: './assets/superheroes/superhero-v2-12.webp'
   },
   {
     id: 'superhero-nebula-batons',
@@ -1476,7 +1476,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'nebula', 'guardians of the galaxy', 'marvel'],
     difficulty: 'Hard',
     popularity: 95,
-    imageUrl: './assets/superheroes/superhero-13.webp'
+    imageUrl: './assets/superheroes/superhero-v2-13.webp'
   },
   {
     id: 'superhero-superman-heroic',
@@ -1485,7 +1485,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'man of steel', 'clark kent', 'dc'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-14.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-14.jpg'
   },
   {
     id: 'superhero-superman-logo',
@@ -1494,7 +1494,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'emblem', 'logo', 'dc'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-15.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-15.jpg'
   },
   {
     id: 'superhero-thor-odinson',
@@ -1503,7 +1503,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'thor', 'god of thunder', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-16.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-16.jpg'
   },
   {
     id: 'superhero-thor-hammer-icon',
@@ -1512,7 +1512,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'mjolnir', 'thor', 'hammer', 'icon'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/superheroes/superhero-17.webp'
+    imageUrl: './assets/superheroes/superhero-v2-17.webp'
   },
   {
     id: 'superhero-spiderman-chest-logo',
@@ -1521,7 +1521,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'spiderman', 'spider emblem', 'logo', 'marvel'],
     difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-18.webp'
+    imageUrl: './assets/superheroes/superhero-v2-18.webp'
   }
 ];
 
