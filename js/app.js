@@ -256,9 +256,11 @@ class SketchTraceApp {
     } catch (e) {}
   }
 
-  renderSketchGrid(containerId, sketches = []) {
+  renderSketchGrid(containerId, sketches = [], options = {}) {
     const container = document.getElementById(containerId);
     if (!container) return;
+
+    const isLibrary = options.isLibrary || ['myUploadsGrid', 'myFavsGrid', 'myDownloadsGrid'].includes(containerId);
 
     if (!sketches || sketches.length === 0) {
       container.innerHTML = `<div class="col-span-full p-6 text-center text-xs text-slate-400">No sketches found in this list.</div>`;
@@ -285,17 +287,48 @@ class SketchTraceApp {
             <span class="capitalize">${sketch.category}</span>
             <span class="font-semibold text-amber-500">★ ${sketch.popularity || 95}%</span>
           </div>
-          <button class="start-trace-btn mt-3 w-full py-2 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-1">
-            📷 Start Trace
-          </button>
+          ${isLibrary ? `
+            <div class="mt-3 flex items-center gap-2">
+              <button class="start-trace-btn flex-1 py-2 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-1">
+                📷 Trace
+              </button>
+              <button class="delete-library-btn px-2.5 py-2 rounded-xl bg-red-50 hover:bg-red-600 text-red-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center" title="Delete Image">
+                🗑️
+              </button>
+            </div>
+          ` : `
+            <button class="start-trace-btn mt-3 w-full py-2 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-1">
+              📷 Start Trace
+            </button>
+          `}
         </div>
       </div>
     `).join('');
 
     container.querySelectorAll('.sketch-card').forEach(card => {
-      card.onclick = (e) => {
+      card.onclick = async (e) => {
         const id = card.getAttribute('data-sketch-id');
         const sketch = window.SketchTrace.sketchCatalog.getSketchById(id) || sketches.find(s => s.id === id);
+
+        if (e.target.closest('.delete-library-btn')) {
+          e.stopPropagation();
+          if (containerId === 'myUploadsGrid') {
+            await window.SketchTrace.storage.deleteUpload(id);
+          } else if (containerId === 'myFavsGrid') {
+            await window.SketchTrace.storage.deleteFavorite(id);
+          } else if (containerId === 'myDownloadsGrid') {
+            await window.SketchTrace.storage.deleteDownload(id);
+          } else {
+            await window.SketchTrace.storage.deleteUpload(id);
+            await window.SketchTrace.storage.deleteFavorite(id);
+            await window.SketchTrace.storage.deleteDownload(id);
+          }
+          this.showToast('🗑️ Image deleted from Library!');
+          this.renderMyUploads();
+          this.renderHome();
+          return;
+        }
+
         if (e.target.closest('.start-trace-btn')) {
           this.switchView('cameraTrace', { sketch });
         } else {

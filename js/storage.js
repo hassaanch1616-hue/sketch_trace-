@@ -112,13 +112,22 @@ class StorageService {
     localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
   }
 
-  async getUploads() {
-    try {
-      const str = localStorage.getItem('sketchtrace_uploads');
-      return str ? JSON.parse(str) : [];
-    } catch (e) {
-      return [];
-    }
+  async deleteUpload(id) {
+    let uploads = await this.getUploads();
+    uploads = uploads.filter(u => u.id !== id);
+    localStorage.setItem('sketchtrace_uploads', JSON.stringify(uploads));
+  }
+
+  async deleteFavorite(id) {
+    let favs = await this.getFavorites();
+    favs = favs.filter(f => f.id !== id);
+    localStorage.setItem('sketchtrace_favs', JSON.stringify(favs));
+  }
+
+  async deleteDownload(id) {
+    let downloads = await this.getDownloads();
+    downloads = downloads.filter(d => d.id !== id);
+    localStorage.setItem('sketchtrace_downloads', JSON.stringify(downloads));
   }
 }
 
