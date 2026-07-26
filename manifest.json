@@ -1,7 +1,7 @@
 {
-  "name": "SketchTrace - Mobile Sketch Tracing Studio",
+  "name": "SketchTrace - Mobile AR Sketch Tracing Studio",
   "short_name": "SketchTrace",
-  "description": "Professional mobile AR camera overlay sketch tracing web application.",
+  "description": "Professional mobile AR camera overlay sketch tracing progressive web application.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -27,6 +27,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "./assets/icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
