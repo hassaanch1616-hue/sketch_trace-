@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="light" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SketchTrace – Mobile Sketch Tracing Studio</title>
+  <meta name="description" content="Professional mobile camera overlay sketch tracing web application." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="./css/styles.css?v=60" />
+</head>
+<body class="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 font-sans pb-16 md:pb-0">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <div data-nav="home" class="flex items-center gap-3 cursor-pointer group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        </div>
+        <div>
+          <span class="font-extrabold text-xl tracking-tight text-slate-900 font-heading">Sketch<span class="text-blue-600">Trace</span></span>
+          <span class="hidden sm:inline-block ml-2 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200">Mobile Camera Studio</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative flex-1 max-w-xs sm:max-w-md">
+        <div class="relative flex items-center">
+          <svg class="w-4 h-4 absolute left-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="mainSearchInput" placeholder="🔍 Search Naruto, Gojo, Kakashi, Tanjiro, Bugatti, Ferrari..." class="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 text-xs text-slate-900 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-sm" />
+        </div>
+        <div id="searchDropdown" class="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-200 hidden z-50 overflow-hidden max-h-96 overflow-y-auto"></div>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" title="Toggle Light / Dark Theme" class="p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 font-bold text-xs">
+          🌙 Theme
+        </button>
+
+        <button data-nav="aiConverter" class="hidden sm:flex px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-extrabold text-xs items-center gap-1.5 shadow-sm transition-all">
+          🪄 AI Converter
+        </button>
+
+        <button data-nav="myUploads" class="hidden sm:flex px-3 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs items-center gap-1.5 shadow-sm">
+          📚 Library
+        </button>
+
+        <button data-nav="admin" class="px-3 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center gap-1.5 shadow-sm">
+          ⚙️ Admin
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- HOME VIEW -->
+    <section id="homeView" class="space-y-10">
+      
+      <!-- Hero Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-700 p-8 sm:p-12 text-white shadow-xl">
+        <div class="relative z-10 max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider mb-4 border border-white/30">
+            ✨ Professional Anime & Car Sketch Tracing Studio
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+            Trace Anime Characters & Supercars or Convert ANY Photo into Art
+          </h1>
+          <p class="text-blue-100 text-sm sm:text-base mb-6 leading-relaxed">
+            Search Naruto, Gojo, Kakashi, Tanjiro, Bugatti, Ferrari, or place your device over paper and trace cleanly!
+          </p>
+
+          <!-- Hero Search Bar -->
+          <div class="relative max-w-xl mb-8">
+            <div class="relative flex items-center">
+              <svg class="w-5 h-5 absolute left-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <input type="text" id="heroSearchInput" placeholder="🔍 Search Naruto, Gojo, Kakashi, Tanjiro, Bugatti, Ferrari..." class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white text-slate-900 placeholder-slate-400 font-semibold text-sm shadow-xl border border-white/40 focus:outline-none focus:ring-4 focus:ring-blue-300" />
+            </div>
+            <div id="heroSearchDropdown" class="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 hidden z-50 overflow-hidden max-h-96 overflow-y-auto text-slate-900"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button data-nav="category" class="px-6 py-3.5 rounded-xl bg-white text-blue-600 font-extrabold text-sm shadow-lg hover:bg-blue-50 transition-transform active:scale-95 flex items-center gap-2">
+              🚀 Explore 12 Categories
+            </button>
+            <button id="heroUploadBtn" class="px-6 py-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-extrabold text-sm hover:bg-white/20 transition-transform active:scale-95 flex items-center gap-2">
+              📤 Upload Photo
+            </button>
+            <button id="heroAIBtn" class="px-6 py-3.5 rounded-xl bg-violet-900/50 backdrop-blur-md border border-violet-400/40 text-white font-extrabold text-sm hover:bg-violet-900/70 transition-transform active:scale-95 flex items-center gap-2">
+              🪄 AI Pencil Sketch Converter
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Section (12 Categories) -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 font-heading">12 Categories Available</h2>
+            <p class="text-xs text-slate-500">260+ HD authentic line art sketches across all 12 custom categories</p>
+          </div>
+        </div>
+        <div id="categoriesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <div data-category="anime" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">✨</div>
+            <h3 class="font-bold text-sm text-slate-900">Anime</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Naruto, Tanjiro, Gojo, Sukuna, Sasuke</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>70 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="cars" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🏎️</div>
+            <h3 class="font-bold text-sm text-slate-900">Cars</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Bugatti, Lamborghini, Ferrari, McLaren</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>20 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="aircraft" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">✈️</div>
+            <h3 class="font-bold text-sm text-slate-900">Aircraft</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Fighter jets & airliners</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>10 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="cartoon" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🎨</div>
+            <h3 class="font-bold text-sm text-slate-900">Cartoon</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Monkey, Chota Bheem, Mickey, Tom & Jerry</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>22 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="bikes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🏍️</div>
+            <h3 class="font-bold text-sm text-slate-900">Bikes</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Yamaha R6, Batcycle, Vespa & Choppers</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>11 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="trains" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🚆</div>
+            <h3 class="font-bold text-sm text-slate-900">Trains</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Bullet trains & Thomas engine</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>14 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="superheroes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">⚡</div>
+            <h3 class="font-bold text-sm text-slate-900">Superheroes</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Batman, Iron Man, Spider-Man, Thor</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>18 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="ships" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🚢</div>
+            <h3 class="font-bold text-sm text-slate-900">Ships</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">RMS Titanic, Pirate galleons & Cruise ships</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>18 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="fish" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🐠</div>
+            <h3 class="font-bold text-sm text-slate-900">Fish</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Baby Shark, Dolphins, Blue Whales, Goldfish</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>24 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="animals" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🦁</div>
+            <h3 class="font-bold text-sm text-slate-900">Animals</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Lions, Horses, Cats, Dogs, Rabbits, Giraffes</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>21 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="birds" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🦅</div>
+            <h3 class="font-bold text-sm text-slate-900">Birds</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Peacocks, Parrots, Toucans, Swans, Owls</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>15 Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="flowers" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🌸</div>
+            <h3 class="font-bold text-sm text-slate-900">Flowers</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Roses, Tulips, Daisies, Lilies, Hibiscus</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>20 Sketches</span><span>→</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Sketches -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+          <h2 class="text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
+            ⭐ Featured HD Anime & Line-Art Sketches
+          </h2>
+        </div>
+
+        <!-- Credits Section under Featured Heading -->
+        <div class="mb-5 p-4 rounded-2xl bg-slate-900 text-white shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          <h3 class="text-xs font-extrabold font-heading text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            🏆 Credits
+          </h3>
+          <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-200">
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-slate-700/80">
+              <span class="text-slate-400 font-normal">Developer:</span> <span class="text-white font-bold">M.Zohaib</span>
+            </div>
+            <div class="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-slate-700/80">
+              <span class="text-slate-400 font-normal">Co-Developer:</span> <span class="text-white font-bold">M.Hassaan</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="featuredGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- Trending Traces -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
+            🔥 Trending Traces
+          </h2>
+        </div>
+        <div id="trendingGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- Recently Viewed -->
+      <div id="recentSection" class="hidden">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-slate-900 font-heading">🕒 Recently Viewed</h2>
+        </div>
+        <div id="recentGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- Favorites Section -->
+      <div id="favoritesSection" class="hidden">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-slate-900 font-heading">❤️ Saved Favorites</h2>
+        </div>
+        <div id="favoritesGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- New Arrivals -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-slate-900 font-heading">✨ New Arrivals</h2>
+        </div>
+        <div id="newGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+    </section>
+
+    <!-- CATEGORY VIEW -->
+    <section id="categoryView" class="hidden space-y-6">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <button data-nav="home" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline mb-2">
+            ← Back to Home
+          </button>
+          <h1 id="categoryTitle" class="text-3xl font-extrabold text-slate-900 font-heading capitalize">Category</h1>
+          <p id="categoryDescription" class="text-sm text-slate-500 mt-1"></p>
+          <span id="categoryCount" class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold"></span>
+        </div>
+      </div>
+      <div id="categorySketchesGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <!-- AI SKETCH CONVERTER VIEW -->
+    <section id="aiConverterView" class="hidden space-y-6">
+      <div>
+        <button data-nav="home" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline mb-2">
+          ← Back to Home
+        </button>
+        <h1 class="text-3xl font-extrabold text-slate-900 font-heading flex items-center gap-2">
+          🎨 Beautiful Artistic AI Pencil Sketch Converter
+        </h1>
+        <p class="text-sm text-slate-500 mt-1">Color Dodge Blending AI guarantees 100% natural, beautiful face structure (Eyes, Nose, Lips, Cap, Clothes) with ZERO black splotches!</p>
+      </div>
+
+      <!-- Upload Trigger Box -->
+      <div id="aiUploadTriggerBtn" class="p-8 rounded-3xl bg-white border-2 border-dashed border-violet-400 hover:border-violet-600 text-center cursor-pointer transition-all shadow-sm group">
+        <div class="w-16 h-16 rounded-2xl bg-violet-100 text-violet-600 flex items-center justify-center text-3xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+          📤
+        </div>
+        <h3 class="font-bold text-base text-slate-900">Click / Tap to Select ANY Face Photo or Portrait</h3>
+        <p class="text-xs text-slate-500 mt-1">Color Dodge Pencil Blending • Beautiful Face Structure • Clean Background</p>
+      </div>
+
+      <!-- Conversion Live Comparison & Detail Controls -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <h3 class="font-bold text-sm text-slate-700 flex items-center justify-between">
+            <span>📷 Original Photo</span>
+          </h3>
+          <div class="w-full aspect-square bg-slate-50 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-100">
+            <img id="converterPreview" class="w-full h-full object-contain" src="" alt="Original Photo" />
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+          <h3 class="font-bold text-sm text-violet-600 flex items-center justify-between">
+            <span>🎨 Beautiful Pencil Sketch Result</span>
+          </h3>
+          <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden flex items-center justify-center border border-slate-200 shadow-inner">
+            <img id="converterResult" class="w-full h-full object-contain" src="" alt="AI Converted Sketch" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls & Tracing Trigger -->
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+        <div class="w-full sm:w-auto flex-1 max-w-xs">
+          <label class="block text-xs font-bold text-slate-700 mb-1">Pencil Softness & Stroke Thickness (Slide to Fine-Tune)</label>
+          <input type="range" id="aiDetailSlider" min="15" max="85" step="5" value="45" class="w-full accent-violet-600" />
+        </div>
+
+        <button id="startTraceConvertedBtn" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-extrabold text-sm shadow-lg shadow-violet-500/20 transition-transform active:scale-95 flex items-center gap-2">
+          📷 Start Tracing AI Sketch
+        </button>
+      </div>
+    </section>
+
+    <!-- FULL SCREEN MOBILE & DESKTOP FIT CAMERA TRACE VIEW -->
+    <section id="cameraTraceView" class="hidden fixed inset-0 z-50 bg-slate-950 flex flex-col justify-between overflow-hidden w-screen h-screen">
+      <!-- Full screen video background & canvas -->
+      <video id="cameraVideo" class="absolute inset-0 w-full h-full object-cover" autoplay playsinline muted></video>
+      <canvas id="traceCanvas" class="absolute inset-0 w-full h-full z-10 touch-none"></canvas>
+
+      <!-- Minimal Floating Top Bar -->
+      <div class="relative z-20 flex items-center justify-between p-4 bg-gradient-to-b from-black/80 to-transparent">
+        <button id="traceBackBtn" class="px-4 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs backdrop-blur-md transition-all">
+          ← Back
+        </button>
+
+        <div class="flex items-center gap-2">
+          <button id="screenLockBtn" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-md">
+            🔒 Lock Screen
+          </button>
+          <button id="toggleOptionsBtn" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md flex items-center gap-1.5 backdrop-blur-md">
+            ⚙️ Controls & Options
+          </button>
+        </div>
+      </div>
+
+      <!-- COLLAPSIBLE SEPARATE OPTIONS DRAWER / MODAL -->
+      <div id="traceOptionsDrawer" class="hidden absolute bottom-4 left-4 right-4 z-30 max-w-xl mx-auto bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-3xl p-5 space-y-4 shadow-2xl text-white">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <h3 class="font-extrabold text-sm text-blue-400 flex items-center gap-2">
+            ⚙️ Tracing Canvas Controls
+          </h3>
+          <button id="closeOptionsBtn" class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold flex items-center justify-center">
+            ✕
+          </button>
+        </div>
+
+        <!-- Sliders Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+            <div class="flex justify-between text-xs mb-1 font-semibold text-slate-300">
+              <span>🎚️ Opacity</span>
+            </div>
+            <input type="range" id="opacitySlider" min="0" max="1" step="0.05" value="0.65" class="w-full accent-blue-500" />
+          </div>
+
+          <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+            <div class="flex justify-between text-xs mb-1 font-semibold text-slate-300">
+              <span>☀️ Brightness</span>
+            </div>
+            <input type="range" id="brightnessSlider" min="0" max="200" step="5" value="100" class="w-full accent-blue-500" />
+          </div>
+
+          <div class="bg-white/5 p-2.5 rounded-xl border border-white/10">
+            <div class="flex justify-between text-xs mb-1 font-semibold text-slate-300">
+              <span>🌓 Contrast</span>
+            </div>
+            <input type="range" id="contrastSlider" min="0" max="200" step="5" value="100" class="w-full accent-blue-500" />
+          </div>
+        </div>
+
+        <!-- Action Control Buttons Grid -->
+        <div class="grid grid-cols-3 sm:grid-cols-4 gap-2 text-xs font-bold">
+          <button id="zoomInBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            🔍 Zoom +
+          </button>
+          <button id="zoomOutBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            🔍 Zoom -
+          </button>
+          <button id="rotateBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            🔄 Rotate
+          </button>
+          <button id="invertBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            ☯️ Invert B/W
+          </button>
+          <button id="traceFlashBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            💡 Flashlight
+          </button>
+          <button id="bgDimmerBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            🌑 Dim Bg
+          </button>
+          <button id="resetPosBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
+            🎯 Reset Pos
+          </button>
+        </div>
+
+        <!-- Grid Selector & Lock Position -->
+        <div class="flex items-center justify-between gap-2 border-t border-white/10 pt-3">
+          <select id="traceGridSelect" class="px-3 py-2 rounded-xl bg-slate-800 text-white text-xs border border-white/20 focus:outline-none">
+            <option value="none">Grid: Off</option>
+            <option value="3x3">Grid: 3x3 Rule</option>
+            <option value="diagonal">Grid: Diagonal</option>
+          </select>
+
+          <button id="lockPosBtn" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs">
+            🔒 Lock Position
+          </button>
+        </div>
+
+      </div>
+
+      <!-- SCREEN LOCK OVERLAY -->
+      <div id="screenLockOverlay" class="hidden absolute inset-0 z-40 bg-black/90 backdrop-blur-lg flex-col items-center justify-center p-6 text-center">
+        <div class="w-20 h-20 rounded-full bg-amber-500/20 text-amber-400 border border-amber-400/40 flex items-center justify-center mb-6 text-3xl">
+          🔒
+        </div>
+        <h2 class="text-2xl font-extrabold text-white mb-2">Screen Locked for Tracing</h2>
+        <p class="text-sm text-slate-400 max-w-sm mb-8">Accidental touch gestures are disabled so you can trace comfortably over paper.</p>
+
+        <button id="unlockHoldBtn" class="relative overflow-hidden px-8 py-4 rounded-2xl bg-amber-500 text-slate-950 font-extrabold text-base flex items-center gap-3">
+          <div class="unlock-progress-bar absolute inset-y-0 left-0 bg-amber-300/60 w-0"></div>
+          <span class="relative z-10">Press & Hold 1.8s to Unlock</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- MY UPLOADS & LIBRARY VIEW -->
+    <section id="myUploadsView" class="hidden space-y-8">
+      <div>
+        <button data-nav="home" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline mb-2">
+          ← Home
+        </button>
+        <h1 class="text-3xl font-extrabold text-slate-900 font-heading">My Library</h1>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900 mb-3">Custom Uploads</h2>
+          <div id="myUploadsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-slate-900 mb-3">Favorites</h2>
+          <div id="myFavsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-slate-900 mb-3">Offline Downloads</h2>
+          <div id="myDownloadsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN PANEL VIEW -->
+    <section id="adminView" class="hidden space-y-6">
+      <div>
+        <button data-nav="home" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline mb-2">
+          ← Home
+        </button>
+        <h1 class="text-3xl font-extrabold text-slate-900 font-heading">Admin Panel</h1>
+      </div>
+
+      <form id="adminAddSketchForm" class="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-sm">
+        <h3 class="font-bold text-base text-slate-900">Add New Sketch to Catalog</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Sketch Name</label>
+            <input type="text" id="adminSketchNameInput" required placeholder="Name" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Category</label>
+            <select id="adminCategorySelect" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs">
+              <option value="anime">Anime</option>
+              <option value="cars">Cars</option>
+              <option value="mandala">Mandala</option>
+              <option value="space">Space & Planets</option>
+              <option value="fantasy">Fantasy & Magic</option>
+              <option value="monuments">Monuments</option>
+              <option value="fashion">Fashion & Style</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Sketch File</label>
+          <input type="file" id="adminFileInput" accept="image/*" class="text-xs" />
+        </div>
+        <button type="submit" class="px-6 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs">
+          Save Sketch
+        </button>
+      </form>
+
+      <div>
+        <h3 class="font-bold text-base text-slate-900 mb-3">Catalog Admin Sketches (Tap to Open & Trace)</h3>
+        <div id="adminSketchesList" class="space-y-3"></div>
+      </div>
+    <!-- FOOTER & CREDITS SECTION -->
+    <footer class="mt-16 mb-20 md:mb-8 border-t border-slate-200 bg-slate-900 text-white py-12 px-6 rounded-3xl text-center shadow-2xl">
+      <div class="max-w-4xl mx-auto space-y-5">
+        <h2 class="text-2xl font-extrabold font-heading text-amber-400 tracking-wide uppercase">Credits</h2>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm font-semibold text-slate-200">
+          <div class="px-6 py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md">
+            <span class="text-slate-400 font-normal">Developer:</span> <span class="text-white font-bold text-base">M.Zohaib</span>
+          </div>
+          <div class="px-6 py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md">
+            <span class="text-slate-400 font-normal">Co-Developer:</span> <span class="text-white font-bold text-base">M.Hassaan</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 pt-3">© 2026 SketchTrace AR Studio. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- SKETCH DETAILS MODAL -->
+  <div id="sketchDetailModal" class="hidden modal-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-lg rounded-3xl bg-white p-6 space-y-6 shadow-2xl border border-slate-200">
+      <button class="close-modal-btn absolute top-4 right-4 p-2 rounded-full bg-slate-100 text-slate-700 font-bold">
+        ✕
+      </button>
+
+      <div id="modalSketchPreview" class="w-full aspect-square bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-slate-100"></div>
+
+      <div>
+        <h2 id="modalSketchName" class="text-2xl font-extrabold text-slate-900 font-heading">Sketch Name</h2>
+        <div class="flex items-center gap-3 mt-1 text-xs text-slate-500">
+          <span id="modalSketchCategory" class="capitalize font-bold text-blue-600">Category</span>
+          <span>•</span>
+          <span id="modalSketchDifficulty" class="font-semibold">Medium</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3">
+        <button id="modalFavBtn" class="py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs">
+          🤍 Favorite
+        </button>
+        <button id="modalDownloadBtn" class="py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs">
+          📥 Download
+        </button>
+        <button id="modalStartTraceBtn" class="py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs">
+          📷 Start Trace
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-2xl"></div>
+
+  <!-- MOBILE BOTTOM NAVIGATION -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 shadow-lg">
+    <div class="grid grid-cols-4 h-16">
+      <button data-nav="home" class="flex flex-col items-center justify-center text-slate-700 font-bold">
+        <span class="text-lg">🏠</span>
+        <span class="text-[10px]">Home</span>
+      </button>
+      <button data-nav="aiConverter" class="flex flex-col items-center justify-center text-slate-700 font-bold">
+        <span class="text-lg">🪄</span>
+        <span class="text-[10px]">AI Convert</span>
+      </button>
+      <button data-nav="myUploads" class="flex flex-col items-center justify-center text-slate-700 font-bold">
+        <span class="text-lg">📚</span>
+        <span class="text-[10px]">Library</span>
+      </button>
+      <button data-nav="admin" class="flex flex-col items-center justify-center text-slate-700 font-bold">
+        <span class="text-lg">⚙️</span>
+        <span class="text-[10px]">Admin</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Script tags -->
+  <script src="./js/sketchCatalog.js?v=60"></script>
+  <script src="./js/storage.js?v=60"></script>
+  <script src="./js/camera.js?v=60"></script>
+  <script src="./js/traceEngine.js?v=60"></script>
+  <script src="./js/aiConverter.js?v=60"></script>
+  <script src="./js/screenLock.js?v=60"></script>
+  <script src="./js/admin.js?v=60"></script>
+  <script src="./js/app.js?v=60"></script>
+</body>
+</html>

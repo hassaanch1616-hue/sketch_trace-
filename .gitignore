@@ -1,0 +1,5 @@
+# Git ignore file for SketchTrace
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
