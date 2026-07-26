@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SketchTrace - HD Authentic Anime Names Catalog
  */
 
@@ -780,13 +780,13 @@ const CAR_PRESETS = [
     imageUrl: './assets/cars/car-14.jpg'
   },
   {
-    id: 'car-cyberpunk-hypercar',
-    name: 'Cyberpunk Hypercar',
+    id: 'car-porsche-gt3-rs',
+    name: 'Porsche 911 GT3 RS',
     category: 'cars',
-    tags: ['cars', 'futuristic', 'hypercar', 'line art'],
+    tags: ['cars', 'porsche', 'supercar', 'line art'],
     difficulty: 'Hard',
-    popularity: 95,
-    imageUrl: './assets/cars/car-15.jpg'
+    popularity: 98,
+    imageUrl: './assets/cars/car-15.png'
   },
   {
     id: 'car-classic-muscle',
@@ -825,13 +825,13 @@ const CAR_PRESETS = [
     imageUrl: './assets/cars/car-19.jpg'
   },
   {
-    id: 'car-street-tuner',
-    name: 'Street Tuner Car',
+    id: 'car-toyota-supra-mk4',
+    name: 'Toyota Supra MK4 Turbo',
     category: 'cars',
-    tags: ['cars', 'tuner', 'street', 'line art'],
-    difficulty: 'Medium',
-    popularity: 90,
-    imageUrl: './assets/cars/car-20.webp'
+    tags: ['cars', 'toyota', 'supra', 'jdm'],
+    difficulty: 'Hard',
+    popularity: 99,
+    imageUrl: './assets/cars/car-20.png'
   }
 ];
 

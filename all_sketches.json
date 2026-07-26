@@ -1,7 +1,7 @@
 ﻿{
     "title":  "SketchTrace Master Sketches Catalog",
     "totalSketches":  263,
-    "updatedAt":  "2026-07-26 17:20:25",
+    "updatedAt":  "2026-07-26 17:26:41",
     "sketches":  [
                      {
                          "id":  "anime-tanjiro",
@@ -1167,18 +1167,18 @@
                          "imageUrl":  "./assets/cars/car-14.jpg"
                      },
                      {
-                         "id":  "car-cyberpunk-hypercar",
-                         "name":  "Cyberpunk Hypercar",
+                         "id":  "car-porsche-gt3-rs",
+                         "name":  "Porsche 911 GT3 RS",
                          "category":  "cars",
                          "tags":  [
                                       "cars",
-                                      "futuristic",
-                                      "hypercar",
+                                      "porsche",
+                                      "supercar",
                                       "line art"
                                   ],
                          "difficulty":  "Hard",
-                         "popularity":  95,
-                         "imageUrl":  "./assets/cars/car-15.jpg"
+                         "popularity":  98,
+                         "imageUrl":  "./assets/cars/car-15.png"
                      },
                      {
                          "id":  "car-classic-muscle",
@@ -1237,18 +1237,18 @@
                          "imageUrl":  "./assets/cars/car-19.jpg"
                      },
                      {
-                         "id":  "car-street-tuner",
-                         "name":  "Street Tuner Car",
+                         "id":  "car-toyota-supra-mk4",
+                         "name":  "Toyota Supra MK4 Turbo",
                          "category":  "cars",
                          "tags":  [
                                       "cars",
-                                      "tuner",
-                                      "street",
-                                      "line art"
+                                      "toyota",
+                                      "supra",
+                                      "jdm"
                                   ],
-                         "difficulty":  "Medium",
-                         "popularity":  90,
-                         "imageUrl":  "./assets/cars/car-20.webp"
+                         "difficulty":  "Hard",
+                         "popularity":  99,
+                         "imageUrl":  "./assets/cars/car-20.png"
                      },
                      {
                          "id":  "aircraft-commercial-jet",
@@ -4966,18 +4966,18 @@
                                                              "imageUrl":  "./assets/cars/car-14.jpg"
                                                          },
                                                          {
-                                                             "id":  "car-cyberpunk-hypercar",
-                                                             "name":  "Cyberpunk Hypercar",
+                                                             "id":  "car-porsche-gt3-rs",
+                                                             "name":  "Porsche 911 GT3 RS",
                                                              "category":  "cars",
                                                              "tags":  [
                                                                           "cars",
-                                                                          "futuristic",
-                                                                          "hypercar",
+                                                                          "porsche",
+                                                                          "supercar",
                                                                           "line art"
                                                                       ],
                                                              "difficulty":  "Hard",
-                                                             "popularity":  95,
-                                                             "imageUrl":  "./assets/cars/car-15.jpg"
+                                                             "popularity":  98,
+                                                             "imageUrl":  "./assets/cars/car-15.png"
                                                          },
                                                          {
                                                              "id":  "car-classic-muscle",
@@ -5036,18 +5036,18 @@
                                                              "imageUrl":  "./assets/cars/car-19.jpg"
                                                          },
                                                          {
-                                                             "id":  "car-street-tuner",
-                                                             "name":  "Street Tuner Car",
+                                                             "id":  "car-toyota-supra-mk4",
+                                                             "name":  "Toyota Supra MK4 Turbo",
                                                              "category":  "cars",
                                                              "tags":  [
                                                                           "cars",
-                                                                          "tuner",
-                                                                          "street",
-                                                                          "line art"
+                                                                          "toyota",
+                                                                          "supra",
+                                                                          "jdm"
                                                                       ],
-                                                             "difficulty":  "Medium",
-                                                             "popularity":  90,
-                                                             "imageUrl":  "./assets/cars/car-20.webp"
+                                                             "difficulty":  "Hard",
+                                                             "popularity":  99,
+                                                             "imageUrl":  "./assets/cars/car-20.png"
                                                          }
                                                      ],
                                            "Count":  20

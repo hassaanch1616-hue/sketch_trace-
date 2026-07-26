@@ -3,7 +3,7 @@
  * Provides offline caching for application assets and sketches
  */
 
-const CACHE_NAME = 'sketchtrace-v20';
+const CACHE_NAME = 'sketchtrace-v21';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
