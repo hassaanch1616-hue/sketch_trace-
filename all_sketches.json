@@ -1,7 +1,7 @@
 ﻿{
     "title":  "SketchTrace Master Sketches Catalog",
     "totalSketches":  263,
-    "updatedAt":  "2026-07-26 15:39:52",
+    "updatedAt":  "2026-07-26 17:20:25",
     "sketches":  [
                      {
                          "id":  "anime-tanjiro",
@@ -982,7 +982,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  99,
-                         "imageUrl":  "./assets/cars/car-1.webp"
+                         "imageUrl":  "./assets/cars/car-1.jpg"
                      },
                      {
                          "id":  "car-lamborghini-huracan",
@@ -996,7 +996,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  98,
-                         "imageUrl":  "./assets/cars/car-2.jpg"
+                         "imageUrl":  "./assets/cars/car-2.webp"
                      },
                      {
                          "id":  "car-mclaren-p1",
@@ -1066,7 +1066,7 @@
                                   ],
                          "difficulty":  "Easy",
                          "popularity":  94,
-                         "imageUrl":  "./assets/cars/car-7.webp"
+                         "imageUrl":  "./assets/cars/car-7.jpg"
                      },
                      {
                          "id":  "car-audi-a3-cabriolet",
@@ -1080,7 +1080,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  93,
-                         "imageUrl":  "./assets/cars/car-8.webp"
+                         "imageUrl":  "./assets/cars/car-8.jpg"
                      },
                      {
                          "id":  "car-bugatti-veyron",
@@ -1094,7 +1094,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  99,
-                         "imageUrl":  "./assets/cars/car-9.webp"
+                         "imageUrl":  "./assets/cars/car-9.jpg"
                      },
                      {
                          "id":  "car-ferrari-f40",
@@ -1108,7 +1108,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  99,
-                         "imageUrl":  "./assets/cars/car-10.jpg"
+                         "imageUrl":  "./assets/cars/car-10.webp"
                      },
                      {
                          "id":  "car-pagani-zonda",
@@ -1122,7 +1122,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  97,
-                         "imageUrl":  "./assets/cars/car-11.webp"
+                         "imageUrl":  "./assets/cars/car-11.jpg"
                      },
                      {
                          "id":  "car-nissan-skyline-r34",
@@ -1136,7 +1136,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  100,
-                         "imageUrl":  "./assets/cars/car-12.jpg"
+                         "imageUrl":  "./assets/cars/car-12.webp"
                      },
                      {
                          "id":  "car-race-car-gt",
@@ -1164,7 +1164,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  96,
-                         "imageUrl":  "./assets/cars/car-14.webp"
+                         "imageUrl":  "./assets/cars/car-14.jpg"
                      },
                      {
                          "id":  "car-cyberpunk-hypercar",
@@ -1178,7 +1178,7 @@
                                   ],
                          "difficulty":  "Hard",
                          "popularity":  95,
-                         "imageUrl":  "./assets/cars/car-15.webp"
+                         "imageUrl":  "./assets/cars/car-15.jpg"
                      },
                      {
                          "id":  "car-classic-muscle",
@@ -1192,7 +1192,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  94,
-                         "imageUrl":  "./assets/cars/car-16.jpg"
+                         "imageUrl":  "./assets/cars/car-16.webp"
                      },
                      {
                          "id":  "car-supercar-outline",
@@ -1206,7 +1206,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  93,
-                         "imageUrl":  "./assets/cars/car-17.jpg"
+                         "imageUrl":  "./assets/cars/car-17.webp"
                      },
                      {
                          "id":  "car-modern-drift",
@@ -1220,7 +1220,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  92,
-                         "imageUrl":  "./assets/cars/car-18.jpg"
+                         "imageUrl":  "./assets/cars/car-18.webp"
                      },
                      {
                          "id":  "car-track-racing",
@@ -1234,7 +1234,7 @@
                                   ],
                          "difficulty":  "Medium",
                          "popularity":  91,
-                         "imageUrl":  "./assets/cars/car-19.webp"
+                         "imageUrl":  "./assets/cars/car-19.jpg"
                      },
                      {
                          "id":  "car-street-tuner",
@@ -4781,7 +4781,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  99,
-                                                             "imageUrl":  "./assets/cars/car-1.webp"
+                                                             "imageUrl":  "./assets/cars/car-1.jpg"
                                                          },
                                                          {
                                                              "id":  "car-lamborghini-huracan",
@@ -4795,7 +4795,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  98,
-                                                             "imageUrl":  "./assets/cars/car-2.jpg"
+                                                             "imageUrl":  "./assets/cars/car-2.webp"
                                                          },
                                                          {
                                                              "id":  "car-mclaren-p1",
@@ -4865,7 +4865,7 @@
                                                                       ],
                                                              "difficulty":  "Easy",
                                                              "popularity":  94,
-                                                             "imageUrl":  "./assets/cars/car-7.webp"
+                                                             "imageUrl":  "./assets/cars/car-7.jpg"
                                                          },
                                                          {
                                                              "id":  "car-audi-a3-cabriolet",
@@ -4879,7 +4879,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  93,
-                                                             "imageUrl":  "./assets/cars/car-8.webp"
+                                                             "imageUrl":  "./assets/cars/car-8.jpg"
                                                          },
                                                          {
                                                              "id":  "car-bugatti-veyron",
@@ -4893,7 +4893,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  99,
-                                                             "imageUrl":  "./assets/cars/car-9.webp"
+                                                             "imageUrl":  "./assets/cars/car-9.jpg"
                                                          },
                                                          {
                                                              "id":  "car-ferrari-f40",
@@ -4907,7 +4907,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  99,
-                                                             "imageUrl":  "./assets/cars/car-10.jpg"
+                                                             "imageUrl":  "./assets/cars/car-10.webp"
                                                          },
                                                          {
                                                              "id":  "car-pagani-zonda",
@@ -4921,7 +4921,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  97,
-                                                             "imageUrl":  "./assets/cars/car-11.webp"
+                                                             "imageUrl":  "./assets/cars/car-11.jpg"
                                                          },
                                                          {
                                                              "id":  "car-nissan-skyline-r34",
@@ -4935,7 +4935,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  100,
-                                                             "imageUrl":  "./assets/cars/car-12.jpg"
+                                                             "imageUrl":  "./assets/cars/car-12.webp"
                                                          },
                                                          {
                                                              "id":  "car-race-car-gt",
@@ -4963,7 +4963,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  96,
-                                                             "imageUrl":  "./assets/cars/car-14.webp"
+                                                             "imageUrl":  "./assets/cars/car-14.jpg"
                                                          },
                                                          {
                                                              "id":  "car-cyberpunk-hypercar",
@@ -4977,7 +4977,7 @@
                                                                       ],
                                                              "difficulty":  "Hard",
                                                              "popularity":  95,
-                                                             "imageUrl":  "./assets/cars/car-15.webp"
+                                                             "imageUrl":  "./assets/cars/car-15.jpg"
                                                          },
                                                          {
                                                              "id":  "car-classic-muscle",
@@ -4991,7 +4991,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  94,
-                                                             "imageUrl":  "./assets/cars/car-16.jpg"
+                                                             "imageUrl":  "./assets/cars/car-16.webp"
                                                          },
                                                          {
                                                              "id":  "car-supercar-outline",
@@ -5005,7 +5005,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  93,
-                                                             "imageUrl":  "./assets/cars/car-17.jpg"
+                                                             "imageUrl":  "./assets/cars/car-17.webp"
                                                          },
                                                          {
                                                              "id":  "car-modern-drift",
@@ -5019,7 +5019,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  92,
-                                                             "imageUrl":  "./assets/cars/car-18.jpg"
+                                                             "imageUrl":  "./assets/cars/car-18.webp"
                                                          },
                                                          {
                                                              "id":  "car-track-racing",
@@ -5033,7 +5033,7 @@
                                                                       ],
                                                              "difficulty":  "Medium",
                                                              "popularity":  91,
-                                                             "imageUrl":  "./assets/cars/car-19.webp"
+                                                             "imageUrl":  "./assets/cars/car-19.jpg"
                                                          },
                                                          {
                                                              "id":  "car-street-tuner",

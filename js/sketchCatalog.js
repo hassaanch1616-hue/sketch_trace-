@@ -660,7 +660,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'bugatti', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-1.webp'
+    imageUrl: './assets/cars/car-1.jpg'
   },
   {
     id: 'car-lamborghini-huracan',
@@ -669,7 +669,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'lamborghini', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/cars/car-2.jpg'
+    imageUrl: './assets/cars/car-2.webp'
   },
   {
     id: 'car-mclaren-p1',
@@ -714,7 +714,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'sports car', 'printable', 'line art'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/cars/car-7.webp'
+    imageUrl: './assets/cars/car-7.jpg'
   },
   {
     id: 'car-audi-a3-cabriolet',
@@ -723,7 +723,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'audi', 'cabriolet', 'line art'],
     difficulty: 'Medium',
     popularity: 93,
-    imageUrl: './assets/cars/car-8.webp'
+    imageUrl: './assets/cars/car-8.jpg'
   },
   {
     id: 'car-bugatti-veyron',
@@ -732,7 +732,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'bugatti', 'supercar', 'line art'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-9.webp'
+    imageUrl: './assets/cars/car-9.jpg'
   },
   {
     id: 'car-ferrari-f40',
@@ -741,7 +741,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'ferrari', 'supercar', 'classic'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/cars/car-10.jpg'
+    imageUrl: './assets/cars/car-10.webp'
   },
   {
     id: 'car-pagani-zonda',
@@ -750,7 +750,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'pagani', 'hypercar', 'line art'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/cars/car-11.webp'
+    imageUrl: './assets/cars/car-11.jpg'
   },
   {
     id: 'car-nissan-skyline-r34',
@@ -759,7 +759,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'nissan', 'jdm', 'skyline'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/cars/car-12.jpg'
+    imageUrl: './assets/cars/car-12.webp'
   },
   {
     id: 'car-race-car-gt',
@@ -777,7 +777,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'rolls royce', 'luxury', 'line art'],
     difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cars/car-14.webp'
+    imageUrl: './assets/cars/car-14.jpg'
   },
   {
     id: 'car-cyberpunk-hypercar',
@@ -786,7 +786,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'futuristic', 'hypercar', 'line art'],
     difficulty: 'Hard',
     popularity: 95,
-    imageUrl: './assets/cars/car-15.webp'
+    imageUrl: './assets/cars/car-15.jpg'
   },
   {
     id: 'car-classic-muscle',
@@ -795,7 +795,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'muscle car', 'vintage', 'line art'],
     difficulty: 'Medium',
     popularity: 94,
-    imageUrl: './assets/cars/car-16.jpg'
+    imageUrl: './assets/cars/car-16.webp'
   },
   {
     id: 'car-supercar-outline',
@@ -804,7 +804,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'supercar', 'outline', 'line art'],
     difficulty: 'Medium',
     popularity: 93,
-    imageUrl: './assets/cars/car-17.jpg'
+    imageUrl: './assets/cars/car-17.webp'
   },
   {
     id: 'car-modern-drift',
@@ -813,7 +813,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'drift', 'sports car', 'line art'],
     difficulty: 'Medium',
     popularity: 92,
-    imageUrl: './assets/cars/car-18.jpg'
+    imageUrl: './assets/cars/car-18.webp'
   },
   {
     id: 'car-track-racing',
@@ -822,7 +822,7 @@ const CAR_PRESETS = [
     tags: ['cars', 'racing', 'track', 'line art'],
     difficulty: 'Medium',
     popularity: 91,
-    imageUrl: './assets/cars/car-19.webp'
+    imageUrl: './assets/cars/car-19.jpg'
   },
   {
     id: 'car-street-tuner',
