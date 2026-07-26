@@ -668,12 +668,8 @@ class SketchTraceApp {
     });
 
     document.getElementById('themeToggleBtn')?.addEventListener('click', () => {
-      if (window.SketchTrace.storage) {
-        const current = window.SketchTrace.storage.getTheme();
-        const next = current === 'dark' ? 'light' : 'dark';
-        window.SketchTrace.storage.setTheme(next);
-        this.showToast(`Switched to ${next} theme`);
-      }
+      const modal = document.getElementById('themeModal');
+      if (modal) modal.classList.remove('hidden');
     });
 
     document.querySelectorAll('.close-modal-btn').forEach(btn => {
