@@ -395,18 +395,59 @@ class SketchTraceApp {
       favBtn.onclick = async () => {
         const added = await window.SketchTrace.storage.toggleFavorite(sketch);
         favBtn.innerText = added ? '❤️ Favorited' : '🤍 Favorite';
+        this.showToast(added ? '❤️ Added to Favorites!' : '🤍 Removed from Favorites');
+        this.renderHome();
+        this.renderMyUploads();
       };
     }
 
     const downloadBtn = document.getElementById('modalDownloadBtn');
     if (downloadBtn) {
-      downloadBtn.onclick = () => {
-        if (window.SketchTrace.storage) window.SketchTrace.storage.saveDownload(sketch);
-        const a = document.createElement('a');
-        a.download = `${sketch.name}.svg`;
-        a.href = sketch.dataUrl || 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">${sketch.svgPath || ''}</svg>`);
-        a.click();
-        this.showToast('Downloaded sketch for offline use!');
+      downloadBtn.onclick = async () => {
+        if (window.SketchTrace.storage) {
+          await window.SketchTrace.storage.saveDownload(sketch);
+          this.renderMyUploads();
+        }
+
+        const src = sketch.imageUrl || sketch.dataUrl;
+        const name = (sketch.name || 'sketch').replace(/[^a-z0-9_-]/gi, '_');
+
+        if (src) {
+          try {
+            const res = await fetch(src);
+            const blob = await res.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            const ext = blob.type.includes('jpeg') || blob.type.includes('jpg') ? 'jpg' : 'png';
+            a.download = `${name}.${ext}`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+          } catch (e) {
+            const a = document.createElement('a');
+            a.href = src;
+            a.download = `${name}.png`;
+            a.target = '_blank';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
+        } else if (sketch.svgPath) {
+          const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">${sketch.svgPath}</svg>`;
+          const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+          const blobUrl = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = blobUrl;
+          a.download = `${name}.svg`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+        }
+
+        this.showToast('📥 Downloaded & saved to Library!');
       };
     }
 

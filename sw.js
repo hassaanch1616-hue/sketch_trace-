@@ -3,7 +3,7 @@
  * Caches application shell, assets, icons, and sketches for 100% offline usage on GitHub Pages.
  */
 
-const CACHE_NAME = 'sketchtrace-v12.0.0';
+const CACHE_NAME = 'sketchtrace-v13.0.0';
 
 const APP_SHELL = [
   './',
