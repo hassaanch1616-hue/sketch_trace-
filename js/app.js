@@ -613,12 +613,26 @@ class SketchTraceApp {
     document.getElementById('heroUploadBtn')?.addEventListener('click', () => fileInput.click());
   }
 
-  // --- My Uploads ---
+  // --- My Uploads & Library ---
   async renderMyUploads() {
     if (!window.SketchTrace.storage) return;
-    const uploads = (await window.SketchTrace.storage.getUploads()) || [];
-    const favs = (await window.SketchTrace.storage.getFavorites()) || [];
-    const downloads = (await window.SketchTrace.storage.getDownloads()) || [];
+    const catalog = window.SketchTrace.sketchCatalog;
+
+    let uploads = (await window.SketchTrace.storage.getUploads()) || [];
+    let favs = (await window.SketchTrace.storage.getFavorites()) || [];
+    let downloads = (await window.SketchTrace.storage.getDownloads()) || [];
+
+    // Ensure full sketch object data (imageUrl, svgPath, name) is populated
+    if (catalog) {
+      favs = favs.map(f => {
+        const catItem = catalog.getSketchById(f.id);
+        return catItem ? { ...catItem, ...f } : f;
+      });
+      downloads = downloads.map(d => {
+        const catItem = catalog.getSketchById(d.id);
+        return catItem ? { ...catItem, ...d } : d;
+      });
+    }
 
     this.renderSketchGrid('myUploadsGrid', uploads);
     this.renderSketchGrid('myFavsGrid', favs);
