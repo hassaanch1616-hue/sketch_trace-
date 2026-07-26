@@ -15,7 +15,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom Design System -->
-  <link rel="stylesheet" href="./css/styles.css?v=60" />
+  <link rel="stylesheet" href="./css/styles.css?v=70" />
 </head>
 <body class="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 font-sans pb-16 md:pb-0">
 
@@ -49,10 +49,6 @@
           🌙 Theme
         </button>
 
-        <button data-nav="aiConverter" class="hidden sm:flex px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-extrabold text-xs items-center gap-1.5 shadow-sm transition-all">
-          🪄 AI Converter
-        </button>
-
         <button data-nav="myUploads" class="hidden sm:flex px-3 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs items-center gap-1.5 shadow-sm">
           📚 Library
         </button>
@@ -78,10 +74,10 @@
             ✨ Professional Anime & Car Sketch Tracing Studio
           </span>
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
-            Trace Anime Characters & Supercars or Convert ANY Photo into Art
+            Trace Anime Characters & Supercars Directly Over Paper
           </h1>
           <p class="text-blue-100 text-sm sm:text-base mb-6 leading-relaxed">
-            Search Naruto, Gojo, Kakashi, Tanjiro, Bugatti, Ferrari, or place your device over paper and trace cleanly!
+            Search Naruto, Gojo, Kakashi, Tanjiro, Bugatti, Ferrari, or upload your own drawing to trace cleanly!
           </p>
 
           <!-- Hero Search Bar -->
@@ -98,10 +94,7 @@
               🚀 Explore 12 Categories
             </button>
             <button id="heroUploadBtn" class="px-6 py-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-extrabold text-sm hover:bg-white/20 transition-transform active:scale-95 flex items-center gap-2">
-              📤 Upload Photo
-            </button>
-            <button id="heroAIBtn" class="px-6 py-3.5 rounded-xl bg-violet-900/50 backdrop-blur-md border border-violet-400/40 text-white font-extrabold text-sm hover:bg-violet-900/70 transition-transform active:scale-95 flex items-center gap-2">
-              🪄 AI Pencil Sketch Converter
+              📤 Upload Photo to Trace
             </button>
           </div>
         </div>
@@ -111,109 +104,93 @@
       <div>
         <div class="flex items-center justify-between mb-4">
           <div>
-            <h2 class="text-2xl font-bold text-slate-900 font-heading">12 Categories Available</h2>
-            <p class="text-xs text-slate-500">260+ HD authentic line art sketches across all 12 custom categories</p>
+            <h2 class="text-2xl font-bold text-slate-900 font-heading">12 Featured Categories</h2>
+            <p class="text-xs text-slate-500">70+ Anime pictures and 30 HD line art sketches in every category</p>
           </div>
         </div>
         <div id="categoriesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           <div data-category="anime" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">✨</div>
             <h3 class="font-bold text-sm text-slate-900">Anime</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Naruto, Tanjiro, Gojo, Sukuna, Sasuke</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>70 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>70+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="cars" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">🏎️</div>
             <h3 class="font-bold text-sm text-slate-900">Cars</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Bugatti, Lamborghini, Ferrari, McLaren</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>20 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Supercars, vintage classics & concepts</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="bikes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🏍️</div>
+            <h3 class="font-bold text-sm text-slate-900">Bikes</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Superbikes, choppers & dirt bikes</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="aircraft" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">✈️</div>
             <h3 class="font-bold text-sm text-slate-900">Aircraft</h3>
             <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Fighter jets & airliners</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>10 Sketches</span><span>→</span></div>
-          </div>
-          <div data-category="cartoon" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
-            <div class="text-3xl mb-2">🎨</div>
-            <h3 class="font-bold text-sm text-slate-900">Cartoon</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Monkey, Chota Bheem, Mickey, Tom & Jerry</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>22 Sketches</span><span>→</span></div>
-          </div>
-          <div data-category="bikes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
-            <div class="text-3xl mb-2">🏍️</div>
-            <h3 class="font-bold text-sm text-slate-900">Bikes</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Yamaha R6, Batcycle, Vespa & Choppers</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>11 Sketches</span><span>→</span></div>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="trains" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">🚆</div>
             <h3 class="font-bold text-sm text-slate-900">Trains</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Bullet trains & Thomas engine</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>14 Sketches</span><span>→</span></div>
-          </div>
-          <div data-category="superheroes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
-            <div class="text-3xl mb-2">⚡</div>
-            <h3 class="font-bold text-sm text-slate-900">Superheroes</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Batman, Iron Man, Spider-Man, Thor</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>18 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Bullet trains & locomotives</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="ships" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">🚢</div>
             <h3 class="font-bold text-sm text-slate-900">Ships</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">RMS Titanic, Pirate galleons & Cruise ships</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>18 Sketches</span><span>→</span></div>
-          </div>
-          <div data-category="fish" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
-            <div class="text-3xl mb-2">🐠</div>
-            <h3 class="font-bold text-sm text-slate-900">Fish</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Baby Shark, Dolphins, Blue Whales, Goldfish</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>24 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Pirate galleons & yachts</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="animals" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">🦁</div>
             <h3 class="font-bold text-sm text-slate-900">Animals</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Lions, Horses, Cats, Dogs, Rabbits, Giraffes</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>21 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Lions, tigers & wild creatures</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
           <div data-category="birds" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
             <div class="text-3xl mb-2">🦅</div>
             <h3 class="font-bold text-sm text-slate-900">Birds</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Peacocks, Parrots, Toucans, Swans, Owls</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>15 Sketches</span><span>→</span></div>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Eagles, owls & peacocks</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
-          <div data-category="flowers" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
-            <div class="text-3xl mb-2">🌸</div>
-            <h3 class="font-bold text-sm text-slate-900">Flowers</h3>
-            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Roses, Tulips, Daisies, Lilies, Hibiscus</p>
-            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>20 Sketches</span><span>→</span></div>
+          <div data-category="fish" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🐠</div>
+            <h3 class="font-bold text-sm text-slate-900">Fish</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Sharks & tropical species</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="dinosaurs" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🦖</div>
+            <h3 class="font-bold text-sm text-slate-900">Dinosaurs</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">T-Rex & Triceratops</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="dragons" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">🐉</div>
+            <h3 class="font-bold text-sm text-slate-900">Dragons</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Fire-breathing beasts</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
+          </div>
+          <div data-category="superheroes" class="category-card cursor-pointer p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-md transition-all">
+            <div class="text-3xl mb-2">⚡</div>
+            <h3 class="font-bold text-sm text-slate-900">Superheroes</h3>
+            <p class="text-xs text-slate-500 mt-0.5 line-clamp-1">Action poses & comic legends</p>
+            <div class="mt-2 flex items-center justify-between text-xs text-blue-600 font-semibold"><span>30+ Sketches</span><span>→</span></div>
           </div>
         </div>
       </div>
 
       <!-- Featured Sketches -->
       <div>
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+        <div class="flex items-center justify-between mb-4">
           <h2 class="text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
             ⭐ Featured HD Anime & Line-Art Sketches
           </h2>
         </div>
-
-        <!-- Credits Section under Featured Heading -->
-        <div class="mb-5 p-4 rounded-2xl bg-slate-900 text-white shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-3">
-          <h3 class="text-xs font-extrabold font-heading text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-            🏆 Credits
-          </h3>
-          <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-200">
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-slate-700/80">
-              <span class="text-slate-400 font-normal">Developer:</span> <span class="text-white font-bold">M.Zohaib</span>
-            </div>
-            <div class="px-3.5 py-1.5 rounded-xl bg-slate-800 border border-slate-700/80">
-              <span class="text-slate-400 font-normal">Co-Developer:</span> <span class="text-white font-bold">M.Hassaan</span>
-            </div>
-          </div>
-        </div>
-
         <div id="featuredGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
       </div>
 
@@ -266,61 +243,6 @@
         </div>
       </div>
       <div id="categorySketchesGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-    </section>
-
-    <!-- AI SKETCH CONVERTER VIEW -->
-    <section id="aiConverterView" class="hidden space-y-6">
-      <div>
-        <button data-nav="home" class="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:underline mb-2">
-          ← Back to Home
-        </button>
-        <h1 class="text-3xl font-extrabold text-slate-900 font-heading flex items-center gap-2">
-          🎨 Beautiful Artistic AI Pencil Sketch Converter
-        </h1>
-        <p class="text-sm text-slate-500 mt-1">Color Dodge Blending AI guarantees 100% natural, beautiful face structure (Eyes, Nose, Lips, Cap, Clothes) with ZERO black splotches!</p>
-      </div>
-
-      <!-- Upload Trigger Box -->
-      <div id="aiUploadTriggerBtn" class="p-8 rounded-3xl bg-white border-2 border-dashed border-violet-400 hover:border-violet-600 text-center cursor-pointer transition-all shadow-sm group">
-        <div class="w-16 h-16 rounded-2xl bg-violet-100 text-violet-600 flex items-center justify-center text-3xl mx-auto mb-3 group-hover:scale-110 transition-transform">
-          📤
-        </div>
-        <h3 class="font-bold text-base text-slate-900">Click / Tap to Select ANY Face Photo or Portrait</h3>
-        <p class="text-xs text-slate-500 mt-1">Color Dodge Pencil Blending • Beautiful Face Structure • Clean Background</p>
-      </div>
-
-      <!-- Conversion Live Comparison & Detail Controls -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
-          <h3 class="font-bold text-sm text-slate-700 flex items-center justify-between">
-            <span>📷 Original Photo</span>
-          </h3>
-          <div class="w-full aspect-square bg-slate-50 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-100">
-            <img id="converterPreview" class="w-full h-full object-contain" src="" alt="Original Photo" />
-          </div>
-        </div>
-
-        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
-          <h3 class="font-bold text-sm text-violet-600 flex items-center justify-between">
-            <span>🎨 Beautiful Pencil Sketch Result</span>
-          </h3>
-          <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden flex items-center justify-center border border-slate-200 shadow-inner">
-            <img id="converterResult" class="w-full h-full object-contain" src="" alt="AI Converted Sketch" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls & Tracing Trigger -->
-      <div class="p-6 rounded-3xl bg-white border border-slate-200 flex flex-wrap items-center justify-between gap-4 shadow-sm">
-        <div class="w-full sm:w-auto flex-1 max-w-xs">
-          <label class="block text-xs font-bold text-slate-700 mb-1">Pencil Softness & Stroke Thickness (Slide to Fine-Tune)</label>
-          <input type="range" id="aiDetailSlider" min="15" max="85" step="5" value="45" class="w-full accent-violet-600" />
-        </div>
-
-        <button id="startTraceConvertedBtn" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-extrabold text-sm shadow-lg shadow-violet-500/20 transition-transform active:scale-95 flex items-center gap-2">
-          📷 Start Tracing AI Sketch
-        </button>
-      </div>
     </section>
 
     <!-- FULL SCREEN MOBILE & DESKTOP FIT CAMERA TRACE VIEW -->
@@ -404,6 +326,9 @@
           </button>
           <button id="resetPosBtn" class="py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white">
             🎯 Reset Pos
+          </button>
+          <button id="traceScreenshotBtn" class="py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white col-span-1">
+            📷 Screenshot
           </button>
         </div>
 
@@ -504,21 +429,8 @@
         <h3 class="font-bold text-base text-slate-900 mb-3">Catalog Admin Sketches (Tap to Open & Trace)</h3>
         <div id="adminSketchesList" class="space-y-3"></div>
       </div>
-    <!-- FOOTER & CREDITS SECTION -->
-    <footer class="mt-16 mb-20 md:mb-8 border-t border-slate-200 bg-slate-900 text-white py-12 px-6 rounded-3xl text-center shadow-2xl">
-      <div class="max-w-4xl mx-auto space-y-5">
-        <h2 class="text-2xl font-extrabold font-heading text-amber-400 tracking-wide uppercase">Credits</h2>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm font-semibold text-slate-200">
-          <div class="px-6 py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md">
-            <span class="text-slate-400 font-normal">Developer:</span> <span class="text-white font-bold text-base">M.Zohaib</span>
-          </div>
-          <div class="px-6 py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md">
-            <span class="text-slate-400 font-normal">Co-Developer:</span> <span class="text-white font-bold text-base">M.Hassaan</span>
-          </div>
-        </div>
-        <p class="text-xs text-slate-500 pt-3">© 2026 SketchTrace AR Studio. All rights reserved.</p>
-      </div>
-    </footer>
+    </section>
+
   </main>
 
   <!-- SKETCH DETAILS MODAL -->
@@ -558,14 +470,10 @@
 
   <!-- MOBILE BOTTOM NAVIGATION -->
   <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 shadow-lg">
-    <div class="grid grid-cols-4 h-16">
+    <div class="grid grid-cols-3 h-16">
       <button data-nav="home" class="flex flex-col items-center justify-center text-slate-700 font-bold">
         <span class="text-lg">🏠</span>
         <span class="text-[10px]">Home</span>
-      </button>
-      <button data-nav="aiConverter" class="flex flex-col items-center justify-center text-slate-700 font-bold">
-        <span class="text-lg">🪄</span>
-        <span class="text-[10px]">AI Convert</span>
       </button>
       <button data-nav="myUploads" class="flex flex-col items-center justify-center text-slate-700 font-bold">
         <span class="text-lg">📚</span>
@@ -579,13 +487,12 @@
   </nav>
 
   <!-- Script tags -->
-  <script src="./js/sketchCatalog.js?v=60"></script>
-  <script src="./js/storage.js?v=60"></script>
-  <script src="./js/camera.js?v=60"></script>
-  <script src="./js/traceEngine.js?v=60"></script>
-  <script src="./js/aiConverter.js?v=60"></script>
-  <script src="./js/screenLock.js?v=60"></script>
-  <script src="./js/admin.js?v=60"></script>
-  <script src="./js/app.js?v=60"></script>
+  <script src="./js/sketchCatalog.js?v=70"></script>
+  <script src="./js/storage.js?v=70"></script>
+  <script src="./js/camera.js?v=70"></script>
+  <script src="./js/traceEngine.js?v=70"></script>
+  <script src="./js/screenLock.js?v=70"></script>
+  <script src="./js/admin.js?v=70"></script>
+  <script src="./js/app.js?v=70"></script>
 </body>
 </html>

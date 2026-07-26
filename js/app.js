@@ -445,7 +445,6 @@ class SketchTraceApp {
     }
   }
 
-  // --- AI Converter ---
   bindConverter() {
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
@@ -456,59 +455,15 @@ class SketchTraceApp {
       if (file) {
         const reader = new FileReader();
         reader.onload = (evt) => {
-          this.switchView('aiConverter', { imageSource: evt.target.result });
+          const customSketch = { id: `upload-${Date.now()}`, name: file.name || 'My Custom Photo', category: 'Uploads', dataUrl: evt.target.result };
+          if (window.SketchTrace.storage) window.SketchTrace.storage.saveUpload(customSketch);
+          this.switchView('cameraTrace', { sketch: customSketch });
         };
         reader.readAsDataURL(file);
       }
     };
 
     document.getElementById('heroUploadBtn')?.addEventListener('click', () => fileInput.click());
-    document.getElementById('heroAIBtn')?.addEventListener('click', () => {
-      // Direct switch to AI Converter View AND allow uploading photo
-      this.switchView('aiConverter');
-      fileInput.click();
-    });
-
-    const uploadArea = document.getElementById('aiUploadTriggerBtn');
-    if (uploadArea) uploadArea.onclick = () => fileInput.click();
-  }
-
-  setupAIConverterView(imageSource) {
-    const preview = document.getElementById('converterPreview');
-    const result = document.getElementById('converterResult');
-    const slider = document.getElementById('aiDetailSlider');
-    if (preview && imageSource) preview.src = imageSource;
-
-    const convert = async (intensityVal = 50) => {
-      if (window.SketchTrace.aiConverter && imageSource) {
-        this.showToast('🪄 Converting photo to AI Sketch outline...');
-        const converted = await window.SketchTrace.aiConverter.convertImage(imageSource, 'pencil', intensityVal);
-        if (result) result.src = converted;
-        this.currentConvertedImage = converted;
-      }
-    };
-
-    if (imageSource) convert(slider ? parseInt(slider.value) : 50);
-
-    if (slider) {
-      slider.onchange = (e) => {
-        convert(parseInt(e.target.value));
-      };
-    }
-
-    const startBtn = document.getElementById('startTraceConvertedBtn');
-    if (startBtn) {
-      startBtn.onclick = () => {
-        const dataUrl = (result && result.src) || this.currentConvertedImage;
-        if (dataUrl) {
-          const customSketch = { id: `ai-${Date.now()}`, name: 'AI Converted Sketch', category: 'AI Drawings', dataUrl: dataUrl };
-          if (window.SketchTrace.storage) window.SketchTrace.storage.saveUpload(customSketch);
-          this.switchView('cameraTrace', { sketch: customSketch });
-        } else {
-          this.showToast('Please select or upload a photo to convert first.');
-        }
-      };
-    }
   }
 
   // --- My Uploads ---
