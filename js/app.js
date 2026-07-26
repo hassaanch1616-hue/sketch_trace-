@@ -34,11 +34,62 @@ class SketchTraceApp {
       this.bindTraceControls();
       this.bindConverter();
       this.bindAdmin();
+      this.bindPwaInstall();
+      this.registerServiceWorker();
 
       this.renderHome();
     } catch (err) {
       console.error('App init error:', err);
     }
+  }
+
+  registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('[PWA] ServiceWorker registered with scope:', reg.scope);
+            reg.onupdatefound = () => {
+              const installingWorker = reg.installing;
+              if (installingWorker) {
+                installingWorker.onstatechange = () => {
+                  if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    this.showToast('🚀 App updated! New version ready.');
+                  }
+                };
+              }
+            };
+          })
+          .catch((err) => {
+            console.error('[PWA] ServiceWorker registration error:', err);
+          });
+      });
+    }
+  }
+
+  bindPwaInstall() {
+    let deferredPrompt = null;
+    const installBtn = document.getElementById('pwaInstallBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (installBtn) {
+        installBtn.classList.remove('hidden');
+        installBtn.onclick = async () => {
+          installBtn.classList.add('hidden');
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          console.log('[PWA] User response to install prompt:', outcome);
+          deferredPrompt = null;
+        };
+      }
+    });
+
+    window.addEventListener('appinstalled', () => {
+      if (installBtn) installBtn.classList.add('hidden');
+      this.showToast('🎉 SketchTrace Installed Successfully!');
+    });
   }
 
   handleResize() {

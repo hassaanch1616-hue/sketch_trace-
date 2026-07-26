@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>SketchTrace – Mobile Sketch Tracing Studio</title>
-  <meta name="description" content="Professional mobile camera overlay sketch tracing web application." />
+  <title>SketchTrace – Mobile AR Sketch Tracing Studio</title>
+  <meta name="description" content="Professional mobile AR camera overlay sketch tracing progressive web application." />
+  
+  <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#2563eb" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="SketchTrace" />
+
+  <!-- Icons & Manifest -->
   <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/icon-512.png" />
 
   <!-- Fonts & Tailwind CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +26,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom Design System -->
-  <link rel="stylesheet" href="./css/styles.css?v=70" />
+  <link rel="stylesheet" href="./css/styles.css?v=100" />
 </head>
 <body class="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 font-sans pb-16 md:pb-0">
 
@@ -30,7 +41,7 @@
         </div>
         <div>
           <span class="font-extrabold text-xl tracking-tight text-slate-900 font-heading">Sketch<span class="text-blue-600">Trace</span></span>
-          <span class="hidden sm:inline-block ml-2 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200">Mobile Camera Studio</span>
+          <span class="hidden sm:inline-block ml-2 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200">Mobile AR Studio</span>
         </div>
       </div>
 
@@ -45,6 +56,10 @@
 
       <!-- Header Actions -->
       <div class="flex items-center gap-2">
+        <button id="pwaInstallBtn" class="hidden px-3 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs flex items-center gap-1.5 shadow-md animate-pulse">
+          📲 Install App
+        </button>
+
         <button id="themeToggleBtn" title="Toggle Light / Dark Theme" class="p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm flex items-center gap-1.5 font-bold text-xs">
           🌙 Theme
         </button>
@@ -487,12 +502,12 @@
   </nav>
 
   <!-- Script tags -->
-  <script src="./js/sketchCatalog.js?v=70"></script>
-  <script src="./js/storage.js?v=70"></script>
-  <script src="./js/camera.js?v=70"></script>
-  <script src="./js/traceEngine.js?v=70"></script>
-  <script src="./js/screenLock.js?v=70"></script>
-  <script src="./js/admin.js?v=70"></script>
-  <script src="./js/app.js?v=70"></script>
+  <script src="./js/sketchCatalog.js?v=100"></script>
+  <script src="./js/storage.js?v=100"></script>
+  <script src="./js/camera.js?v=100"></script>
+  <script src="./js/traceEngine.js?v=100"></script>
+  <script src="./js/screenLock.js?v=100"></script>
+  <script src="./js/admin.js?v=100"></script>
+  <script src="./js/app.js?v=100"></script>
 </body>
 </html>
