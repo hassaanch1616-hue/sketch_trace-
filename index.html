@@ -448,6 +448,87 @@
 
   </main>
 
+  <!-- 10 THEMES SELECTOR MODAL -->
+  <div id="themeModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-xl rounded-3xl bg-slate-900 text-white p-6 space-y-5 shadow-2xl border border-slate-700">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-extrabold font-heading text-blue-400 flex items-center gap-2">
+            🎨 Choose Your Theme (10 Color Styles)
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Customize your SketchTrace studio appearance instantly</p>
+        </div>
+        <button id="closeThemeModalBtn" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center">
+          ✕
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 max-h-[70vh] overflow-y-auto p-1">
+        
+        <div data-theme-btn="light" class="theme-pill p-3 rounded-2xl bg-slate-100 text-slate-900 border-2 border-transparent hover:border-blue-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">☀️</div>
+          <div class="font-extrabold text-xs">Light Studio</div>
+          <div class="text-[9px] text-slate-500 font-semibold">Classic Slate</div>
+        </div>
+
+        <div data-theme-btn="dark" class="theme-pill p-3 rounded-2xl bg-slate-800 text-white border-2 border-transparent hover:border-blue-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🌙</div>
+          <div class="font-extrabold text-xs">Midnight</div>
+          <div class="text-[9px] text-slate-400 font-semibold">Dark Cyber</div>
+        </div>
+
+        <div data-theme-btn="crimson" class="theme-pill p-3 rounded-2xl bg-red-950 text-red-200 border-2 border-transparent hover:border-red-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🔥</div>
+          <div class="font-extrabold text-xs">Anime Crimson</div>
+          <div class="text-[9px] text-red-400 font-semibold">Akatsuki Red</div>
+        </div>
+
+        <div data-theme-btn="cyberpunk" class="theme-pill p-3 rounded-2xl bg-fuchsia-950 text-fuchsia-200 border-2 border-transparent hover:border-fuchsia-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🏎️</div>
+          <div class="font-extrabold text-xs">Synthwave</div>
+          <div class="text-[9px] text-fuchsia-400 font-semibold">Pink & Cyan</div>
+        </div>
+
+        <div data-theme-btn="emerald" class="theme-pill p-3 rounded-2xl bg-emerald-950 text-emerald-200 border-2 border-transparent hover:border-emerald-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🍃</div>
+          <div class="font-extrabold text-xs">Forest Emerald</div>
+          <div class="text-[9px] text-emerald-400 font-semibold">Calm Sage</div>
+        </div>
+
+        <div data-theme-btn="violet" class="theme-pill p-3 rounded-2xl bg-violet-950 text-violet-200 border-2 border-transparent hover:border-violet-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">💜</div>
+          <div class="font-extrabold text-xs">Royalty Violet</div>
+          <div class="text-[9px] text-violet-400 font-semibold">Ultra Purple</div>
+        </div>
+
+        <div data-theme-btn="ocean" class="theme-pill p-3 rounded-2xl bg-sky-950 text-sky-200 border-2 border-transparent hover:border-sky-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🌊</div>
+          <div class="font-extrabold text-xs">Ocean Deep</div>
+          <div class="text-[9px] text-sky-400 font-semibold">Cyan Sea</div>
+        </div>
+
+        <div data-theme-btn="amber" class="theme-pill p-3 rounded-2xl bg-amber-950 text-amber-200 border-2 border-transparent hover:border-amber-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">⚡</div>
+          <div class="font-extrabold text-xs">Sunset Gold</div>
+          <div class="text-[9px] text-amber-400 font-semibold">Cyber Amber</div>
+        </div>
+
+        <div data-theme-btn="sakura" class="theme-pill p-3 rounded-2xl bg-pink-100 text-pink-900 border-2 border-transparent hover:border-pink-500 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🌸</div>
+          <div class="font-extrabold text-xs">Sakura Pastel</div>
+          <div class="text-[9px] text-pink-600 font-semibold">Anime Pink</div>
+        </div>
+
+        <div data-theme-btn="oled" class="theme-pill p-3 rounded-2xl bg-black text-white border-2 border-zinc-800 hover:border-sky-400 text-center cursor-pointer space-y-1">
+          <div class="text-2xl">🖤</div>
+          <div class="font-extrabold text-xs">Pitch Black</div>
+          <div class="text-[9px] text-zinc-400 font-semibold">Pure OLED</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- SKETCH DETAILS MODAL -->
   <div id="sketchDetailModal" class="hidden modal-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="relative w-full max-w-lg rounded-3xl bg-white p-6 space-y-6 shadow-2xl border border-slate-200">

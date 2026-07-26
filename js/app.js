@@ -35,12 +35,37 @@ class SketchTraceApp {
       this.bindConverter();
       this.bindAdmin();
       this.bindPwaInstall();
+      this.bindThemeModal();
       this.registerServiceWorker();
 
       this.renderHome();
     } catch (err) {
       console.error('App init error:', err);
     }
+  }
+
+  bindThemeModal() {
+    const modal = document.getElementById('themeModal');
+    const toggleBtn = document.getElementById('themeToggleBtn');
+    const closeBtn = document.getElementById('closeThemeModalBtn');
+
+    if (toggleBtn && modal) {
+      toggleBtn.onclick = () => modal.classList.remove('hidden');
+    }
+    if (closeBtn && modal) {
+      closeBtn.onclick = () => modal.classList.add('hidden');
+    }
+
+    document.querySelectorAll('[data-theme-btn]').forEach(btn => {
+      btn.onclick = () => {
+        const themeName = btn.getAttribute('data-theme-btn');
+        if (window.SketchTrace.storage) {
+          window.SketchTrace.storage.setTheme(themeName);
+          this.showToast(`🎨 Theme changed to ${themeName.toUpperCase()}!`);
+        }
+        modal?.classList.add('hidden');
+      };
+    });
   }
 
   registerServiceWorker() {

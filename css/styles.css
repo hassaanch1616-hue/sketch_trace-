@@ -1,0 +1,188 @@
+/* SketchTrace Design System - 10 Themes Engine */
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.9);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --accent-primary: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* 1. ☀️ LIGHT STUDIO (Default) */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.9);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --accent-primary: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+}
+
+/* 2. 🌙 DARK CYBERPUNK (Midnight) */
+[data-theme="dark"] {
+  --bg-primary: #0b0f19;
+  --bg-card: #131c2e;
+  --bg-header: rgba(19, 28, 46, 0.9);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-light: #1e293b;
+}
+
+/* 3. 🔥 ANIME CRIMSON (Akatsuki Red & Gold) */
+[data-theme="crimson"] {
+  --bg-primary: #0f0707;
+  --bg-card: #1a0c0c;
+  --bg-header: rgba(26, 12, 12, 0.9);
+  --text-main: #fef2f2;
+  --text-muted: #fca5a5;
+  --border-color: #3b1414;
+  --accent-primary: #dc2626;
+  --accent-hover: #b91c1c;
+  --accent-light: #450a0a;
+}
+
+/* 4. 🏎️ NEON CYBERPUNK (Pink & Cyan Synthwave) */
+[data-theme="cyberpunk"] {
+  --bg-primary: #0d0714;
+  --bg-card: #180e25;
+  --bg-header: rgba(24, 14, 37, 0.9);
+  --text-main: #fdf2f8;
+  --text-muted: #f472b6;
+  --border-color: #3b114d;
+  --accent-primary: #ec4899;
+  --accent-hover: #db2777;
+  --accent-light: #500732;
+}
+
+/* 5. 🍃 FOREST EMERALD (Sage Green) */
+[data-theme="emerald"] {
+  --bg-primary: #06120e;
+  --bg-card: #0d221b;
+  --bg-header: rgba(13, 34, 27, 0.9);
+  --text-main: #ecfdf5;
+  --text-muted: #6ee7b7;
+  --border-color: #143d30;
+  --accent-primary: #059669;
+  --accent-hover: #047857;
+  --accent-light: #064e3b;
+}
+
+/* 6. 💜 ROYALTY VIOLET (Purple Glow) */
+[data-theme="violet"] {
+  --bg-primary: #0b0612;
+  --bg-card: #160d24;
+  --bg-header: rgba(22, 13, 36, 0.9);
+  --text-main: #faf5ff;
+  --text-muted: #c084fc;
+  --border-color: #2e184b;
+  --accent-primary: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-light: #3b0764;
+}
+
+/* 7. 🌊 OCEAN DEEP (Cyan Sea) */
+[data-theme="ocean"] {
+  --bg-primary: #03131e;
+  --bg-card: #082335;
+  --bg-header: rgba(8, 35, 53, 0.9);
+  --text-main: #f0f9ff;
+  --text-muted: #7dd3fc;
+  --border-color: #0f4466;
+  --accent-primary: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-light: #0c4a6e;
+}
+
+/* 8. ⚡ SUNSET GOLD (Cyber Amber) */
+[data-theme="amber"] {
+  --bg-primary: #120902;
+  --bg-card: #241306;
+  --bg-header: rgba(36, 19, 6, 0.9);
+  --text-main: #fffbeb;
+  --text-muted: #fcd34d;
+  --border-color: #4a280d;
+  --accent-primary: #d97706;
+  --accent-hover: #b45309;
+  --accent-light: #451a03;
+}
+
+/* 9. 🌸 SAKURA PASTEL (Anime Rose Pink) */
+[data-theme="sakura"] {
+  --bg-primary: #fdf2f8;
+  --bg-card: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.9);
+  --text-main: #831843;
+  --text-muted: #db2777;
+  --border-color: #fbcfe8;
+  --accent-primary: #db2777;
+  --accent-hover: #be185d;
+  --accent-light: #fce7f3;
+}
+
+/* 10. 🖤 PITCH BLACK OLED (Stealth Pure Black) */
+[data-theme="oled"] {
+  --bg-primary: #000000;
+  --bg-card: #0c0c0c;
+  --bg-header: rgba(12, 12, 12, 0.9);
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --border-color: #27272a;
+  --accent-primary: #38bdf8;
+  --accent-hover: #0284c7;
+  --accent-light: #18181b;
+}
+
+/* Global Applied Theme Variables */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--bg-header) !important;
+  border-color: var(--border-color) !important;
+}
+
+.bg-white {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+.text-slate-900 {
+  color: var(--text-main) !important;
+}
+
+.text-slate-500, .text-slate-700 {
+  color: var(--text-muted) !important;
+}
+
+.border-slate-200 {
+  border-color: var(--border-color) !important;
+}
+
+.bg-slate-50, .bg-slate-100 {
+  background-color: var(--accent-light) !important;
+  color: var(--text-main) !important;
+}
+
+/* Theme Selector Modal styling */
+.theme-pill {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.theme-pill:hover {
+  transform: translateY(-2px);
+}

@@ -23,12 +23,12 @@ class StorageService {
 
   setTheme(t) {
     localStorage.setItem('sketchtrace_theme', t);
-    if (t === 'dark') {
+    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.className = t;
+    if (['dark', 'crimson', 'cyberpunk', 'emerald', 'violet', 'ocean', 'amber', 'oled'].includes(t)) {
       document.documentElement.classList.add('dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      document.documentElement.setAttribute('data-theme', 'light');
     }
   }
 
