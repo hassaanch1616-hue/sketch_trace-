@@ -1110,19 +1110,19 @@ const CARTOON_PRESETS = [
     imageUrl: './assets/cartoon/cartoon-20.webp'
   },
   {
-    id: 'cartoon-shizuka-minamoto',
-    name: 'Shizuka Minamoto (Doraemon)',
+    id: 'cartoon-pikachu-electric',
+    name: 'Pikachu Electric Art',
     category: 'cartoon',
-    tags: ['cartoon', 'shizuka', 'doraemon', 'anime'],
+    tags: ['cartoon', 'pikachu', 'pokemon', 'electric', 'anime'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/cartoon/cartoon-21.webp'
   },
   {
-    id: 'cartoon-dekisugi',
-    name: 'Dekisugi Hidetoshi (Doraemon)',
+    id: 'cartoon-shizuka-minamoto',
+    name: 'Shizuka Minamoto (Doraemon)',
     category: 'cartoon',
-    tags: ['cartoon', 'dekisugi', 'hidetoshi', 'doraemon'],
+    tags: ['cartoon', 'shizuka', 'doraemon', 'anime'],
     difficulty: 'Easy',
     popularity: 94,
     imageUrl: './assets/cartoon/cartoon-22.jpg'
