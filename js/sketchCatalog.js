@@ -838,36 +838,36 @@ const CAR_PRESETS = [
 const AIRCRAFT_PRESETS = [
   {
     id: 'aircraft-commercial-jet',
-    name: 'Commercial Jet Airliner',
+    name: 'Boeing 787 Dreamliner Commercial Jet',
     category: 'aircraft',
-    tags: ['aircraft', 'airplane', 'jet', 'airliner', 'commercial'],
+    tags: ['aircraft', 'airplane', 'boeing', '787', 'airliner'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/aircraft/aircraft-1.jpg'
   },
   {
     id: 'aircraft-passenger-plane',
-    name: 'Passenger Airplane',
+    name: 'Airbus A380 Double-Decker Airliner',
     category: 'aircraft',
-    tags: ['aircraft', 'airplane', 'passenger', 'flight'],
+    tags: ['aircraft', 'airplane', 'airbus', 'a380', 'passenger'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/aircraft/aircraft-2.jpg'
   },
   {
     id: 'aircraft-helicopter',
-    name: 'Helicopter Aircraft',
+    name: 'AH-64 Apache Attack Helicopter',
     category: 'aircraft',
-    tags: ['aircraft', 'helicopter', 'chopper', 'rotor'],
+    tags: ['aircraft', 'helicopter', 'apache', 'chopper', 'rotor'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/aircraft/aircraft-3.webp'
   },
   {
     id: 'aircraft-propeller-biplane',
-    name: 'Propeller Biplane',
+    name: 'Sopwith Camel WW1 Vintage Biplane',
     category: 'aircraft',
-    tags: ['aircraft', 'biplane', 'propeller', 'vintage'],
+    tags: ['aircraft', 'biplane', 'sopwith', 'propeller', 'vintage'],
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/aircraft/aircraft-4.jpg'
@@ -883,7 +883,7 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-f15-strike-eagle',
-    name: 'F-15 Strike Eagle',
+    name: 'F-15 Strike Eagle Supersonic Jet',
     category: 'aircraft',
     tags: ['aircraft', 'f-15', 'strike eagle', 'fighter jet'],
     difficulty: 'Hard',
@@ -892,7 +892,7 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-f5-tiger',
-    name: 'F-5 Tiger Fighter Jet',
+    name: 'Northrop F-5 Tiger II Fighter',
     category: 'aircraft',
     tags: ['aircraft', 'f-5', 'tiger', 'fighter jet'],
     difficulty: 'Hard',
@@ -901,27 +901,27 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-supersonic-jet',
-    name: 'Supersonic Jet Aircraft',
+    name: 'Concorde Supersonic Passenger Jet',
     category: 'aircraft',
-    tags: ['aircraft', 'supersonic', 'jet', 'military'],
+    tags: ['aircraft', 'concorde', 'supersonic', 'jet'],
     difficulty: 'Hard',
     popularity: 96,
     imageUrl: './assets/aircraft/aircraft-8.jpg'
   },
   {
     id: 'aircraft-military-cargo',
-    name: 'Military Cargo Transport Plane',
+    name: 'Lockheed C-130 Hercules Cargo Plane',
     category: 'aircraft',
-    tags: ['aircraft', 'cargo', 'military', 'transport'],
+    tags: ['aircraft', 'hercules', 'cargo', 'military'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/aircraft/aircraft-9.jpg'
   },
   {
     id: 'aircraft-vintage-monoplane',
-    name: 'Vintage Monoplane',
+    name: 'P-51 Mustang Vintage Monoplane',
     category: 'aircraft',
-    tags: ['aircraft', 'monoplane', 'vintage', 'classic'],
+    tags: ['aircraft', 'p-51', 'mustang', 'vintage', 'classic'],
     difficulty: 'Medium',
     popularity: 93,
     imageUrl: './assets/aircraft/aircraft-10.jpg'
