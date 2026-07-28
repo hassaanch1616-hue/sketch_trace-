@@ -933,7 +933,7 @@ const CARTOON_PRESETS = [
     id: 'cartoon-tom-cat',
     name: 'Tom Cat (Tom & Jerry)',
     category: 'cartoon',
-    tags: ['cartoon', 'tom', 'jerry', 'cat', 'tom and jerry'],
+    tags: ['cartoon', 'tom cat', 'tom and jerry', 'cat'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/cartoon/cartoon-1.webp'
@@ -948,13 +948,22 @@ const CARTOON_PRESETS = [
     imageUrl: './assets/cartoon/cartoon-2.jpg'
   },
   {
+    id: 'cartoon-gian-gouda',
+    name: 'Gian / Takeshi Gouda (Doraemon)',
+    category: 'cartoon',
+    tags: ['cartoon', 'gian', 'takeshi gouda', 'doraemon'],
+    difficulty: 'Medium',
+    popularity: 98,
+    imageUrl: './assets/cartoon/cartoon-3.webp'
+  },
+  {
     id: 'cartoon-squidward',
     name: 'Squidward Tentacles (SpongeBob)',
     category: 'cartoon',
     tags: ['cartoon', 'squidward', 'spongebob', 'nickelodeon'],
-    difficulty: 'Medium',
-    popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-3.webp'
+    difficulty: 'Hard',
+    popularity: 100,
+    imageUrl: './assets/cartoon/cartoon-4.webp'
   },
   {
     id: 'cartoon-sonic-hedgehog',
@@ -962,71 +971,17 @@ const CARTOON_PRESETS = [
     category: 'cartoon',
     tags: ['cartoon', 'sonic', 'hedgehog', 'sega', 'gaming'],
     difficulty: 'Hard',
-    popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-4.webp'
+    popularity: 99,
+    imageUrl: './assets/cartoon/cartoon-5.webp'
   },
   {
     id: 'cartoon-nick-judy-zootopia',
     name: 'Nick Wilde & Judy Hopps (Zootopia)',
     category: 'cartoon',
     tags: ['cartoon', 'zootopia', 'nick wilde', 'judy hopps', 'disney'],
-    difficulty: 'Hard',
-    popularity: 99,
-    imageUrl: './assets/cartoon/cartoon-5.webp'
-  },
-  {
-    id: 'cartoon-hello-kitty',
-    name: 'Hello Kitty',
-    category: 'cartoon',
-    tags: ['cartoon', 'hello kitty', 'sanrio', 'cute'],
     difficulty: 'Easy',
     popularity: 99,
     imageUrl: './assets/cartoon/cartoon-6.webp'
-  },
-  {
-    id: 'cartoon-mickey-mouse',
-    name: 'Mickey Mouse',
-    category: 'cartoon',
-    tags: ['cartoon', 'mickey mouse', 'disney', 'classic'],
-    difficulty: 'Medium',
-    popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-7.jpg'
-  },
-  {
-    id: 'cartoon-dancing-minion',
-    name: 'Dancing Minion Dave',
-    category: 'cartoon',
-    tags: ['cartoon', 'minion', 'dave', 'despicable me'],
-    difficulty: 'Easy',
-    popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-8.webp'
-  },
-  {
-    id: 'cartoon-pikachu-electric',
-    name: 'Pikachu (Electric Art)',
-    category: 'cartoon',
-    tags: ['cartoon', 'pikachu', 'pokemon', 'anime'],
-    difficulty: 'Hard',
-    popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-9.webp'
-  },
-  {
-    id: 'cartoon-shizuka-minamoto',
-    name: 'Shizuka Minamoto (Doraemon)',
-    category: 'cartoon',
-    tags: ['cartoon', 'shizuka', 'doraemon', 'anime'],
-    difficulty: 'Medium',
-    popularity: 97,
-    imageUrl: './assets/cartoon/cartoon-10.webp'
-  },
-  {
-    id: 'cartoon-gian-gouda',
-    name: 'Gian / Takeshi Gouda (Doraemon)',
-    category: 'cartoon',
-    tags: ['cartoon', 'gian', 'takeshi gouda', 'doraemon'],
-    difficulty: 'Medium',
-    popularity: 96,
-    imageUrl: './assets/cartoon/cartoon-11.jpg'
   },
   {
     id: 'cartoon-doraemon',
@@ -1035,16 +990,16 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'doraemon', 'nobita', 'cat robot'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-12.jpg'
+    imageUrl: './assets/cartoon/cartoon-7.jpg'
   },
   {
     id: 'cartoon-carl-fredricksen',
     name: 'Carl Fredricksen (UP Movie)',
     category: 'cartoon',
     tags: ['cartoon', 'carl', 'up', 'pixar', 'disney', 'balloons'],
-    difficulty: 'Hard',
+    difficulty: 'Easy',
     popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-13.jpg'
+    imageUrl: './assets/cartoon/cartoon-8.webp'
   },
   {
     id: 'cartoon-homer-simpson',
@@ -1053,16 +1008,16 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'homer', 'simpson', 'the simpsons'],
     difficulty: 'Medium',
     popularity: 99,
-    imageUrl: './assets/cartoon/cartoon-14.webp'
+    imageUrl: './assets/cartoon/cartoon-9.webp'
   },
   {
     id: 'cartoon-happy-pikachu',
     name: 'Happy Waving Pikachu',
     category: 'cartoon',
     tags: ['cartoon', 'pikachu', 'pokemon'],
-    difficulty: 'Easy',
-    popularity: 99,
-    imageUrl: './assets/cartoon/cartoon-15.webp'
+    difficulty: 'Medium',
+    popularity: 97,
+    imageUrl: './assets/cartoon/cartoon-10.webp'
   },
   {
     id: 'cartoon-robin-teen-titans',
@@ -1070,35 +1025,8 @@ const CARTOON_PRESETS = [
     category: 'cartoon',
     tags: ['cartoon', 'robin', 'teen titans', 'teen titans go', 'dc'],
     difficulty: 'Medium',
-    popularity: 98,
-    imageUrl: './assets/cartoon/cartoon-16.webp'
-  },
-  {
-    id: 'cartoon-dekisugi',
-    name: 'Dekisugi Hidetoshi (Doraemon)',
-    category: 'cartoon',
-    tags: ['cartoon', 'dekisugi', 'hidetoshi', 'doraemon'],
-    difficulty: 'Medium',
-    popularity: 95,
-    imageUrl: './assets/cartoon/cartoon-17.webp'
-  },
-  {
-    id: 'cartoon-suneo',
-    name: 'Suneo Honekawa (Doraemon)',
-    category: 'cartoon',
-    tags: ['cartoon', 'suneo', 'honekawa', 'doraemon'],
-    difficulty: 'Medium',
     popularity: 96,
-    imageUrl: './assets/cartoon/cartoon-18.webp'
-  },
-  {
-    id: 'cartoon-boss-baby',
-    name: 'The Boss Baby (Ted Templeton)',
-    category: 'cartoon',
-    tags: ['cartoon', 'boss baby', 'ted templeton', 'dreamworks'],
-    difficulty: 'Medium',
-    popularity: 99,
-    imageUrl: './assets/cartoon/cartoon-19.webp'
+    imageUrl: './assets/cartoon/cartoon-11.jpg'
   },
   {
     id: 'cartoon-nobita-nobi',
@@ -1107,7 +1035,34 @@ const CARTOON_PRESETS = [
     tags: ['cartoon', 'nobita', 'nobi', 'doraemon'],
     difficulty: 'Medium',
     popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-20.webp'
+    imageUrl: './assets/cartoon/cartoon-12.jpg'
+  },
+  {
+    id: 'cartoon-suneo',
+    name: 'Suneo Honekawa (Doraemon)',
+    category: 'cartoon',
+    tags: ['cartoon', 'suneo', 'honekawa', 'doraemon'],
+    difficulty: 'Hard',
+    popularity: 98,
+    imageUrl: './assets/cartoon/cartoon-13.jpg'
+  },
+  {
+    id: 'cartoon-boss-baby',
+    name: 'The Boss Baby (Ted Templeton)',
+    category: 'cartoon',
+    tags: ['cartoon', 'boss baby', 'ted templeton', 'dreamworks'],
+    difficulty: 'Medium',
+    popularity: 99,
+    imageUrl: './assets/cartoon/cartoon-14.webp'
+  },
+  {
+    id: 'cartoon-nobita-walking',
+    name: 'Nobita Nobi Walking (Doraemon)',
+    category: 'cartoon',
+    tags: ['cartoon', 'nobita', 'doraemon'],
+    difficulty: 'Easy',
+    popularity: 99,
+    imageUrl: './assets/cartoon/cartoon-15.webp'
   },
   {
     id: 'cartoon-spongebob-squarepants',
@@ -1115,14 +1070,59 @@ const CARTOON_PRESETS = [
     category: 'cartoon',
     tags: ['cartoon', 'spongebob', 'squarepants', 'nickelodeon'],
     difficulty: 'Medium',
-    popularity: 100,
-    imageUrl: './assets/cartoon/cartoon-21.webp'
+    popularity: 98,
+    imageUrl: './assets/cartoon/cartoon-16.webp'
   },
   {
     id: 'cartoon-cute-duckling',
     name: 'Cute Duckling in Raincoat',
     category: 'cartoon',
     tags: ['cartoon', 'duckling', 'duck', 'raincoat', 'cute'],
+    difficulty: 'Medium',
+    popularity: 95,
+    imageUrl: './assets/cartoon/cartoon-17.webp'
+  },
+  {
+    id: 'cartoon-hello-kitty',
+    name: 'Hello Kitty',
+    category: 'cartoon',
+    tags: ['cartoon', 'hello kitty', 'sanrio', 'cute'],
+    difficulty: 'Medium',
+    popularity: 96,
+    imageUrl: './assets/cartoon/cartoon-18.webp'
+  },
+  {
+    id: 'cartoon-mickey-mouse',
+    name: 'Mickey Mouse',
+    category: 'cartoon',
+    tags: ['cartoon', 'mickey mouse', 'disney', 'classic'],
+    difficulty: 'Medium',
+    popularity: 99,
+    imageUrl: './assets/cartoon/cartoon-19.webp'
+  },
+  {
+    id: 'cartoon-dancing-minion',
+    name: 'Dancing Minion Dave',
+    category: 'cartoon',
+    tags: ['cartoon', 'minion', 'dave', 'despicable me'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/cartoon/cartoon-20.webp'
+  },
+  {
+    id: 'cartoon-shizuka-minamoto',
+    name: 'Shizuka Minamoto (Doraemon)',
+    category: 'cartoon',
+    tags: ['cartoon', 'shizuka', 'doraemon', 'anime'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/cartoon/cartoon-21.webp'
+  },
+  {
+    id: 'cartoon-dekisugi',
+    name: 'Dekisugi Hidetoshi (Doraemon)',
+    category: 'cartoon',
+    tags: ['cartoon', 'dekisugi', 'hidetoshi', 'doraemon'],
     difficulty: 'Easy',
     popularity: 94,
     imageUrl: './assets/cartoon/cartoon-22.jpg'
