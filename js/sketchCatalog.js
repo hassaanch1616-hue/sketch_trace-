@@ -274,36 +274,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-15',
-    name: 'Tanjiro Kamado Sun Breathing',
+    name: 'Portgas D. Ace (One Piece)',
     category: 'anime',
-    tags: ['anime', 'tanjiro', 'demon slayer', 'kimetsu'],
+    tags: ['anime', 'ace', 'portgas', 'one piece', 'fire fist'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-15.jpg'
   },
   {
     id: 'anime-css-16',
-    name: 'Nezuko Kamado Demon Form',
+    name: 'Sung Jin-woo (Solo Leveling)',
     category: 'anime',
-    tags: ['anime', 'nezuko', 'demon slayer', 'kimetsu'],
+    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling', 'shadow monarch'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-16.png'
   },
   {
     id: 'anime-css-17',
-    name: 'Zenitsu Agatsuma Thunder',
+    name: 'Red-Haired Shanks (One Piece)',
     category: 'anime',
-    tags: ['anime', 'zenitsu', 'demon slayer', 'thunder'],
+    tags: ['anime', 'shanks', 'red hair', 'one piece', 'yonko'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-17.jpg'
   },
   {
     id: 'anime-css-18',
-    name: 'Inosuke Hashibira Beast Style',
+    name: 'Megumi Fushiguro (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'inosuke', 'demon slayer'],
+    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen', 'ten shadows'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-18.jpg'
@@ -562,36 +562,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-47',
-    name: 'Shikamaru Nara Shadow Stitching',
+    name: 'Gaara of the Desert (Naruto)',
     category: 'anime',
-    tags: ['anime', 'shikamaru', 'nara', 'naruto'],
+    tags: ['anime', 'gaara', 'kazekage', 'sand', 'naruto'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-47.jpg'
   },
   {
     id: 'anime-css-48',
-    name: 'Hinata Hyuga Byakugan',
+    name: 'Ryomen Sukuna (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
+    tags: ['anime', 'sukuna', 'ryomen', 'jujutsu kaisen', 'king of curses'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-48.png'
   },
   {
     id: 'anime-css-49',
-    name: 'Pain Tensei Rinnegan',
+    name: 'Itachi Uchiha Akatsuki (Naruto)',
     category: 'anime',
-    tags: ['anime', 'pain', 'nagato', 'rinnegan', 'naruto'],
+    tags: ['anime', 'itachi', 'uchiha', 'akatsuki', 'sharingan', 'naruto'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-49.jpg'
   },
   {
     id: 'anime-css-50',
-    name: 'Orochimaru Snake Summon',
+    name: 'Satoru Gojo Six Eyes (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'orochimaru', 'sannin', 'naruto'],
+    tags: ['anime', 'gojo', 'satoru', 'six eyes', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-50.png'
