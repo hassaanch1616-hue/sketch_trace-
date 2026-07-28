@@ -166,27 +166,27 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-3',
-    name: 'Sasuke Uchiha (With Katana Sword)',
+    name: 'Deidara (Akatsuki)',
     category: 'anime',
-    tags: ['anime', 'sasuke', 'uchiha', 'katana', 'naruto'],
+    tags: ['anime', 'deidara', 'akatsuki', 'clay', 'naruto'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-3.jpg'
   },
   {
     id: 'anime-css-4',
-    name: 'Deidara (Akatsuki)',
+    name: 'Hinata Hyuga (Naruto)',
     category: 'anime',
-    tags: ['anime', 'deidara', 'akatsuki', 'clay', 'naruto'],
+    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-4.jpg'
   },
   {
     id: 'anime-css-5',
-    name: 'Hinata Hyuga (Naruto)',
+    name: 'Sakura Haruno (Naruto)',
     category: 'anime',
-    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
+    tags: ['anime', 'sakura', 'haruno', 'naruto', 'ninja'],
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/anime/anime-css-5.png'
@@ -427,27 +427,27 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-32',
-    name: 'Saitama One Punch Man',
+    name: 'Shinobu Kocho (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'saitama', 'one punch man'],
+    tags: ['anime', 'shinobu', 'kocho', 'insect hashira', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-32.jpg'
   },
   {
     id: 'anime-css-33',
-    name: 'Genos Demon Cyborg',
+    name: 'Gabimaru the Hollow (Full Body)',
     category: 'anime',
-    tags: ['anime', 'genos', 'one punch man'],
+    tags: ['anime', 'gabimaru', 'hollow', 'hells paradise'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-33.jpg'
   },
   {
     id: 'anime-css-34',
-    name: 'Light Yagami Death Note',
+    name: 'Gabimaru the Hollow (Portrait)',
     category: 'anime',
-    tags: ['anime', 'light', 'yagami', 'death note'],
+    tags: ['anime', 'gabimaru', 'hollow', 'hells paradise', 'portrait'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-34.jpg'
@@ -490,36 +490,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-39',
-    name: 'Gon Freecss Jajanken',
+    name: 'Ichigo Kurosaki (Bleach Bankai)',
     category: 'anime',
-    tags: ['anime', 'gon', 'freecss', 'hunter x hunter'],
+    tags: ['anime', 'ichigo', 'kurosaki', 'bleach', 'bankai'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-39.jpg'
   },
   {
     id: 'anime-css-40',
-    name: 'Kurapika Scarlet Eyes',
+    name: 'Smiling Titan (Attack on Titan)',
     category: 'anime',
-    tags: ['anime', 'kurapika', 'hunter x hunter'],
+    tags: ['anime', 'titan', 'smiling titan', 'attack on titan'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-40.jpg'
   },
   {
     id: 'anime-css-41',
-    name: 'Minato Namikaze Yellow Flash',
+    name: 'Neji Hyuga Headband (Naruto)',
     category: 'anime',
-    tags: ['anime', 'minato', 'namikaze', 'fourth hokage', 'naruto'],
+    tags: ['anime', 'neji', 'hyuga', 'byakugan', 'naruto'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-41.jpg'
   },
   {
     id: 'anime-css-42',
-    name: 'Jiraiya Toad Sage',
+    name: 'Vinsmoke Sanji (One Piece)',
     category: 'anime',
-    tags: ['anime', 'jiraiya', 'sage', 'naruto'],
+    tags: ['anime', 'sanji', 'vinsmoke', 'one piece', 'straw hat'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-42.png'
@@ -598,36 +598,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-51',
-    name: 'Shoto Todoroki Half Cold Half Hot',
+    name: 'Obito Uchiha / Tobi (Akatsuki Mask)',
     category: 'anime',
-    tags: ['anime', 'todoroki', 'shoto', 'my hero academia'],
+    tags: ['anime', 'obito', 'tobi', 'akatsuki', 'mask', 'naruto'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-51.jpg'
   },
   {
     id: 'anime-css-52',
-    name: 'Katsuki Bakugo Explosion',
+    name: 'Tanjiro Kamado Demon Slayer',
     category: 'anime',
-    tags: ['anime', 'bakugo', 'katsuki', 'my hero academia'],
+    tags: ['anime', 'tanjiro', 'kamado', 'demon slayer', 'kimetsu'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-52.png'
   },
   {
     id: 'anime-css-53',
-    name: 'Izuku Midoriya One For All',
+    name: 'Kakashi Hatake Mask & Headband',
     category: 'anime',
-    tags: ['anime', 'deku', 'midoriya', 'my hero academia'],
+    tags: ['anime', 'kakashi', 'hatake', 'headband', 'sharingan', 'naruto'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-53.jpg'
   },
   {
     id: 'anime-css-54',
-    name: 'All Might Plus Ultra',
+    name: 'Naruto Running (Naruto)',
     category: 'anime',
-    tags: ['anime', 'all might', 'my hero academia'],
+    tags: ['anime', 'naruto', 'running', 'shippuden', 'ninja'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-54.png'
