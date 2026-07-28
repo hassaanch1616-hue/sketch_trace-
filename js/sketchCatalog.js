@@ -2001,58 +2001,13 @@ const ANIMAL_PRESETS = [
     imageUrl: './assets/animals/animal-10.webp'
   },
   {
-    id: 'animal-minimalist-rabbit',
-    name: 'Minimalist Cute Rabbit / Bunny',
-    category: 'animals',
-    tags: ['animals', 'rabbit', 'bunny', 'minimalist', 'cute'],
-    difficulty: 'Easy',
-    popularity: 97,
-    imageUrl: './assets/animals/animal-11.webp'
-  },
-  {
-    id: 'animal-fluffy-bunny-whiskers',
-    name: 'Fluffy Bunny with Whiskers',
-    category: 'animals',
-    tags: ['animals', 'bunny', 'rabbit', 'whiskers', 'fluffy'],
-    difficulty: 'Easy',
-    popularity: 98,
-    imageUrl: './assets/animals/animal-12.webp'
-  },
-  {
-    id: 'animal-baby-giraffe-spots',
-    name: 'Cute Baby Giraffe with Spots',
-    category: 'animals',
-    tags: ['animals', 'giraffe', 'baby giraffe', 'spots', 'cute'],
-    difficulty: 'Easy',
-    popularity: 98,
-    imageUrl: './assets/animals/animal-13.webp'
-  },
-  {
-    id: 'animal-labrador-puppy-dog',
-    name: 'Labrador Retriever Puppy / Dog',
-    category: 'animals',
-    tags: ['animals', 'dog', 'labrador', 'puppy', 'pet'],
-    difficulty: 'Medium',
-    popularity: 100,
-    imageUrl: './assets/animals/animal-14.webp'
-  },
-  {
-    id: 'animal-mountain-goat-beard',
-    name: 'Mountain Goat with Beard & Horns',
-    category: 'animals',
-    tags: ['animals', 'goat', 'mountain goat', 'horns', 'beard'],
-    difficulty: 'Medium',
-    popularity: 95,
-    imageUrl: './assets/animals/animal-15.webp'
-  },
-  {
     id: 'animal-kawaii-kitty-cat',
     name: 'Cute Kawaii Kitty Cat',
     category: 'animals',
     tags: ['animals', 'cat', 'kawaii', 'kitty', 'cute'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/animals/animal-16.webp'
+    imageUrl: './assets/animals/animal-11.webp'
   },
   {
     id: 'animal-african-elephant-head',
@@ -2061,7 +2016,43 @@ const ANIMAL_PRESETS = [
     tags: ['animals', 'elephant', 'tusks', 'trunk', 'safari'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/animals/animal-17.webp'
+    imageUrl: './assets/animals/animal-12.webp'
+  },
+  {
+    id: 'animal-minimalist-rabbit',
+    name: 'Minimalist Cute Rabbit / Bunny',
+    category: 'animals',
+    tags: ['animals', 'rabbit', 'bunny', 'minimalist', 'cute'],
+    difficulty: 'Easy',
+    popularity: 97,
+    imageUrl: './assets/animals/animal-13.webp'
+  },
+  {
+    id: 'animal-fluffy-bunny-whiskers',
+    name: 'Fluffy Bunny with Whiskers',
+    category: 'animals',
+    tags: ['animals', 'bunny', 'rabbit', 'whiskers', 'fluffy'],
+    difficulty: 'Easy',
+    popularity: 98,
+    imageUrl: './assets/animals/animal-14.webp'
+  },
+  {
+    id: 'animal-baby-giraffe-spots',
+    name: 'Cute Baby Giraffe with Spots',
+    category: 'animals',
+    tags: ['animals', 'giraffe', 'baby giraffe', 'spots', 'cute'],
+    difficulty: 'Easy',
+    popularity: 98,
+    imageUrl: './assets/animals/animal-15.webp'
+  },
+  {
+    id: 'animal-labrador-puppy-dog',
+    name: 'Labrador Retriever Puppy / Dog',
+    category: 'animals',
+    tags: ['animals', 'dog', 'labrador', 'puppy', 'pet'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/animals/animal-16.webp'
   },
   {
     id: 'animal-geometric-polygonal-deer',
@@ -2070,7 +2061,7 @@ const ANIMAL_PRESETS = [
     tags: ['animals', 'deer', 'geometric', 'polygonal', 'art'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/animals/animal-18.webp'
+    imageUrl: './assets/animals/animal-17.webp'
   },
   {
     id: 'animal-fluffy-poodle-puppy',
@@ -2079,7 +2070,7 @@ const ANIMAL_PRESETS = [
     tags: ['animals', 'dog', 'poodle', 'puppy', 'cute'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/animals/animal-19.webp'
+    imageUrl: './assets/animals/animal-18.webp'
   },
   {
     id: 'animal-peeking-giraffe-head',
@@ -2088,13 +2079,22 @@ const ANIMAL_PRESETS = [
     tags: ['animals', 'giraffe', 'head', 'peeking', 'cute'],
     difficulty: 'Easy',
     popularity: 96,
+    imageUrl: './assets/animals/animal-19.webp'
+  },
+  {
+    id: 'animal-sitting-dog-outline',
+    name: 'Sitting Puppy / Dog Outline',
+    category: 'animals',
+    tags: ['animals', 'dog', 'puppy', 'sitting', 'pet'],
+    difficulty: 'Easy',
+    popularity: 96,
     imageUrl: './assets/animals/animal-20.webp'
   },
   {
-    id: 'animal-wild-horse-face',
-    name: 'Wild Horse Face with Mane',
+    id: 'animal-mountain-goat-horns',
+    name: 'Mountain Goat with Beard & Horns',
     category: 'animals',
-    tags: ['animals', 'horse', 'wild horse', 'mane', 'face'],
+    tags: ['animals', 'goat', 'mountain goat', 'horns', 'beard'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/animals/animal-21.webp'
