@@ -166,9 +166,9 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-3',
-    name: 'Sasuke Uchiha Chidori',
+    name: 'Sasuke Uchiha (With Katana Sword)',
     category: 'anime',
-    tags: ['anime', 'sasuke', 'uchiha', 'chidori', 'sharingan'],
+    tags: ['anime', 'sasuke', 'uchiha', 'katana', 'naruto'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-3.jpg'
@@ -184,9 +184,9 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-5',
-    name: 'Sakura Haruno Line Art',
+    name: 'Hinata Hyuga (Naruto)',
     category: 'anime',
-    tags: ['anime', 'sakura', 'haruno', 'naruto', 'ninja'],
+    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/anime/anime-css-5.png'
@@ -220,11 +220,11 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-9',
-    name: 'Hinata Hyuga (Naruto)',
+    name: 'Sasuke Uchiha Rinnegan',
     category: 'anime',
-    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
+    tags: ['anime', 'sasuke', 'uchiha', 'rinnegan'],
     difficulty: 'Medium',
-    popularity: 95,
+    popularity: 90,
     imageUrl: './assets/anime/anime-css-9.png'
   },
   {
@@ -238,43 +238,43 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-11',
-    name: 'Sharingan Eye Diamond Sketch',
+    name: 'Satoru Gojo (Round Sunglasses)',
     category: 'anime',
-    tags: ['anime', 'sharingan', 'eye', 'sketch', 'naruto'],
+    tags: ['anime', 'gojo', 'satoru', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-11.jpg'
   },
   {
     id: 'anime-css-12',
-    name: 'Hinata Hyuga Full Body (Naruto)',
+    name: 'Ryomen Sukuna King of Curses',
     category: 'anime',
-    tags: ['anime', 'hinata', 'hyuga', 'naruto'],
+    tags: ['anime', 'sukuna', 'ryomen', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-12.png'
   },
   {
     id: 'anime-css-13',
-    name: 'Nico Robin (One Piece)',
+    name: 'Megumi Fushiguro Ten Shadows',
     category: 'anime',
-    tags: ['anime', 'robin', 'nico robin', 'one piece'],
+    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-13.jpg'
   },
   {
     id: 'anime-css-14',
-    name: 'Sung Jin-woo (Solo Leveling)',
+    name: 'Yuji Itadori Black Flash',
     category: 'anime',
-    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling'],
+    tags: ['anime', 'yuji', 'itadori', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-14.png'
   },
   {
     id: 'anime-css-15',
-    name: 'Portgas D. Ace (One Piece)',
+    name: 'Portgas D. Ace Fire Fist (One Piece)',
     category: 'anime',
     tags: ['anime', 'ace', 'portgas', 'one piece', 'fire fist'],
     difficulty: 'Medium',
@@ -285,7 +285,7 @@ const ANIME_PRESETS = [
     id: 'anime-css-16',
     name: 'Sung Jin-woo (Solo Leveling)',
     category: 'anime',
-    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling', 'shadow monarch'],
+    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-16.png'
@@ -294,7 +294,7 @@ const ANIME_PRESETS = [
     id: 'anime-css-17',
     name: 'Red-Haired Shanks (One Piece)',
     category: 'anime',
-    tags: ['anime', 'shanks', 'red hair', 'one piece', 'yonko'],
+    tags: ['anime', 'shanks', 'red hair', 'one piece'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-17.jpg'
@@ -303,115 +303,115 @@ const ANIME_PRESETS = [
     id: 'anime-css-18',
     name: 'Megumi Fushiguro (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen', 'ten shadows'],
+    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-18.jpg'
   },
   {
     id: 'anime-css-19',
-    name: 'Rengoku Kyojuro Flame Hashira',
+    name: 'Aoi Todo (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'rengoku', 'flame hashira', 'demon slayer'],
+    tags: ['anime', 'todo', 'aoi todo', 'jujutsu kaisen'],
     difficulty: 'Medium',
-    popularity: 99,
+    popularity: 95,
     imageUrl: './assets/anime/anime-css-19.jpg'
   },
   {
     id: 'anime-css-20',
-    name: 'Akaza Upper Moon Three',
+    name: 'Suguru Geto (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'akaza', 'demon slayer'],
+    tags: ['anime', 'geto', 'suguru geto', 'jujutsu kaisen'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-20.jpg'
   },
   {
     id: 'anime-css-21',
-    name: 'Monkey D. Luffy Gear 5',
+    name: 'Satoru Gojo Smiling (Jujutsu Kaisen)',
     category: 'anime',
-    tags: ['anime', 'luffy', 'one piece', 'gear 5'],
+    tags: ['anime', 'gojo', 'satoru', 'jujutsu kaisen', 'sunglasses'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/anime/anime-css-21.jpg'
   },
   {
     id: 'anime-css-22',
-    name: 'Roronoa Zoro Three Sword Style',
+    name: 'Muzan Kibutsuji (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'zoro', 'roronoa', 'one piece'],
+    tags: ['anime', 'muzan', 'kibutsuji', 'demon king', 'kimetsu'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-22.jpg'
   },
   {
     id: 'anime-css-23',
-    name: 'Vinsmoke Sanji Diable Jambe',
+    name: 'Inosuke Hashibira Unmasked (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'sanji', 'one piece'],
+    tags: ['anime', 'inosuke', 'unmasked', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-23.jpg'
   },
   {
     id: 'anime-css-24',
-    name: 'Portgas D. Ace Fire Fist',
+    name: 'Giyu Tomioka Water Hashira (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'ace', 'one piece'],
+    tags: ['anime', 'giyu', 'tomioka', 'water hashira', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-24.jpg'
   },
   {
     id: 'anime-css-25',
-    name: 'Son Goku Super Saiyan',
+    name: 'Sharingan Eye Diamond Sketch',
     category: 'anime',
-    tags: ['anime', 'goku', 'dragon ball', 'saiyan'],
+    tags: ['anime', 'sharingan', 'diamond sketch', 'naruto'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/anime/anime-css-25.jpg'
   },
   {
     id: 'anime-css-26',
-    name: 'Prince Vegeta Ultra Ego',
+    name: 'Neji Hyuga (Naruto)',
     category: 'anime',
-    tags: ['anime', 'vegeta', 'dragon ball', 'saiyan'],
+    tags: ['anime', 'neji', 'hyuga', 'byakugan', 'naruto'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-26.png'
   },
   {
     id: 'anime-css-27',
-    name: 'Gohan Beast Mode',
+    name: 'Nezuko Kamado Bamboo Mouth (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'gohan', 'dragon ball'],
+    tags: ['anime', 'nezuko', 'kamado', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-27.jpg'
   },
   {
     id: 'anime-css-28',
-    name: 'Future Trunks Sword',
+    name: 'Tanjiro Kamado Hanafuda (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'trunks', 'dragon ball'],
+    tags: ['anime', 'tanjiro', 'kamado', 'demon slayer', 'hanafuda'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-28.jpg'
   },
   {
     id: 'anime-css-29',
-    name: 'Eren Yeager Attack Titan',
+    name: 'Gyomei Himejima Stone Hashira (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'eren', 'yeager', 'attack on titan'],
+    tags: ['anime', 'gyomei', 'stone hashira', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-29.jpg'
   },
   {
     id: 'anime-css-30',
-    name: 'Levi Ackerman ODM Gear',
+    name: 'Zenitsu Agatsuma Profile (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'levi', 'ackerman', 'attack on titan'],
+    tags: ['anime', 'zenitsu', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/anime/anime-css-30.jpg'
