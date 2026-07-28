@@ -2157,21 +2157,21 @@ const BIRD_PRESETS = [
     imageUrl: './assets/birds/bird-6.webp'
   },
   {
-    id: 'bird-majestic-peacock',
-    name: 'Majestic Peacock with Displayed Feathers',
+    id: 'bird-graceful-white-swan',
+    name: 'Graceful White Swan on Water',
     category: 'birds',
-    tags: ['birds', 'peacock', 'feathers', 'majestic', 'tail'],
-    difficulty: 'Hard',
-    popularity: 100,
+    tags: ['birds', 'swan', 'water', 'lake', 'graceful'],
+    difficulty: 'Easy',
+    popularity: 98,
     imageUrl: './assets/birds/bird-7.webp'
   },
   {
-    id: 'bird-cute-parakeet-lovebird',
-    name: 'Cute Parakeet / Lovebird',
+    id: 'bird-geometric-flying-owl',
+    name: 'Geometric Flying Owl Logo',
     category: 'birds',
-    tags: ['birds', 'parakeet', 'lovebird', 'pet', 'cute'],
-    difficulty: 'Easy',
-    popularity: 97,
+    tags: ['birds', 'owl', 'geometric', 'flying', 'logo'],
+    difficulty: 'Medium',
+    popularity: 96,
     imageUrl: './assets/birds/bird-8.jpg'
   },
   {
@@ -2202,21 +2202,21 @@ const BIRD_PRESETS = [
     imageUrl: './assets/birds/bird-11.webp'
   },
   {
-    id: 'bird-graceful-white-swan',
-    name: 'Graceful White Swan on Water',
+    id: 'bird-majestic-peacock',
+    name: 'Majestic Peacock with Displayed Feathers',
     category: 'birds',
-    tags: ['birds', 'swan', 'water', 'lake', 'graceful'],
-    difficulty: 'Easy',
-    popularity: 98,
+    tags: ['birds', 'peacock', 'feathers', 'majestic', 'tail'],
+    difficulty: 'Hard',
+    popularity: 100,
     imageUrl: './assets/birds/bird-12.webp'
   },
   {
-    id: 'bird-geometric-flying-owl',
-    name: 'Geometric Flying Owl Logo',
+    id: 'bird-cute-parakeet-lovebird',
+    name: 'Cute Parakeet / Lovebird',
     category: 'birds',
-    tags: ['birds', 'owl', 'geometric', 'flying', 'logo'],
-    difficulty: 'Medium',
-    popularity: 96,
+    tags: ['birds', 'parakeet', 'lovebird', 'pet', 'cute'],
+    difficulty: 'Easy',
+    popularity: 97,
     imageUrl: './assets/birds/bird-13.webp'
   },
   {
