@@ -238,36 +238,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-11',
-    name: 'Satoru Gojo (Round Sunglasses)',
+    name: 'Sharingan Eye Diamond Sketch',
     category: 'anime',
-    tags: ['anime', 'gojo', 'satoru', 'jujutsu kaisen'],
+    tags: ['anime', 'sharingan', 'eye', 'sketch', 'naruto'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-11.jpg'
   },
   {
     id: 'anime-css-12',
-    name: 'Ryomen Sukuna King of Curses',
+    name: 'Hinata Hyuga Full Body (Naruto)',
     category: 'anime',
-    tags: ['anime', 'sukuna', 'ryomen', 'jujutsu kaisen'],
+    tags: ['anime', 'hinata', 'hyuga', 'naruto'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-12.png'
   },
   {
     id: 'anime-css-13',
-    name: 'Megumi Fushiguro Ten Shadows',
+    name: 'Nico Robin (One Piece)',
     category: 'anime',
-    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen'],
+    tags: ['anime', 'robin', 'nico robin', 'one piece'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-13.jpg'
   },
   {
     id: 'anime-css-14',
-    name: 'Yuji Itadori Black Flash',
+    name: 'Sung Jin-woo (Solo Leveling)',
     category: 'anime',
-    tags: ['anime', 'yuji', 'itadori', 'jujutsu kaisen'],
+    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-14.png'
@@ -454,36 +454,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-35',
-    name: 'L Lawliet Detective',
+    name: 'Ichigo Kurosaki Hollow Mask (Bleach)',
     category: 'anime',
-    tags: ['anime', 'l', 'lawliet', 'death note'],
+    tags: ['anime', 'ichigo', 'kurosaki', 'hollow mask', 'bleach'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-35.jpg'
   },
   {
     id: 'anime-css-36',
-    name: 'Edward Elric Fullmetal Alchemist',
+    name: 'Uryu Ishida (Bleach)',
     category: 'anime',
-    tags: ['anime', 'edward', 'elric', 'fullmetal'],
+    tags: ['anime', 'uryu', 'ishida', 'quincy', 'bleach'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-36.jpg'
   },
   {
     id: 'anime-css-37',
-    name: 'Alphonse Elric Armor',
+    name: 'Sakura Haruno Full Body (Naruto)',
     category: 'anime',
-    tags: ['anime', 'alphonse', 'elric', 'fullmetal'],
+    tags: ['anime', 'sakura', 'haruno', 'naruto'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-37.jpg'
   },
   {
     id: 'anime-css-38',
-    name: 'Killua Zoldyck Godspeed',
+    name: 'Monkey D. Luffy Straw Hat (One Piece)',
     category: 'anime',
-    tags: ['anime', 'killua', 'zoldyck', 'hunter x hunter'],
+    tags: ['anime', 'luffy', 'straw hat', 'one piece'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-38.png'
@@ -526,36 +526,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-43',
-    name: 'Tsunade Senju 100 Healings',
+    name: 'Haku (Naruto)',
     category: 'anime',
-    tags: ['anime', 'tsunade', 'senju', 'hokage', 'naruto'],
+    tags: ['anime', 'haku', 'ice mirror', 'naruto'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-43.jpg'
   },
   {
     id: 'anime-css-44',
-    name: 'Gaara Sand Shield',
+    name: 'Tony Tony Chopper (One Piece)',
     category: 'anime',
-    tags: ['anime', 'gaara', 'kazekage', 'naruto'],
+    tags: ['anime', 'chopper', 'tony chopper', 'one piece'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-44.png'
   },
   {
     id: 'anime-css-45',
-    name: 'Obito Uchiha Tobi Mask',
+    name: 'Yahiko / Pain (Akatsuki)',
     category: 'anime',
-    tags: ['anime', 'obito', 'uchiha', 'tobi', 'naruto'],
+    tags: ['anime', 'yahiko', 'pain', 'akatsuki', 'naruto'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-45.jpg'
   },
   {
     id: 'anime-css-46',
-    name: 'Madara Uchiha Perfect Susanoo',
+    name: 'Nico Robin Full Body (One Piece)',
     category: 'anime',
-    tags: ['anime', 'madara', 'uchiha', 'susanoo', 'naruto'],
+    tags: ['anime', 'robin', 'nico robin', 'one piece'],
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/anime/anime-css-46.png'
