@@ -5,18 +5,18 @@
 window.SketchTrace = window.SketchTrace || {};
 
 const CATEGORIES = [
-  { id: 'anime', name: 'Anime', icon: '\u2728', count: 70, description: 'Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna, Naruto, Kakashi' },
-  { id: 'cars', name: 'Cars', icon: '\uD83C\uDFCE', count: 20, description: 'Bugatti Chiron, Lamborghini, McLaren, Ferrari, BMW, Audi, Nissan Skyline & Supercars' },
-  { id: 'aircraft', name: 'Aircraft', icon: '\u2708', count: 10, description: 'F-15 Eagle, Fighter Jets, Commercial Airliners, Helicopters & Biplanes' },
+  { id: 'anime', name: 'Anime', icon: '\u2728', count: 67, description: 'Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna, Naruto, Kakashi' },
+  { id: 'cars', name: 'Cars', icon: '\uD83C\uDFCE', count: 18, description: 'Bugatti Chiron, Lamborghini, McLaren, Ferrari, BMW, Audi, Nissan Skyline & Supercars' },
+  { id: 'aircraft', name: 'Aircraft', icon: '\u2708', count: 9, description: 'F-15 Eagle, Fighter Jets, Commercial Airliners, Helicopters & Biplanes' },
   { id: 'cartoon', name: 'Cartoon', icon: '\uD83C\uDFA8', count: 22, description: 'Mickey Mouse, Doraemon, SpongeBob, Hello Kitty, Pikachu, Tom & Jerry, Minions' },
   { id: 'bikes', name: 'Bikes', icon: '\uD83C\uDFCD', count: 11, description: 'Yamaha YZF-R6, Batman Batcycle, Vespa Scooter, Harley Chopper, Motocross Dirt Bike, ATV Quad & MTB' },
-  { id: 'trains', name: 'Trains', icon: '\uD83D\uDE86', count: 14, description: 'Shinkansen Bullet Train, Thomas the Tank Engine, Edward, Steam Locomotives, Metro & Intercity Express' },
+  { id: 'trains', name: 'Trains', icon: '\uD83D\uDE86', count: 10, description: 'Shinkansen Bullet Train, Thomas the Tank Engine, Edward, Steam Locomotives, Metro & Intercity Express' },
   { id: 'superheroes', name: 'Superheroes', icon: '\u26A1', count: 18, description: 'Batman, Iron Man, Spider-Man, Superman, Thor, Deadpool, Venom, Black Panther & The Flash' },
-  { id: 'ships', name: 'Ships', icon: '\uD83D\uDEA2', count: 18, description: 'RMS Titanic, Pirate Galleons, Naval Battleships, Luxury Cruise Ships, Mayflower & Sailboats' },
+  { id: 'ships', name: 'Ships', icon: '\uD83D\uDEA2', count: 17, description: 'RMS Titanic, Pirate Galleons, Naval Battleships, Luxury Cruise Ships, Mayflower & Sailboats' },
   { id: 'fish', name: 'Fish', icon: '\uD83D\uDC20', count: 24, description: 'Baby Shark, Dolphins, Blue Whales, Goldfish, Seahorses, Angelfish & Clownfish' },
   { id: 'animals', name: 'Animals', icon: '\uD83E\uDD81', count: 21, description: 'Lions, Horses, Cats, Dogs, Rabbits, Giraffes, Deers, Elephants & Goats' },
   { id: 'birds', name: 'Birds', icon: '\uD83E\uDD85', count: 15, description: 'Peacocks, Macaw Parrots, Toucans, Hummingbirds, Swans, Doves, Swallows & Owls' },
-  { id: 'flowers', name: 'Flowers', icon: '\uD83C\uDF39', count: 20, description: 'Roses, Tulips, Daisies, Lilies, Hibiscus, Sunflowers, Plumeria, Cherry Blossoms & Bouquets' }
+  { id: 'flowers', name: 'Flowers', icon: '\uD83C\uDF39', count: 14, description: 'Roses, Tulips, Daisies, Lilies, Hibiscus, Sunflowers, Plumeria, Cherry Blossoms & Bouquets' }
 ];
 
 const ANIME_PRESETS = [
@@ -361,17 +361,7 @@ const ANIME_PRESETS = [
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-24.jpg'
-  },
-  {
-    id: 'anime-css-25',
-    name: 'Son Goku Super Saiyan',
-    category: 'anime',
-    tags: ['anime', 'goku', 'dragon ball', 'saiyan'],
-    difficulty: 'Medium',
-    popularity: 100,
-    imageUrl: './assets/anime/anime-css-25.jpg'
-  },
-  {
+  },  {
     id: 'anime-css-26',
     name: 'Prince Vegeta Ultra Ego',
     category: 'anime',
@@ -415,17 +405,7 @@ const ANIME_PRESETS = [
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/anime/anime-css-30.jpg'
-  },
-  {
-    id: 'anime-css-31',
-    name: 'Mikasa Ackerman Blade',
-    category: 'anime',
-    tags: ['anime', 'mikasa', 'ackerman', 'attack on titan'],
-    difficulty: 'Medium',
-    popularity: 97,
-    imageUrl: './assets/anime/anime-css-31.jpg'
-  },
-  {
+  },  {
     id: 'anime-css-32',
     name: 'Saitama One Punch Man',
     category: 'anime',
@@ -640,29 +620,7 @@ const ANIME_PRESETS = [
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/anime/anime-css-55.png'
-  },
-  {
-    id: 'anime-css-56',
-    name: 'Sharingan Eye Pattern 2',
-    category: 'anime',
-    tags: ['anime', 'sharingan', 'eye', 'naruto'],
-    difficulty: 'Medium',
-    popularity: 93,
-    imageUrl: './assets/anime/anime-css-56.png'
-  }
-];
-
-const CAR_PRESETS = [
-  {
-    id: 'car-bugatti-chiron',
-    name: 'Bugatti Chiron',
-    category: 'cars',
-    tags: ['cars', 'bugatti', 'supercar', 'line art'],
-    difficulty: 'Hard',
-    popularity: 99,
-    imageUrl: './assets/cars/car-v2-1.jpg'
-  },
-  {
+  },  {
     id: 'car-lamborghini-huracan',
     name: 'Lamborghini Huracan',
     category: 'cars',
@@ -688,17 +646,7 @@ const CAR_PRESETS = [
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/cars/car-v2-4.webp'
-  },
-  {
-    id: 'car-audi-r8-concept',
-    name: 'Audi R8 Concept',
-    category: 'cars',
-    tags: ['cars', 'audi', 'sports car', 'line art'],
-    difficulty: 'Medium',
-    popularity: 95,
-    imageUrl: './assets/cars/car-v2-5.webp'
-  },
-  {
+  },  {
     id: 'car-bmw-m8-csl',
     name: 'BMW M8 CSL',
     category: 'cars',
@@ -907,17 +855,7 @@ const AIRCRAFT_PRESETS = [
     difficulty: 'Hard',
     popularity: 96,
     imageUrl: './assets/aircraft/aircraft-8.jpg'
-  },
-  {
-    id: 'aircraft-military-cargo',
-    name: 'Lockheed C-130 Hercules Cargo Plane',
-    category: 'aircraft',
-    tags: ['aircraft', 'hercules', 'cargo', 'military'],
-    difficulty: 'Medium',
-    popularity: 95,
-    imageUrl: './assets/aircraft/aircraft-9.jpg'
-  },
-  {
+  },  {
     id: 'aircraft-vintage-monoplane',
     name: 'P-51 Mustang Vintage Monoplane',
     category: 'aircraft',
@@ -1249,17 +1187,7 @@ const TRAIN_PRESETS = [
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/trains/train-2.jpg'
-  },
-  {
-    id: 'train-vintage-steam-front',
-    name: 'Vintage Steam Locomotive (Front View)',
-    category: 'trains',
-    tags: ['trains', 'vintage', 'steam train', 'locomotive', 'steam engine'],
-    difficulty: 'Hard',
-    popularity: 97,
-    imageUrl: './assets/trains/train-3.jpg'
-  },
-  {
+  },  {
     id: 'train-puffing-choo-choo',
     name: 'Puffing Choo-Choo Steam Train',
     category: 'trains',
@@ -1267,17 +1195,7 @@ const TRAIN_PRESETS = [
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/trains/train-4.jpg'
-  },
-  {
-    id: 'train-modern-monorail',
-    name: 'Modern Monorail Subway Train',
-    category: 'trains',
-    tags: ['trains', 'monorail', 'subway', 'metro', 'modern'],
-    difficulty: 'Easy',
-    popularity: 95,
-    imageUrl: './assets/trains/train-5.jpg'
-  },
-  {
+  },  {
     id: 'train-thomas-tank-engine',
     name: 'Thomas the Tank Engine (Smiling Thomas)',
     category: 'trains',
@@ -1303,17 +1221,7 @@ const TRAIN_PRESETS = [
     difficulty: 'Easy',
     popularity: 96,
     imageUrl: './assets/trains/train-8.webp'
-  },
-  {
-    id: 'train-modern-metro-station',
-    name: 'Modern Metro Train at Station',
-    category: 'trains',
-    tags: ['trains', 'metro', 'station', 'subway', 'passenger'],
-    difficulty: 'Medium',
-    popularity: 97,
-    imageUrl: './assets/trains/train-9.webp'
-  },
-  {
+  },  {
     id: 'train-long-express-steam',
     name: 'Long Express Steam Passenger Train',
     category: 'trains',
@@ -1339,17 +1247,7 @@ const TRAIN_PRESETS = [
     difficulty: 'Hard',
     popularity: 97,
     imageUrl: './assets/trains/train-12.jpg'
-  },
-  {
-    id: 'train-diesel-passenger',
-    name: 'Diesel Passenger Train Engine',
-    category: 'trains',
-    tags: ['trains', 'diesel', 'passenger', 'engine', 'railway'],
-    difficulty: 'Medium',
-    popularity: 96,
-    imageUrl: './assets/trains/train-13.jpg'
-  },
-  {
+  },  {
     id: 'train-diesel-express-locomotive',
     name: 'Diesel Express Locomotive',
     category: 'trains',
@@ -1588,17 +1486,7 @@ const SHIP_PRESETS = [
     difficulty: 'Hard',
     popularity: 97,
     imageUrl: './assets/ships/ship-7.webp'
-  },
-  {
-    id: 'ship-skull-crossbones-pirate',
-    name: 'Skull & Crossbones Pirate Ship',
-    category: 'ships',
-    tags: ['ships', 'pirate', 'jolly roger', 'skull', 'flag'],
-    difficulty: 'Medium',
-    popularity: 99,
-    imageUrl: './assets/ships/ship-8.webp'
-  },
-  {
+  },  {
     id: 'ship-colorful-sailboat',
     name: 'Colorful Sailboat on Waves',
     category: 'ships',
@@ -2257,17 +2145,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Easy',
     popularity: 99,
     imageUrl: './assets/flowers/flower-2.webp'
-  },
-  {
-    id: 'flower-cute-garden',
-    name: 'Cute Simple Garden Flower with Leaves',
-    category: 'flowers',
-    tags: ['flowers', 'garden', 'simple', 'leaves', 'cute'],
-    difficulty: 'Easy',
-    popularity: 97,
-    imageUrl: './assets/flowers/flower-3.webp'
-  },
-  {
+  },  {
     id: 'flower-lush-tree-of-life',
     name: 'Lush Flowering Tree of Life',
     category: 'flowers',
@@ -2284,17 +2162,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Easy',
     popularity: 96,
     imageUrl: './assets/flowers/flower-5.webp'
-  },
-  {
-    id: 'flower-blooming-lily-bud',
-    name: 'Blooming Lily Flower with Bud',
-    category: 'flowers',
-    tags: ['flowers', 'lily', 'bud', 'blooming', 'garden'],
-    difficulty: 'Medium',
-    popularity: 98,
-    imageUrl: './assets/flowers/flower-6.webp'
-  },
-  {
+  },  {
     id: 'flower-tropical-hibiscus-branch',
     name: 'Tropical Hibiscus Flowers on Branch',
     category: 'flowers',
@@ -2338,17 +2206,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/flowers/flower-11.jpg'
-  },
-  {
-    id: 'flower-cherry-blossom-sakura',
-    name: '5-Petal Cherry Blossom / Sakura',
-    category: 'flowers',
-    tags: ['flowers', 'sakura', 'cherry blossom', 'japan', 'petal'],
-    difficulty: 'Easy',
-    popularity: 100,
-    imageUrl: './assets/flowers/flower-12.jpg'
-  },
-  {
+  },  {
     id: 'flower-floral-corner-border',
     name: 'Elegant Floral Corner Border',
     category: 'flowers',
@@ -2356,17 +2214,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/flowers/flower-13.jpg'
-  },
-  {
-    id: 'flower-simple-tulip-bud',
-    name: 'Simple Tulip Bud for Kids',
-    category: 'flowers',
-    tags: ['flowers', 'tulip', 'bud', 'kids', 'simple'],
-    difficulty: 'Easy',
-    popularity: 95,
-    imageUrl: './assets/flowers/flower-14.jpg'
-  },
-  {
+  },  {
     id: 'flower-bouquet-vase',
     name: 'Flower Bouquet in Ceramic Vase',
     category: 'flowers',
@@ -2383,17 +2231,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Easy',
     popularity: 97,
     imageUrl: './assets/flowers/flower-16.webp'
-  },
-  {
-    id: 'flower-hawaiian-hibiscus',
-    name: 'Hawaiian Hibiscus Blossoms',
-    category: 'flowers',
-    tags: ['flowers', 'hawaiian', 'hibiscus', 'aloha', 'tropical'],
-    difficulty: 'Medium',
-    popularity: 99,
-    imageUrl: './assets/flowers/flower-17.webp'
-  },
-  {
+  },  {
     id: 'flower-potted-hibiscus',
     name: 'Potted Hibiscus Plant in Pot',
     category: 'flowers',
@@ -2401,17 +2239,7 @@ const FLOWER_PRESETS = [
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/flowers/flower-18.jpg'
-  },
-  {
-    id: 'flower-single-rose-stem',
-    name: 'Single Rose Stem with Leaves',
-    category: 'flowers',
-    tags: ['flowers', 'rose', 'single rose', 'stem', 'love'],
-    difficulty: 'Easy',
-    popularity: 100,
-    imageUrl: './assets/flowers/flower-19.jpg'
-  },
-  {
+  },  {
     id: 'flower-blooming-rose-leaves',
     name: 'Beautiful Blooming Rose with Leaves',
     category: 'flowers',
