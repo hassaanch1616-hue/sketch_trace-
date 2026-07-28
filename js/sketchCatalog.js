@@ -148,36 +148,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-1',
-    name: 'Naruto Uzumaki Sage Mode',
+    name: 'Zenitsu Agatsuma (Demon Slayer)',
     category: 'anime',
-    tags: ['anime', 'naruto', 'uzumaki', 'sage mode', 'shippuden'],
+    tags: ['anime', 'zenitsu', 'agatsuma', 'demon slayer'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-1.jpg'
   },
   {
     id: 'anime-css-2',
-    name: 'Sasuke Uchiha Chidori',
+    name: 'Naruto Baryon Mode (Kurama Link)',
     category: 'anime',
-    tags: ['anime', 'sasuke', 'uchiha', 'chidori', 'sharingan'],
+    tags: ['anime', 'naruto', 'baryon mode', 'kurama', 'shippuden'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-2.jpg'
   },
   {
     id: 'anime-css-3',
-    name: 'Kakashi Hatake Sharingan',
+    name: 'Sasuke Uchiha Chidori',
     category: 'anime',
-    tags: ['anime', 'kakashi', 'hatake', 'sharingan', 'ninja'],
+    tags: ['anime', 'sasuke', 'uchiha', 'chidori', 'sharingan'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-3.jpg'
   },
   {
     id: 'anime-css-4',
-    name: 'Itachi Uchiha Akatsuki',
+    name: 'Deidara (Akatsuki)',
     category: 'anime',
-    tags: ['anime', 'itachi', 'uchiha', 'akatsuki', 'sharingan'],
+    tags: ['anime', 'deidara', 'akatsuki', 'clay', 'naruto'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/anime/anime-css-4.jpg'
@@ -220,11 +220,11 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-9',
-    name: 'Sasuke Uchiha Rinnegan',
+    name: 'Hinata Hyuga (Naruto)',
     category: 'anime',
-    tags: ['anime', 'sasuke', 'uchiha', 'rinnegan'],
+    tags: ['anime', 'hinata', 'hyuga', 'byakugan', 'naruto'],
     difficulty: 'Medium',
-    popularity: 90,
+    popularity: 95,
     imageUrl: './assets/anime/anime-css-9.png'
   },
   {
@@ -238,36 +238,36 @@ const ANIME_PRESETS = [
   },
   {
     id: 'anime-css-11',
-    name: 'Gojo Satoru Unlimited Void',
+    name: 'Sharingan Eye Diamond Sketch',
     category: 'anime',
-    tags: ['anime', 'gojo', 'satoru', 'jujutsu kaisen'],
+    tags: ['anime', 'sharingan', 'eye', 'sketch', 'naruto'],
     difficulty: 'Medium',
     popularity: 99,
     imageUrl: './assets/anime/anime-css-11.jpg'
   },
   {
     id: 'anime-css-12',
-    name: 'Ryomen Sukuna King of Curses',
+    name: 'Hinata Hyuga Full Body (Naruto)',
     category: 'anime',
-    tags: ['anime', 'sukuna', 'ryomen', 'jujutsu kaisen'],
+    tags: ['anime', 'hinata', 'hyuga', 'naruto'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/anime/anime-css-12.png'
   },
   {
     id: 'anime-css-13',
-    name: 'Megumi Fushiguro Ten Shadows',
+    name: 'Nico Robin (One Piece)',
     category: 'anime',
-    tags: ['anime', 'megumi', 'fushiguro', 'jujutsu kaisen'],
+    tags: ['anime', 'robin', 'nico robin', 'one piece'],
     difficulty: 'Medium',
     popularity: 97,
     imageUrl: './assets/anime/anime-css-13.jpg'
   },
   {
     id: 'anime-css-14',
-    name: 'Yuji Itadori Black Flash',
+    name: 'Sung Jin-woo (Solo Leveling)',
     category: 'anime',
-    tags: ['anime', 'yuji', 'itadori', 'jujutsu kaisen'],
+    tags: ['anime', 'jinwoo', 'sung jinwoo', 'solo leveling'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/anime/anime-css-14.png'
@@ -1140,13 +1140,22 @@ const BIKE_PRESETS = [
     imageUrl: './assets/bikes/bike-1.webp'
   },
   {
+    id: 'bike-batman-batcycle-cruiser',
+    name: 'Batman on Batcycle (Cruiser)',
+    category: 'bikes',
+    tags: ['bikes', 'batman', 'batcycle', 'cruiser', 'dc'],
+    difficulty: 'Hard',
+    popularity: 99,
+    imageUrl: './assets/bikes/bike-2.jpg'
+  },
+  {
     id: 'bike-touring-cruiser',
     name: 'Touring Cruiser (Honda Goldwing)',
     category: 'bikes',
     tags: ['bikes', 'touring', 'goldwing', 'cruiser', 'motorcycle'],
     difficulty: 'Hard',
     popularity: 97,
-    imageUrl: './assets/bikes/bike-2.jpg'
+    imageUrl: './assets/bikes/bike-3.webp'
   },
   {
     id: 'bike-yamaha-r6',
@@ -1155,15 +1164,6 @@ const BIKE_PRESETS = [
     tags: ['bikes', 'yamaha', 'r6', 'superbike', 'sports bike'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/bikes/bike-3.webp'
-  },
-  {
-    id: 'bike-sport-outline',
-    name: 'Minimalist Sport Bike Vector',
-    category: 'bikes',
-    tags: ['bikes', 'sport bike', 'vector', 'outline', 'minimalist'],
-    difficulty: 'Easy',
-    popularity: 94,
     imageUrl: './assets/bikes/bike-4.webp'
   },
   {
