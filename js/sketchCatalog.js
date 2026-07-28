@@ -1167,13 +1167,22 @@ const BIKE_PRESETS = [
     imageUrl: './assets/bikes/bike-4.webp'
   },
   {
-    id: 'bike-harley-chopper',
-    name: 'Classic Chopper Cruiser (Harley Style)',
+    id: 'bike-batman-batcycle',
+    name: 'Batman on Batcycle',
     category: 'bikes',
-    tags: ['bikes', 'chopper', 'harley', 'cruiser', 'motorcycle'],
-    difficulty: 'Medium',
-    popularity: 99,
+    tags: ['bikes', 'batman', 'batcycle', 'dc', 'superhero'],
+    difficulty: 'Hard',
+    popularity: 100,
     imageUrl: './assets/bikes/bike-5.webp'
+  },
+  {
+    id: 'bike-atv-quad',
+    name: 'Off-Road ATV Quad Bike',
+    category: 'bikes',
+    tags: ['bikes', 'atv', 'quad bike', '4x4', 'off-road'],
+    difficulty: 'Medium',
+    popularity: 96,
+    imageUrl: './assets/bikes/bike-6.jpg'
   },
   {
     id: 'bike-motogp-futuristic',
@@ -1182,24 +1191,15 @@ const BIKE_PRESETS = [
     tags: ['bikes', 'motogp', 'superbike', 'racing', 'futuristic'],
     difficulty: 'Hard',
     popularity: 98,
-    imageUrl: './assets/bikes/bike-6.jpg'
-  },
-  {
-    id: 'bike-motocross-dirt',
-    name: 'Motocross Dirt Bike',
-    category: 'bikes',
-    tags: ['bikes', 'dirt bike', 'motocross', 'off-road', 'enduro'],
-    difficulty: 'Hard',
-    popularity: 99,
     imageUrl: './assets/bikes/bike-7.webp'
   },
   {
-    id: 'bike-batman-batcycle',
-    name: 'Batman on Batcycle',
+    id: 'bike-mountain-mtb',
+    name: 'Downhill Mountain Bicycle (MTB)',
     category: 'bikes',
-    tags: ['bikes', 'batman', 'batcycle', 'dc', 'superhero'],
-    difficulty: 'Hard',
-    popularity: 100,
+    tags: ['bikes', 'bicycle', 'mtb', 'mountain bike', 'downhill'],
+    difficulty: 'Medium',
+    popularity: 95,
     imageUrl: './assets/bikes/bike-8.jpg'
   },
   {
@@ -1212,21 +1212,21 @@ const BIKE_PRESETS = [
     imageUrl: './assets/bikes/bike-9.webp'
   },
   {
-    id: 'bike-atv-quad',
-    name: 'Off-Road ATV Quad Bike',
+    id: 'bike-harley-chopper',
+    name: 'Classic Chopper Cruiser (Harley Style)',
     category: 'bikes',
-    tags: ['bikes', 'atv', 'quad bike', '4x4', 'off-road'],
+    tags: ['bikes', 'chopper', 'harley', 'cruiser', 'motorcycle'],
     difficulty: 'Medium',
-    popularity: 96,
+    popularity: 99,
     imageUrl: './assets/bikes/bike-10.webp'
   },
   {
-    id: 'bike-mountain-mtb',
-    name: 'Downhill Mountain Bicycle (MTB)',
+    id: 'bike-motocross-dirt',
+    name: 'Motocross Dirt Bike',
     category: 'bikes',
-    tags: ['bikes', 'bicycle', 'mtb', 'mountain bike', 'downhill'],
-    difficulty: 'Medium',
-    popularity: 95,
+    tags: ['bikes', 'dirt bike', 'motocross', 'off-road', 'enduro'],
+    difficulty: 'Hard',
+    popularity: 99,
     imageUrl: './assets/bikes/bike-11.webp'
   }
 ];
@@ -1452,13 +1452,22 @@ const SUPERHERO_PRESETS = [
     imageUrl: './assets/superheroes/superhero-v2-10.jpg'
   },
   {
+    id: 'superhero-spiderman-chest-logo',
+    name: 'Spider-Man Spider Chest Emblem',
+    category: 'superheroes',
+    tags: ['superheroes', 'spiderman', 'spider emblem', 'logo', 'marvel'],
+    difficulty: 'Easy',
+    popularity: 98,
+    imageUrl: './assets/superheroes/superhero-v2-11.jpg'
+  },
+  {
     id: 'superhero-flash-logo',
     name: 'The Flash Lightning Emblem',
     category: 'superheroes',
     tags: ['superheroes', 'the flash', 'flash', 'lightning', 'dc'],
     difficulty: 'Easy',
     popularity: 97,
-    imageUrl: './assets/superheroes/superhero-v2-11.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-12.webp'
   },
   {
     id: 'superhero-black-panther-mask',
@@ -1467,7 +1476,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'black panther', 'mask', 'wakanda', 'marvel'],
     difficulty: 'Medium',
     popularity: 98,
-    imageUrl: './assets/superheroes/superhero-v2-12.webp'
+    imageUrl: './assets/superheroes/superhero-v2-13.webp'
   },
   {
     id: 'superhero-nebula-batons',
@@ -1476,7 +1485,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'nebula', 'guardians of the galaxy', 'marvel'],
     difficulty: 'Hard',
     popularity: 95,
-    imageUrl: './assets/superheroes/superhero-v2-13.webp'
+    imageUrl: './assets/superheroes/superhero-v2-14.jpg'
   },
   {
     id: 'superhero-superman-heroic',
@@ -1485,7 +1494,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'man of steel', 'clark kent', 'dc'],
     difficulty: 'Hard',
     popularity: 100,
-    imageUrl: './assets/superheroes/superhero-v2-14.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-15.jpg'
   },
   {
     id: 'superhero-superman-logo',
@@ -1494,7 +1503,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'superman', 'emblem', 'logo', 'dc'],
     difficulty: 'Easy',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-v2-15.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-16.jpg'
   },
   {
     id: 'superhero-thor-odinson',
@@ -1503,7 +1512,7 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'thor', 'god of thunder', 'avengers', 'marvel'],
     difficulty: 'Hard',
     popularity: 99,
-    imageUrl: './assets/superheroes/superhero-v2-16.jpg'
+    imageUrl: './assets/superheroes/superhero-v2-17.webp'
   },
   {
     id: 'superhero-thor-hammer-icon',
@@ -1512,15 +1521,6 @@ const SUPERHERO_PRESETS = [
     tags: ['superheroes', 'mjolnir', 'thor', 'hammer', 'icon'],
     difficulty: 'Easy',
     popularity: 94,
-    imageUrl: './assets/superheroes/superhero-v2-17.webp'
-  },
-  {
-    id: 'superhero-spiderman-chest-logo',
-    name: 'Spider-Man Spider Chest Emblem',
-    category: 'superheroes',
-    tags: ['superheroes', 'spiderman', 'spider emblem', 'logo', 'marvel'],
-    difficulty: 'Easy',
-    popularity: 98,
     imageUrl: './assets/superheroes/superhero-v2-18.webp'
   }
 ];
