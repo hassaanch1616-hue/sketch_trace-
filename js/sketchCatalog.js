@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SketchTrace - HD Authentic Anime Names Catalog
  */
 
@@ -709,9 +709,9 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-sports-coupe',
-    name: 'Sports Coupe Printable',
+    name: 'Toyota Supra GR Sports Coupe',
     category: 'cars',
-    tags: ['cars', 'sports car', 'printable', 'line art'],
+    tags: ['cars', 'toyota', 'supra', 'sports car', 'line art'],
     difficulty: 'Easy',
     popularity: 94,
     imageUrl: './assets/cars/car-v2-7.jpg'
@@ -727,7 +727,7 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-bugatti-veyron',
-    name: 'Bugatti Veyron',
+    name: 'Bugatti Veyron 16.4 Grand Sport',
     category: 'cars',
     tags: ['cars', 'bugatti', 'supercar', 'line art'],
     difficulty: 'Hard',
@@ -736,7 +736,7 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-ferrari-f40',
-    name: 'Ferrari F40',
+    name: 'Ferrari F40 Twin-Turbo',
     category: 'cars',
     tags: ['cars', 'ferrari', 'supercar', 'classic'],
     difficulty: 'Hard',
@@ -745,7 +745,7 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-pagani-zonda',
-    name: 'Pagani Zonda',
+    name: 'Pagani Zonda Cinque Roadster',
     category: 'cars',
     tags: ['cars', 'pagani', 'hypercar', 'line art'],
     difficulty: 'Hard',
@@ -754,7 +754,7 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-nissan-skyline-r34',
-    name: 'Nissan Skyline GT-R R34',
+    name: 'Nissan Skyline GT-R R34 V-Spec',
     category: 'cars',
     tags: ['cars', 'nissan', 'jdm', 'skyline'],
     difficulty: 'Hard',
@@ -763,16 +763,16 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-race-car-gt',
-    name: 'Race Car GT',
+    name: 'Ford GT Le Mans Race Car',
     category: 'cars',
-    tags: ['cars', 'race car', 'gt', 'line art'],
+    tags: ['cars', 'race car', 'ford gt', 'line art'],
     difficulty: 'Easy',
     popularity: 92,
     imageUrl: './assets/cars/car-v2-13.webp'
   },
   {
     id: 'car-rolls-royce-ghost',
-    name: 'Rolls Royce Ghost',
+    name: 'Rolls-Royce Ghost Extended',
     category: 'cars',
     tags: ['cars', 'rolls royce', 'luxury', 'line art'],
     difficulty: 'Medium',
@@ -781,7 +781,7 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-porsche-gt3-rs',
-    name: 'Porsche 911 GT3 RS',
+    name: 'Porsche 911 GT3 RS (992)',
     category: 'cars',
     tags: ['cars', 'porsche', 'supercar', 'line art'],
     difficulty: 'Hard',
@@ -790,36 +790,36 @@ const CAR_PRESETS = [
   },
   {
     id: 'car-classic-muscle',
-    name: 'Classic Muscle Car',
+    name: '1969 Ford Mustang Boss 429',
     category: 'cars',
-    tags: ['cars', 'muscle car', 'vintage', 'line art'],
+    tags: ['cars', 'muscle car', 'ford mustang', 'vintage'],
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/cars/car-v2-16.webp'
   },
   {
     id: 'car-supercar-outline',
-    name: 'Supercar Outline',
+    name: 'Koenigsegg Jesko Attack Hypercar',
     category: 'cars',
-    tags: ['cars', 'supercar', 'outline', 'line art'],
+    tags: ['cars', 'koenigsegg', 'jesko', 'hypercar'],
     difficulty: 'Medium',
     popularity: 93,
     imageUrl: './assets/cars/car-v2-17.webp'
   },
   {
     id: 'car-modern-drift',
-    name: 'Modern Drift Car',
+    name: 'Mazda RX-7 FD Spec Drift Car',
     category: 'cars',
-    tags: ['cars', 'drift', 'sports car', 'line art'],
+    tags: ['cars', 'mazda', 'rx7', 'drift', 'jdm'],
     difficulty: 'Medium',
     popularity: 92,
     imageUrl: './assets/cars/car-v2-18.webp'
   },
   {
     id: 'car-track-racing',
-    name: 'Track Racing Car',
+    name: 'Aston Martin Valkyrie Track Racer',
     category: 'cars',
-    tags: ['cars', 'racing', 'track', 'line art'],
+    tags: ['cars', 'aston martin', 'valkyrie', 'racing'],
     difficulty: 'Medium',
     popularity: 91,
     imageUrl: './assets/cars/car-v2-19.jpg'
@@ -838,36 +838,36 @@ const CAR_PRESETS = [
 const AIRCRAFT_PRESETS = [
   {
     id: 'aircraft-commercial-jet',
-    name: 'Commercial Jet Airliner',
+    name: 'Boeing 787 Dreamliner Commercial Jet',
     category: 'aircraft',
-    tags: ['aircraft', 'airplane', 'jet', 'airliner', 'commercial'],
+    tags: ['aircraft', 'airplane', 'boeing', '787', 'airliner'],
     difficulty: 'Medium',
     popularity: 98,
     imageUrl: './assets/aircraft/aircraft-1.jpg'
   },
   {
     id: 'aircraft-passenger-plane',
-    name: 'Passenger Airplane',
+    name: 'Airbus A380 Double-Decker Airliner',
     category: 'aircraft',
-    tags: ['aircraft', 'airplane', 'passenger', 'flight'],
+    tags: ['aircraft', 'airplane', 'airbus', 'a380', 'passenger'],
     difficulty: 'Medium',
     popularity: 96,
     imageUrl: './assets/aircraft/aircraft-2.jpg'
   },
   {
     id: 'aircraft-helicopter',
-    name: 'Helicopter Aircraft',
+    name: 'AH-64 Apache Attack Helicopter',
     category: 'aircraft',
-    tags: ['aircraft', 'helicopter', 'chopper', 'rotor'],
+    tags: ['aircraft', 'helicopter', 'apache', 'chopper', 'rotor'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/aircraft/aircraft-3.webp'
   },
   {
     id: 'aircraft-propeller-biplane',
-    name: 'Propeller Biplane',
+    name: 'Sopwith Camel WW1 Vintage Biplane',
     category: 'aircraft',
-    tags: ['aircraft', 'biplane', 'propeller', 'vintage'],
+    tags: ['aircraft', 'biplane', 'sopwith', 'propeller', 'vintage'],
     difficulty: 'Medium',
     popularity: 94,
     imageUrl: './assets/aircraft/aircraft-4.jpg'
@@ -883,7 +883,7 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-f15-strike-eagle',
-    name: 'F-15 Strike Eagle',
+    name: 'F-15 Strike Eagle Supersonic Jet',
     category: 'aircraft',
     tags: ['aircraft', 'f-15', 'strike eagle', 'fighter jet'],
     difficulty: 'Hard',
@@ -892,7 +892,7 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-f5-tiger',
-    name: 'F-5 Tiger Fighter Jet',
+    name: 'Northrop F-5 Tiger II Fighter',
     category: 'aircraft',
     tags: ['aircraft', 'f-5', 'tiger', 'fighter jet'],
     difficulty: 'Hard',
@@ -901,27 +901,27 @@ const AIRCRAFT_PRESETS = [
   },
   {
     id: 'aircraft-supersonic-jet',
-    name: 'Supersonic Jet Aircraft',
+    name: 'Concorde Supersonic Passenger Jet',
     category: 'aircraft',
-    tags: ['aircraft', 'supersonic', 'jet', 'military'],
+    tags: ['aircraft', 'concorde', 'supersonic', 'jet'],
     difficulty: 'Hard',
     popularity: 96,
     imageUrl: './assets/aircraft/aircraft-8.jpg'
   },
   {
     id: 'aircraft-military-cargo',
-    name: 'Military Cargo Transport Plane',
+    name: 'Lockheed C-130 Hercules Cargo Plane',
     category: 'aircraft',
-    tags: ['aircraft', 'cargo', 'military', 'transport'],
+    tags: ['aircraft', 'hercules', 'cargo', 'military'],
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/aircraft/aircraft-9.jpg'
   },
   {
     id: 'aircraft-vintage-monoplane',
-    name: 'Vintage Monoplane',
+    name: 'P-51 Mustang Vintage Monoplane',
     category: 'aircraft',
-    tags: ['aircraft', 'monoplane', 'vintage', 'classic'],
+    tags: ['aircraft', 'p-51', 'mustang', 'vintage', 'classic'],
     difficulty: 'Medium',
     popularity: 93,
     imageUrl: './assets/aircraft/aircraft-10.jpg'
