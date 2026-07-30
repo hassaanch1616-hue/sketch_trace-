@@ -70,16 +70,25 @@ class SketchTraceApp {
 
   registerServiceWorker() {
     if ('serviceWorker' in navigator) {
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
           .then((reg) => {
             console.log('[PWA] ServiceWorker registered with scope:', reg.scope);
+            reg.update();
             reg.onupdatefound = () => {
               const installingWorker = reg.installing;
               if (installingWorker) {
                 installingWorker.onstatechange = () => {
                   if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                    this.showToast('🚀 App updated! New version ready.');
+                    this.showToast('🚀 App updated! Ads & Features active.');
                   }
                 };
               }
