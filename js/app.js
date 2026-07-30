@@ -364,12 +364,16 @@ class SketchTraceApp {
   async openSketchDetailModal(sketch) {
     if (!sketch) return;
     this.selectedSketch = sketch;
-    if (window.SketchTrace.storage) {
-      await window.SketchTrace.storage.addRecent(sketch);
-    }
 
     const modal = document.getElementById('sketchDetailModal');
     if (!modal) return;
+
+    // Open picture modal immediately for fast UI feedback
+    modal.classList.remove('hidden');
+
+    if (window.SketchTrace.storage) {
+      window.SketchTrace.storage.addRecent(sketch).catch(() => {});
+    }
 
     const nameEl = document.getElementById('modalSketchName');
     const catEl = document.getElementById('modalSketchCategory');
