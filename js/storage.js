@@ -43,7 +43,7 @@ class StorageService {
     } catch (e) {}
     document.documentElement.setAttribute('data-theme', t);
     document.documentElement.className = t;
-    if (['dark', 'crimson', 'cyberpunk', 'emerald', 'violet', 'ocean', 'amber', 'oled'].includes(t)) {
+    if (['dark', 'crimson', 'cyberpunk', 'emerald', 'violet', 'ocean', 'amber', 'oled', 'pakistan'].includes(t)) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');

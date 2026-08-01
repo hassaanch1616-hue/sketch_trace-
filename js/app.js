@@ -36,12 +36,40 @@ class SketchTraceApp {
       this.bindAdmin();
       this.bindPwaInstall();
       this.bindThemeModal();
+      this.initPakistanFlagRain();
       this.registerServiceWorker();
 
       this.renderHome();
     } catch (err) {
       console.error('App init error:', err);
     }
+  }
+
+  initPakistanFlagRain() {
+    let container = document.getElementById('pakistanFlagRain');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'pakistanFlagRain';
+      container.className = 'pointer-events-none fixed inset-0 z-10 overflow-hidden hidden';
+      document.body.appendChild(container);
+    }
+
+    const items = ['🇵🇰', '🌙⭐', '💚', '✨', '🇵🇰', '🇵🇰', '💚', '🌙⭐', '🇵🇰'];
+    let html = '';
+    const totalFlags = 36;
+
+    for (let i = 0; i < totalFlags; i++) {
+      const emoji = items[i % items.length];
+      const left = (Math.random() * 96).toFixed(2);
+      const delay = (Math.random() * 9).toFixed(2);
+      const duration = (5 + Math.random() * 8).toFixed(2);
+      const size = (1.2 + Math.random() * 1.4).toFixed(2);
+      const opacity = (0.5 + Math.random() * 0.45).toFixed(2);
+
+      html += `<span class="falling-flag" style="left:${left}%; animation-delay:${delay}s; animation-duration:${duration}s; font-size:${size}rem; opacity:${opacity};">${emoji}</span>`;
+    }
+
+    container.innerHTML = html;
   }
 
   bindThemeModal() {
