@@ -2573,6 +2573,21 @@ function createProceduralSVG(categoryId, num, index) {
 
 var catalogCache = new Map();
 
+function isIndependenceExpired() {
+  var now = new Date();
+  var cutoff = new Date(now.getFullYear(), 7, 15, 0, 0, 0); // 15 Aug 00:00:00 (end of 14 Aug)
+  return now >= cutoff;
+}
+
+function filterExpired(list) {
+  if (isIndependenceExpired()) {
+    return list.filter(function(s) {
+      return s && s.category !== 'independence' && (!s.id || s.id.indexOf('independence') === -1);
+    });
+  }
+  return list;
+}
+
 function getSketchesByCategory(categoryId) {
   if (catalogCache.has(categoryId)) return catalogCache.get(categoryId);
   var list = generateCategorySketches(categoryId, 30);
@@ -2582,14 +2597,15 @@ function getSketchesByCategory(categoryId) {
 
 function getAllSketches() {
   var all = [];
-  CATEGORIES.forEach(function(cat) {
+  var activeCategories = isIndependenceExpired() ? CATEGORIES.filter(function(c) { return c.id !== 'independence'; }) : CATEGORIES;
+  activeCategories.forEach(function(cat) {
     all = all.concat(getSketchesByCategory(cat.id));
   });
   return all;
 }
 
 function getFeaturedSketches() {
-  return [
+  var list = [
     INDEPENDENCE_PRESETS[1], // Pakistan Zindabad! Celebration
     INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
     INDEPENDENCE_PRESETS[2], // Faisal Mosque
@@ -2599,10 +2615,11 @@ function getFeaturedSketches() {
     ANIME_PRESETS[0],  // Tanjiro
     ANIME_PRESETS[1]   // Gabimaru
   ];
+  return filterExpired(list);
 }
 
 function getTrendingSketches() {
-  return [
+  var list = [
     INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
     INDEPENDENCE_PRESETS[3], // Waving Pakistan Flag
     INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
@@ -2610,10 +2627,11 @@ function getTrendingSketches() {
     CAR_PRESETS[2],  // McLaren P1
     ANIME_PRESETS[0]
   ];
+  return filterExpired(list);
 }
 
 function getNewSketches() {
-  return [
+  var list = [
     INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
     INDEPENDENCE_PRESETS[2], // Faisal Mosque
     INDEPENDENCE_PRESETS[4], // Mazar-e-Quaid
@@ -2621,6 +2639,7 @@ function getNewSketches() {
     CAR_PRESETS[0],  // Bugatti Chiron
     ANIME_PRESETS[0]
   ];
+  return filterExpired(list);
 }
 
 function searchSketches(query) {
@@ -2669,7 +2688,12 @@ function getSketchById(id) {
 }
 
 window.SketchTrace.sketchCatalog = {
-  CATEGORIES: CATEGORIES,
+  get CATEGORIES() {
+    if (isIndependenceExpired()) {
+      return CATEGORIES.filter(function(c) { return c.id !== 'independence'; });
+    }
+    return CATEGORIES;
+  },
   INDEPENDENCE_PRESETS: INDEPENDENCE_PRESETS,
   ANIME_PRESETS: ANIME_PRESETS,
   CAR_PRESETS: CAR_PRESETS,

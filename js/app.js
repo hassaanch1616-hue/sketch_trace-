@@ -60,7 +60,7 @@ class SketchTraceApp {
       bigFlag.id = 'pakistanBigWavingFlag';
       bigFlag.className = 'pointer-events-none fixed inset-0 z-0 flex items-center justify-center overflow-hidden hidden';
       bigFlag.innerHTML = `
-        <svg viewBox="0 0 300 200" class="w-[85vw] max-w-4xl h-auto opacity-20 filter drop-shadow-2xl waving-big-flag">
+        <svg viewBox="0 0 300 200" class="w-[95vw] max-w-[1400px] h-auto opacity-40 filter drop-shadow-2xl waving-big-flag">
           <rect width="300" height="200" fill="#01411C" rx="12"/>
           <rect width="75" height="200" fill="#FFFFFF" rx="8"/>
           <g transform="translate(187.5, 100)">
@@ -102,6 +102,11 @@ class SketchTraceApp {
     const modal = document.getElementById('themeModal');
     const toggleBtn = document.getElementById('themeToggleBtn');
     const closeBtn = document.getElementById('closeThemeModalBtn');
+
+    if (window.SketchTrace.storage && window.SketchTrace.storage.isIndependenceExpired()) {
+      const pakBtn = document.querySelector('[data-theme-btn="pakistan"]');
+      if (pakBtn) pakBtn.classList.add('hidden');
+    }
 
     if (toggleBtn && modal) {
       toggleBtn.onclick = () => modal.classList.remove('hidden');
@@ -213,6 +218,20 @@ class SketchTraceApp {
           }
         }
       });
+
+      const headerEl = document.querySelector('header');
+      const navEl = document.querySelector('nav');
+      const footerEl = document.querySelector('footer');
+
+      if (viewName === 'cameraTrace') {
+        if (headerEl) headerEl.classList.add('hidden');
+        if (navEl) navEl.classList.add('hidden');
+        if (footerEl) footerEl.classList.add('hidden');
+      } else {
+        if (headerEl) headerEl.classList.remove('hidden');
+        if (navEl) navEl.classList.remove('hidden');
+        if (footerEl) footerEl.classList.remove('hidden');
+      }
 
       // View-specific actions
       if (viewName === 'home') {
@@ -330,9 +349,16 @@ class SketchTraceApp {
       return;
     }
 
-    container.innerHTML = sketches.map(sketch => `
-      <div data-sketch-id="${sketch.id}" class="sketch-card cursor-pointer group rounded-2xl bg-white border border-slate-200 overflow-hidden hover:border-blue-600 hover:shadow-md transition-all">
+    container.innerHTML = sketches.map(sketch => {
+      const isIndep = sketch.category === 'independence' || (sketch.id && String(sketch.id).startsWith('independence'));
+      return `
+      <div data-sketch-id="${sketch.id}" class="sketch-card cursor-pointer group rounded-2xl bg-white border border-slate-200 overflow-hidden hover:border-blue-600 hover:shadow-md transition-all relative">
         <div class="bg-slate-50 p-6 aspect-square flex items-center justify-center relative overflow-hidden border-b border-slate-100">
+          ${isIndep ? `
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-gradient-to-r from-emerald-700 to-green-600 text-white text-[10px] font-extrabold shadow-lg border border-emerald-400/50 flex items-center gap-1 z-10">
+              🇵🇰 14 August Special
+            </span>
+          ` : ''}
           ${(sketch.imageUrl || sketch.dataUrl) ? `
             <img src="${sketch.imageUrl || sketch.dataUrl}" alt="${sketch.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
           ` : `
@@ -345,6 +371,11 @@ class SketchTraceApp {
           </span>
         </div>
         <div class="p-4">
+          ${isIndep ? `
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 text-[10px] font-extrabold mb-1.5 border border-emerald-300 shadow-xs">
+              🇵🇰 14 August Special
+            </div>
+          ` : ''}
           <h4 class="font-bold text-sm text-slate-900 line-clamp-1 group-hover:text-blue-600 transition-colors">${sketch.name}</h4>
           <div class="flex items-center justify-between mt-1.5 text-xs text-slate-500">
             <span class="capitalize">${sketch.category}</span>
@@ -366,7 +397,7 @@ class SketchTraceApp {
           `}
         </div>
       </div>
-    `).join('');
+    `;}).join('');
 
     container.querySelectorAll('.sketch-card').forEach(card => {
       card.onclick = async (e) => {
@@ -443,8 +474,11 @@ class SketchTraceApp {
     const diffEl = document.getElementById('modalSketchDifficulty');
     const previewContainer = document.getElementById('modalSketchPreview');
 
+    const isIndep = sketch.category === 'independence' || (sketch.id && String(sketch.id).startsWith('independence'));
     if (nameEl) nameEl.innerText = sketch.name;
-    if (catEl) catEl.innerText = sketch.category;
+    if (catEl) {
+      catEl.innerHTML = isIndep ? `<span class="inline-flex items-center gap-1 font-extrabold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300">🇵🇰 14 August Special</span>` : sketch.category;
+    }
     if (diffEl) diffEl.innerText = sketch.difficulty || 'Medium';
 
     if (previewContainer) {
