@@ -5,7 +5,7 @@
 window.SketchTrace = window.SketchTrace || {};
 
 const CATEGORIES = [
-  { id: 'independence', name: 'Happy Independence', icon: '🇵🇰', count: 3, description: 'Quaid-e-Azam, Bab-e-Khyber, Pakistan Flag Crescent & Star Independence Sketches' },
+  { id: 'independence', name: 'Happy Independence', icon: '🇵🇰', count: 8, description: 'Quaid-e-Azam, Mazar-e-Quaid, Faisal Mosque, Pakistan Zindabad, Bab-e-Khyber & Flag Sketches' },
   { id: 'anime', name: 'Anime', icon: '\u2728', count: 70, description: 'Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna, Naruto, Kakashi' },
   { id: 'cars', name: 'Cars', icon: '\uD83C\uDFCE', count: 20, description: 'Bugatti Chiron, Lamborghini, McLaren, Ferrari, BMW, Audi, Nissan Skyline & Supercars' },
   { id: 'aircraft', name: 'Aircraft', icon: '\u2708', count: 10, description: 'F-15 Eagle, Fighter Jets, Commercial Airliners, Helicopters & Biplanes' },
@@ -31,12 +31,48 @@ const INDEPENDENCE_PRESETS = [
     imageUrl: './assets/independence/independence-quaid-e-azam.jpg'
   },
   {
+    id: 'independence-pakistan-zindabad',
+    name: 'Pakistan Zindabad! Celebration Sketch',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'pakistan zindabad', 'children', 'flag', '14 august'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/independence/independence-pakistan-zindabad.jpg'
+  },
+  {
+    id: 'independence-faisal-mosque',
+    name: 'Faisal Mosque Islamabad',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'faisal mosque', 'islamabad', 'architecture', '14 august'],
+    difficulty: 'Hard',
+    popularity: 99,
+    imageUrl: './assets/independence/independence-faisal-mosque.jpg'
+  },
+  {
+    id: 'independence-waving-flag',
+    name: 'Waving Pakistan National Flag',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'flag', 'waving flag', 'pakistan', '14 august'],
+    difficulty: 'Easy',
+    popularity: 99,
+    imageUrl: './assets/independence/independence-waving-flag.jpg'
+  },
+  {
+    id: 'independence-mazar-e-quaid',
+    name: 'Mazar-e-Quaid Karachi',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'mazar-e-quaid', 'karachi', 'jinnah mausoleum', '14 august'],
+    difficulty: 'Medium',
+    popularity: 98,
+    imageUrl: './assets/independence/independence-mazar-e-quaid.jpg'
+  },
+  {
     id: 'independence-crescent-star',
     name: 'Pakistan Flag Crescent & Star',
     category: 'independence',
     tags: ['independence', 'happy independence', 'flag', 'crescent star', 'pakistan', '14 august'],
     difficulty: 'Easy',
-    popularity: 99,
+    popularity: 98,
     imageUrl: './assets/independence/independence-crescent-star.jpg'
   },
   {
@@ -45,8 +81,17 @@ const INDEPENDENCE_PRESETS = [
     category: 'independence',
     tags: ['independence', 'happy independence', 'bab-e-khyber', 'monument', 'pakistan', '14 august'],
     difficulty: 'Medium',
-    popularity: 98,
+    popularity: 97,
     imageUrl: './assets/independence/independence-bab-e-khyber.jpg'
+  },
+  {
+    id: 'independence-pakistan-flag-poster',
+    name: 'Pakistan Flag Line Art Poster',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'flag poster', 'pakistan', '14 august'],
+    difficulty: 'Easy',
+    popularity: 96,
+    imageUrl: './assets/independence/independence-pakistan-flag-poster.jpg'
   }
 ];
 
@@ -2536,9 +2581,10 @@ function getAllSketches() {
 
 function getFeaturedSketches() {
   return [
+    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad! Celebration
     INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
-    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
-    INDEPENDENCE_PRESETS[2], // Bab-e-Khyber
+    INDEPENDENCE_PRESETS[2], // Faisal Mosque
+    INDEPENDENCE_PRESETS[4], // Mazar-e-Quaid
     CAR_PRESETS[0],  // Bugatti Chiron
     CAR_PRESETS[1],  // Lamborghini
     ANIME_PRESETS[0],  // Tanjiro
@@ -2548,20 +2594,21 @@ function getFeaturedSketches() {
 
 function getTrendingSketches() {
   return [
+    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
+    INDEPENDENCE_PRESETS[3], // Waving Pakistan Flag
     INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
-    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
     CAR_PRESETS[0],  // Bugatti Chiron
     CAR_PRESETS[2],  // McLaren P1
-    ANIME_PRESETS[0],
-    ANIME_PRESETS[1]
+    ANIME_PRESETS[0]
   ];
 }
 
 function getNewSketches() {
   return [
-    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
-    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
-    INDEPENDENCE_PRESETS[2], // Bab-e-Khyber
+    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
+    INDEPENDENCE_PRESETS[2], // Faisal Mosque
+    INDEPENDENCE_PRESETS[4], // Mazar-e-Quaid
+    INDEPENDENCE_PRESETS[3], // Waving Flag
     CAR_PRESETS[0],  // Bugatti Chiron
     ANIME_PRESETS[0]
   ];

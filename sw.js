@@ -3,7 +3,7 @@
  * Caches application shell, assets, icons, and sketches for 100% offline usage on GitHub Pages.
  */
 
-const CACHE_NAME = 'sketchtrace-v36.0.0';
+const CACHE_NAME = 'sketchtrace-v37.0.0';
 
 const APP_SHELL = [
   './',
@@ -25,7 +25,12 @@ const APP_SHELL = [
   './assets/icons/maskable-icon-512.png',
   './assets/independence/independence-quaid-e-azam.jpg',
   './assets/independence/independence-crescent-star.jpg',
-  './assets/independence/independence-bab-e-khyber.jpg'
+  './assets/independence/independence-bab-e-khyber.jpg',
+  './assets/independence/independence-pakistan-zindabad.jpg',
+  './assets/independence/independence-faisal-mosque.jpg',
+  './assets/independence/independence-waving-flag.jpg',
+  './assets/independence/independence-mazar-e-quaid.jpg',
+  './assets/independence/independence-pakistan-flag-poster.jpg'
 ];
 
 // Install Event - Pre-cache App Shell
