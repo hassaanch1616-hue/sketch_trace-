@@ -244,3 +244,45 @@ header, main, footer, nav {
 [data-theme="pakistan"] #pakistanFlagRain {
   display: block !important;
 }
+
+/* Large Waving Background Flag */
+#pakistanBigWavingFlag {
+  position: fixed;
+  inset: 0;
+  z-index: 0 !important;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@keyframes bigFlagWave {
+  0% {
+    transform: scale(1) rotate(-2deg) skewY(0deg);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  }
+  25% {
+    transform: scale(1.04) rotate(1.5deg) skewY(2deg);
+    filter: drop-shadow(15px 30px 55px rgba(0, 0, 0, 0.6));
+  }
+  50% {
+    transform: scale(0.97) rotate(3deg) skewY(-1.5deg);
+    filter: drop-shadow(-12px 25px 50px rgba(0, 0, 0, 0.5));
+  }
+  75% {
+    transform: scale(1.03) rotate(-1deg) skewY(1deg);
+    filter: drop-shadow(8px 26px 52px rgba(0, 0, 0, 0.55));
+  }
+  100% {
+    transform: scale(1) rotate(-2deg) skewY(0deg);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.waving-big-flag {
+  animation: bigFlagWave 8s ease-in-out infinite;
+  will-change: transform, filter;
+  transform-origin: center center;
+}
+
+[data-theme="pakistan"] #pakistanBigWavingFlag {
+  display: flex !important;
+}

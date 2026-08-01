@@ -54,6 +54,25 @@ class SketchTraceApp {
       document.body.insertBefore(container, document.body.firstChild);
     }
 
+    let bigFlag = document.getElementById('pakistanBigWavingFlag');
+    if (!bigFlag) {
+      bigFlag = document.createElement('div');
+      bigFlag.id = 'pakistanBigWavingFlag';
+      bigFlag.className = 'pointer-events-none fixed inset-0 z-0 flex items-center justify-center overflow-hidden hidden';
+      bigFlag.innerHTML = `
+        <svg viewBox="0 0 300 200" class="w-[85vw] max-w-4xl h-auto opacity-20 filter drop-shadow-2xl waving-big-flag">
+          <rect width="300" height="200" fill="#01411C" rx="12"/>
+          <rect width="75" height="200" fill="#FFFFFF" rx="8"/>
+          <g transform="translate(187.5, 100)">
+            <circle cx="0" cy="0" r="48" fill="#FFFFFF"/>
+            <circle cx="14" cy="-10" r="42" fill="#01411C"/>
+            <polygon points="14,-20 19.5,-5 35,-5 22.5,4 27,19 14,10 1,19 5.5,4 -7,-5 8.5,-5" fill="#FFFFFF" transform="rotate(-15)"/>
+          </g>
+        </svg>
+      `;
+      document.body.insertBefore(bigFlag, document.body.firstChild);
+    }
+
     const flagSvgs = [
       // 1. Waving Flag with Pole
       `<svg viewBox="0 0 100 70" class="w-10 h-7 inline-block drop-shadow-md"><line x1="10" y1="5" x2="10" y2="68" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round"/><circle cx="10" cy="5" r="4" fill="#FFD700"/><g transform="translate(10, 8)"><rect width="80" height="50" fill="#01411C" rx="3"/><rect width="20" height="50" fill="#FFFFFF" rx="2"/><g transform="translate(50, 25)"><circle cx="0" cy="0" r="12" fill="#FFFFFF"/><circle cx="3.5" cy="-2.5" r="10" fill="#01411C"/><polygon points="3,-5 4.5,-1 8.5,-1 5.5,1 6.5,5 3.5,3 0.5,5 1.5,1 -2.5,-1 2.5,-1" fill="#FFFFFF" transform="rotate(-15)"/></g></g></svg>`,
