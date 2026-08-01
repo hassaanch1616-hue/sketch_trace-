@@ -91,7 +91,10 @@ class TraceEngine {
   }
 
   render() {
+    if (this.renderRequested) return;
+    this.renderRequested = true;
     requestAnimationFrame(() => {
+      this.renderRequested = false;
       const { width: w, height: h } = this.canvas;
       if (!w || !h) return;
       this.ctx.clearRect(0, 0, w, h);
@@ -101,11 +104,16 @@ class TraceEngine {
         this.ctx.fillRect(0, 0, w, h);
       }
 
+      // Fast CSS filter delegation to GPU compositor thread
+      let cssFilter = `brightness(${this.brightness}%) contrast(${this.contrast}%) saturate(${this.saturation}%)`;
+      if (this.invert) cssFilter += ` invert(100%)`;
+      if (this.canvas.style.filter !== cssFilter) {
+        this.canvas.style.filter = cssFilter;
+      }
+
       if (this.isImgLoaded && this.img.width > 0) {
         this.ctx.save();
-        let filter = `opacity(${this.opacity}) brightness(${this.brightness}%) contrast(${this.contrast}%) saturate(${this.saturation}%)`;
-        if (this.invert) filter += ` invert(100%)`;
-        this.ctx.filter = filter;
+        this.ctx.globalAlpha = this.opacity; // GPU native fast alpha transparency
 
         this.ctx.translate(this.panX, this.panY);
         this.ctx.rotate((this.rotation * Math.PI) / 180);
@@ -152,6 +160,15 @@ class TraceEngine {
 
   bindEvents() {
     const el = this.canvas;
+    let initialPinchDist = 0;
+    let initialScale = 1;
+
+    const getDistance = (t1, t2) => {
+      const dx = t1.clientX - t2.clientX;
+      const dy = t1.clientY - t2.clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    };
+
     const handleStart = (e) => {
       if (this.isLocked) return;
       const touches = e.touches || [e];
@@ -161,24 +178,36 @@ class TraceEngine {
         this.startTouchY = touches[0].clientY;
         this.initialPanX = this.panX;
         this.initialPanY = this.panY;
+      } else if (touches.length === 2) {
+        this.isDragging = false;
+        initialPinchDist = getDistance(touches[0], touches[1]);
+        initialScale = this.scale;
       }
     };
 
     const handleMove = (e) => {
-      if (this.isLocked || !this.isDragging) return;
+      if (this.isLocked) return;
       const touches = e.touches || [e];
-      if (touches.length === 1) {
+      if (touches.length === 1 && this.isDragging) {
         this.panX = this.initialPanX + (touches[0].clientX - this.startTouchX);
         this.panY = this.initialPanY + (touches[0].clientY - this.startTouchY);
+        this.render();
+      } else if (touches.length === 2 && initialPinchDist > 0) {
+        const currentDist = getDistance(touches[0], touches[1]);
+        const zoomFactor = currentDist / initialPinchDist;
+        this.scale = Math.min(5.0, Math.max(0.2, initialScale * zoomFactor));
         this.render();
       }
     };
 
-    const handleEnd = () => { this.isDragging = false; };
+    const handleEnd = () => {
+      this.isDragging = false;
+      initialPinchDist = 0;
+    };
 
-    el.addEventListener('touchstart', handleStart, { passive: false });
-    el.addEventListener('touchmove', handleMove, { passive: false });
-    el.addEventListener('touchend', handleEnd);
+    el.addEventListener('touchstart', handleStart, { passive: true });
+    el.addEventListener('touchmove', handleMove, { passive: true });
+    el.addEventListener('touchend', handleEnd, { passive: true });
 
     el.addEventListener('mousedown', handleStart);
     window.addEventListener('mousemove', handleMove);

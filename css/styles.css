@@ -298,3 +298,25 @@ header, main, footer, nav {
 [data-theme="pakistan"] #pakistanBigWavingFlag {
   display: flex !important;
 }
+
+/* Mobile Hardware Acceleration & Ultra Smooth FPS Optimizations */
+@media (max-width: 768px) {
+  #pakistanBigWavingFlag svg {
+    filter: none !important;
+    opacity: 0.25 !important;
+  }
+
+  .falling-flag {
+    filter: none !important;
+  }
+
+  @keyframes bigFlagWave {
+    0%, 100% { transform: scale(1.05) translate3d(0, 0, 0); }
+    50% { transform: scale(1.1) translate3d(0, 0, 0); }
+  }
+
+  .sketch-card, #cameraTraceView, canvas {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+}
