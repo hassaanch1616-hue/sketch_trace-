@@ -5,7 +5,7 @@
 window.SketchTrace = window.SketchTrace || {};
 
 const CATEGORIES = [
-  { id: 'independence', name: 'Happy Independence', icon: '🇵🇰', count: 8, description: 'Quaid-e-Azam, Mazar-e-Quaid, Faisal Mosque, Pakistan Zindabad, Bab-e-Khyber & Flag Sketches' },
+  { id: 'independence', name: 'Happy Independence', icon: '🇵🇰', count: 9, description: 'Pakistan Map, Quaid-e-Azam, Mazar-e-Quaid, Faisal Mosque, Pakistan Zindabad, Bab-e-Khyber & Flag Sketches' },
   { id: 'anime', name: 'Anime', icon: '\u2728', count: 70, description: 'Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna, Naruto, Kakashi' },
   { id: 'cars', name: 'Cars', icon: '\uD83C\uDFCE', count: 20, description: 'Bugatti Chiron, Lamborghini, McLaren, Ferrari, BMW, Audi, Nissan Skyline & Supercars' },
   { id: 'aircraft', name: 'Aircraft', icon: '\u2708', count: 10, description: 'F-15 Eagle, Fighter Jets, Commercial Airliners, Helicopters & Biplanes' },
@@ -21,6 +21,15 @@ const CATEGORIES = [
 ];
 
 const INDEPENDENCE_PRESETS = [
+  {
+    id: 'independence-pakistan-map',
+    name: 'Pakistan Map Outline Sketch',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'pakistan map', 'map', 'geography', '14 august'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/independence/independence-pakistan-map.jpg'
+  },
   {
     id: 'independence-quaid-e-azam',
     name: 'Quaid-e-Azam Muhammad Ali Jinnah',
