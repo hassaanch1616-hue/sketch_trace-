@@ -54,19 +54,26 @@ class SketchTraceApp {
       document.body.appendChild(container);
     }
 
-    const items = ['🇵🇰', '🌙⭐', '💚', '✨', '🇵🇰', '🇵🇰', '💚', '🌙⭐', '🇵🇰'];
+    const flagSvgs = [
+      // 1. Waving Flag with Pole
+      `<svg viewBox="0 0 100 70" class="w-10 h-7 inline-block drop-shadow-md"><line x1="10" y1="5" x2="10" y2="68" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round"/><circle cx="10" cy="5" r="4" fill="#FFD700"/><g transform="translate(10, 8)"><rect width="80" height="50" fill="#01411C" rx="3"/><rect width="20" height="50" fill="#FFFFFF" rx="2"/><g transform="translate(50, 25)"><circle cx="0" cy="0" r="12" fill="#FFFFFF"/><circle cx="3.5" cy="-2.5" r="10" fill="#01411C"/><polygon points="3,-5 4.5,-1 8.5,-1 5.5,1 6.5,5 3.5,3 0.5,5 1.5,1 -2.5,-1 2.5,-1" fill="#FFFFFF" transform="rotate(-15)"/></g></g></svg>`,
+      // 2. Official National Flag Banner
+      `<svg viewBox="0 0 90 60" class="w-9 h-6 inline-block drop-shadow-md"><rect width="90" height="60" fill="#01411C" rx="4"/><rect width="22.5" height="60" fill="#FFFFFF" rx="3"/><g transform="translate(56.25, 30)"><circle cx="0" cy="0" r="14" fill="#FFFFFF"/><circle cx="4" cy="-3" r="12" fill="#01411C"/><polygon points="4,-6 5.5,-1.5 10,-1.5 6.5,1 7.8,5.5 4,3 0.2,5.5 1.5,1 -2,-1.5 2.5,-1.5" fill="#FFFFFF" transform="rotate(-15)"/></g></svg>`,
+      // 3. Round Crescent Badge
+      `<svg viewBox="0 0 80 80" class="w-8 h-8 inline-block drop-shadow-md"><circle cx="40" cy="40" r="38" fill="#01411C" stroke="#FFFFFF" stroke-width="3"/><g transform="translate(40, 40)"><circle cx="0" cy="0" r="18" fill="#FFFFFF"/><circle cx="5" cy="-4" r="15" fill="#01411C"/><polygon points="5,-8 7,-2 13,-2 8,2 10,8 5,4 0,8 2,2 -3,-2 3,-2" fill="#FFFFFF" transform="rotate(-15)"/></g></svg>`
+    ];
+
     let html = '';
-    const totalFlags = 36;
+    const totalFlags = 40;
 
     for (let i = 0; i < totalFlags; i++) {
-      const emoji = items[i % items.length];
-      const left = (Math.random() * 96).toFixed(2);
-      const delay = (Math.random() * 9).toFixed(2);
-      const duration = (5 + Math.random() * 8).toFixed(2);
-      const size = (1.2 + Math.random() * 1.4).toFixed(2);
-      const opacity = (0.5 + Math.random() * 0.45).toFixed(2);
+      const svg = flagSvgs[i % flagSvgs.length];
+      const left = (Math.random() * 95).toFixed(2);
+      const delay = (Math.random() * 10).toFixed(2);
+      const duration = (6 + Math.random() * 8).toFixed(2);
+      const opacity = (0.65 + Math.random() * 0.35).toFixed(2);
 
-      html += `<span class="falling-flag" style="left:${left}%; animation-delay:${delay}s; animation-duration:${duration}s; font-size:${size}rem; opacity:${opacity};">${emoji}</span>`;
+      html += `<div class="falling-flag" style="left:${left}%; animation-delay:${delay}s; animation-duration:${duration}s; opacity:${opacity};">${svg}</div>`;
     }
 
     container.innerHTML = html;
