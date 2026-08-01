@@ -50,8 +50,8 @@ class SketchTraceApp {
     if (!container) {
       container = document.createElement('div');
       container.id = 'pakistanFlagRain';
-      container.className = 'pointer-events-none fixed inset-0 z-10 overflow-hidden hidden';
-      document.body.appendChild(container);
+      container.className = 'pointer-events-none fixed inset-0 z-0 overflow-hidden hidden';
+      document.body.insertBefore(container, document.body.firstChild);
     }
 
     const flagSvgs = [
