@@ -5,6 +5,7 @@
 window.SketchTrace = window.SketchTrace || {};
 
 const CATEGORIES = [
+  { id: 'independence', name: 'Happy Independence', icon: '🇵🇰', count: 3, description: 'Quaid-e-Azam, Bab-e-Khyber, Pakistan Flag Crescent & Star Independence Sketches' },
   { id: 'anime', name: 'Anime', icon: '\u2728', count: 70, description: 'Tanjiro Kamado, Gabimaru, Sasuke, Itachi, Gojo, Sukuna, Naruto, Kakashi' },
   { id: 'cars', name: 'Cars', icon: '\uD83C\uDFCE', count: 20, description: 'Bugatti Chiron, Lamborghini, McLaren, Ferrari, BMW, Audi, Nissan Skyline & Supercars' },
   { id: 'aircraft', name: 'Aircraft', icon: '\u2708', count: 10, description: 'F-15 Eagle, Fighter Jets, Commercial Airliners, Helicopters & Biplanes' },
@@ -17,6 +18,36 @@ const CATEGORIES = [
   { id: 'animals', name: 'Animals', icon: '\uD83E\uDD81', count: 21, description: 'Lions, Horses, Cats, Dogs, Rabbits, Giraffes, Deers, Elephants & Goats' },
   { id: 'birds', name: 'Birds', icon: '\uD83E\uDD85', count: 15, description: 'Peacocks, Macaw Parrots, Toucans, Hummingbirds, Swans, Doves, Swallows & Owls' },
   { id: 'flowers', name: 'Flowers', icon: '\uD83C\uDF39', count: 20, description: 'Roses, Tulips, Daisies, Lilies, Hibiscus, Sunflowers, Plumeria, Cherry Blossoms & Bouquets' }
+];
+
+const INDEPENDENCE_PRESETS = [
+  {
+    id: 'independence-quaid-e-azam',
+    name: 'Quaid-e-Azam Muhammad Ali Jinnah',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'quaid-e-azam', 'jinnah', 'pakistan', '14 august'],
+    difficulty: 'Medium',
+    popularity: 100,
+    imageUrl: './assets/independence/independence-quaid-e-azam.jpg'
+  },
+  {
+    id: 'independence-crescent-star',
+    name: 'Pakistan Flag Crescent & Star',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'flag', 'crescent star', 'pakistan', '14 august'],
+    difficulty: 'Easy',
+    popularity: 99,
+    imageUrl: './assets/independence/independence-crescent-star.jpg'
+  },
+  {
+    id: 'independence-bab-e-khyber',
+    name: 'Bab-e-Khyber Monument',
+    category: 'independence',
+    tags: ['independence', 'happy independence', 'bab-e-khyber', 'monument', 'pakistan', '14 august'],
+    difficulty: 'Medium',
+    popularity: 98,
+    imageUrl: './assets/independence/independence-bab-e-khyber.jpg'
+  }
 ];
 
 const ANIME_PRESETS = [
@@ -2427,7 +2458,9 @@ function generateCategorySketches(categoryId, count) {
   var categoryObj = CATEGORIES.find(function(c) { return c.id === categoryId; }) || CATEGORIES[0];
   var items = [];
 
-  if (categoryId === 'anime') {
+  if (categoryId === 'independence') {
+    return INDEPENDENCE_PRESETS.slice();
+  } else if (categoryId === 'anime') {
     items = ANIME_PRESETS.slice();
   } else if (categoryId === 'cars') {
     return CAR_PRESETS.slice();
@@ -2503,40 +2536,34 @@ function getAllSketches() {
 
 function getFeaturedSketches() {
   return [
+    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
+    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
+    INDEPENDENCE_PRESETS[2], // Bab-e-Khyber
     CAR_PRESETS[0],  // Bugatti Chiron
     CAR_PRESETS[1],  // Lamborghini
-    CAR_PRESETS[9],  // Ferrari F40
-    CAR_PRESETS[11], // Nissan Skyline R34
     ANIME_PRESETS[0],  // Tanjiro
-    ANIME_PRESETS[1],  // Gabimaru
-    ANIME_PRESETS[13], // Kakashi
-    ANIME_PRESETS[10]  // Gojo
+    ANIME_PRESETS[1]   // Gabimaru
   ];
 }
 
 function getTrendingSketches() {
   return [
+    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
+    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
     CAR_PRESETS[0],  // Bugatti Chiron
     CAR_PRESETS[2],  // McLaren P1
-    CAR_PRESETS[5],  // BMW M8 CSL
-    CAR_PRESETS[11], // Nissan Skyline
     ANIME_PRESETS[0],
-    ANIME_PRESETS[1],
-    ANIME_PRESETS[8],
-    ANIME_PRESETS[10]
+    ANIME_PRESETS[1]
   ];
 }
 
 function getNewSketches() {
   return [
+    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
+    INDEPENDENCE_PRESETS[1], // Pakistan Flag Crescent & Star
+    INDEPENDENCE_PRESETS[2], // Bab-e-Khyber
     CAR_PRESETS[0],  // Bugatti Chiron
-    CAR_PRESETS[1],  // Lamborghini
-    CAR_PRESETS[2],  // McLaren P1
-    CAR_PRESETS[9],  // Ferrari F40
-    CAR_PRESETS[11], // Nissan Skyline GT-R R34
-    CAR_PRESETS[13], // Rolls Royce Ghost
-    ANIME_PRESETS[0],
-    ANIME_PRESETS[1]
+    ANIME_PRESETS[0]
   ];
 }
 
@@ -2554,6 +2581,8 @@ function searchSketches(query) {
 }
 
 function getSketchById(id) {
+  var indepPreset = INDEPENDENCE_PRESETS.find(function(p) { return p.id === id; });
+  if (indepPreset) return indepPreset;
   var preset = ANIME_PRESETS.find(function(p) { return p.id === id; });
   if (preset) return preset;
   var carPreset = CAR_PRESETS.find(function(p) { return p.id === id; });
@@ -2585,6 +2614,7 @@ function getSketchById(id) {
 
 window.SketchTrace.sketchCatalog = {
   CATEGORIES: CATEGORIES,
+  INDEPENDENCE_PRESETS: INDEPENDENCE_PRESETS,
   ANIME_PRESETS: ANIME_PRESETS,
   CAR_PRESETS: CAR_PRESETS,
   AIRCRAFT_PRESETS: AIRCRAFT_PRESETS,
