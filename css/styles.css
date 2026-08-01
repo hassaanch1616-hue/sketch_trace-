@@ -143,6 +143,19 @@
   --accent-light: #18181b;
 }
 
+/* 11. 🇵🇰 PAKISTAN INDEPENDENCE (Flag Green & White) */
+[data-theme="pakistan"] {
+  --bg-primary: #031c0d;
+  --bg-card: #092e17;
+  --bg-header: rgba(9, 46, 23, 0.92);
+  --text-main: #ffffff;
+  --text-muted: #86efac;
+  --border-color: #14532d;
+  --accent-primary: #22c55e;
+  --accent-hover: #16a34a;
+  --accent-light: #0d381d;
+}
+
 /* Global Applied Theme Variables */
 body {
   background-color: var(--bg-primary) !important;
