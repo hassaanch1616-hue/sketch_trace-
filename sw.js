@@ -3,7 +3,7 @@
  * Caches application shell, assets, icons, and sketches for 100% offline usage on GitHub Pages.
  */
 
-const CACHE_NAME = 'sketchtrace-v56.0.0';
+const CACHE_NAME = 'sketchtrace-v80.0.0';
 
 const APP_SHELL = [
   './',
@@ -15,6 +15,7 @@ const APP_SHELL = [
   './js/storage.js',
   './js/camera.js',
   './js/traceEngine.js',
+  './js/aiConverter.js',
   './js/screenLock.js',
   './js/admin.js',
   './manifest.json',
@@ -22,16 +23,7 @@ const APP_SHELL = [
   './assets/icons/apple-touch-icon.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
-  './assets/icons/maskable-icon-512.png',
-  './assets/independence/independence-pakistan-map.jpg',
-  './assets/independence/independence-quaid-e-azam.jpg',
-  './assets/independence/independence-crescent-star.jpg',
-  './assets/independence/independence-bab-e-khyber.jpg',
-  './assets/independence/independence-pakistan-zindabad.jpg',
-  './assets/independence/independence-faisal-mosque.jpg',
-  './assets/independence/independence-waving-flag.jpg',
-  './assets/independence/independence-mazar-e-quaid.jpg',
-  './assets/independence/independence-pakistan-flag-poster.jpg'
+  './assets/icons/maskable-icon-512.png'
 ];
 
 // Install Event - Pre-cache App Shell
@@ -63,7 +55,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event - Stale-While-Revalidate / Network-First with Cache Fallback Strategy
+// Fetch Event - Stale-While-Revalidate / Cache-First for media, Network-First for code
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
@@ -74,27 +66,54 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Network-First with Cache Fallback for dynamic assets & images
-  event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
+  // Strategy for images & static assets: Cache-First with Network fallback
+  const isImageOrAsset = requestUrl.pathname.match(/\.(webp|jpg|jpeg|png|gif|svg|ico|css|woff2?)$/i);
+
+  if (isImageOrAsset) {
+    event.respondWith(
+      caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
         }
-        return networkResponse;
+        return fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const responseClone = networkResponse.clone();
+              caches.open(CACHE_NAME).then((cache) => {
+                cache.put(event.request, responseClone);
+              });
+            }
+            return networkResponse;
+          })
+          .catch(() => {
+            return new Response('', { status: 404, statusText: 'Not Found' });
+          });
       })
-      .catch(() => {
-        return caches.match(event.request).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
+    );
+  } else {
+    // Strategy for HTML and JS: Network-First with Cache fallback
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
           }
-          if (event.request.headers.get('accept')?.includes('text/html')) {
-            return caches.match('./index.html');
-          }
-        });
-      })
-  );
+          return networkResponse;
+        })
+        .catch(() => {
+          return caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            if (event.request.headers.get('accept')?.includes('text/html')) {
+              return caches.match('./index.html', { ignoreSearch: true });
+            }
+            return new Response('', { status: 408, statusText: 'Offline' });
+          });
+        })
+    );
+  }
 });

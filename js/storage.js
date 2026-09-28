@@ -34,10 +34,7 @@ class StorageService {
   }
 
   isIndependenceExpired() {
-    const now = new Date();
-    // Independence theme expires at the end of August 14th (August 15th 00:00:00)
-    const cutoff = new Date(now.getFullYear(), 7, 15, 0, 0, 0); // Month 7 is August
-    return now >= cutoff;
+    return false;
   }
 
   getTheme() {

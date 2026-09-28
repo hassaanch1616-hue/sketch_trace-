@@ -13,6 +13,11 @@
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
+/* Critical Utility Fallback (ensures views hide properly even without Tailwind CDN) */
+.hidden {
+  display: none !important;
+}
+
 /* 1. ☀️ LIGHT STUDIO (Default) */
 [data-theme="light"] {
   --bg-primary: #f8fafc;
@@ -320,3 +325,51 @@ header, main, footer, nav {
     backface-visibility: hidden;
   }
 }
+
+/* Sketch Card Media & Image Display Guaranteed Sizing */
+.sketch-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+.sketch-card-media .sketch-img,
+.sketch-card-media .sketch-svg,
+.sketch-card-media img,
+.sketch-card-media svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+#modalSketchPreview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff !important;
+  overflow: hidden;
+}
+
+#modalSketchPreview img,
+#modalSketchPreview svg,
+#modalSketchPreview .sketch-modal-img,
+#modalSketchPreview .sketch-modal-svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+

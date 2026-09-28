@@ -1442,6 +1442,51 @@ const TRAIN_PRESETS = [
     difficulty: 'Medium',
     popularity: 95,
     imageUrl: './assets/trains/train-14.jpg'
+  },
+  {
+    id: 'train-classic-express-passenger',
+    name: 'Classic Express Passenger Train',
+    category: 'trains',
+    tags: ['trains', 'express', 'passenger', 'locomotive'],
+    difficulty: 'Medium',
+    popularity: 94,
+    imageUrl: './assets/trains/train-15.jpg'
+  },
+  {
+    id: 'train-heavy-freight-engine',
+    name: 'Heavy Freight Engine Train',
+    category: 'trains',
+    tags: ['trains', 'freight', 'engine', 'heavy train'],
+    difficulty: 'Medium',
+    popularity: 93,
+    imageUrl: './assets/trains/train-16.jpg'
+  },
+  {
+    id: 'train-heavy-diesel-locomotive',
+    name: 'Heavy Diesel Locomotive Engine',
+    category: 'trains',
+    tags: ['trains', 'diesel', 'locomotive', 'engine'],
+    difficulty: 'Medium',
+    popularity: 92,
+    imageUrl: './assets/trains/train-17.jpg'
+  },
+  {
+    id: 'train-high-speed-passenger-bullet',
+    name: 'Modern High-Speed Passenger Bullet Train',
+    category: 'trains',
+    tags: ['trains', 'bullet train', 'high speed', 'passenger'],
+    difficulty: 'Medium',
+    popularity: 91,
+    imageUrl: './assets/trains/train-18.jpg'
+  },
+  {
+    id: 'train-vintage-steam-locomotive-engine',
+    name: 'Vintage Steam Locomotive Engine',
+    category: 'trains',
+    tags: ['trains', 'steam', 'vintage', 'engine'],
+    difficulty: 'Medium',
+    popularity: 90,
+    imageUrl: './assets/trains/train-19.webp'
   }
 ];
 
@@ -1772,6 +1817,51 @@ const SHIP_PRESETS = [
     difficulty: 'Easy',
     popularity: 98,
     imageUrl: './assets/ships/ship-18.webp'
+  },
+  {
+    id: 'ship-naval-destroyer-warship',
+    name: 'Naval Destroyer Warship',
+    category: 'ships',
+    tags: ['ships', 'navy', 'warship', 'destroyer'],
+    difficulty: 'Hard',
+    popularity: 93,
+    imageUrl: './assets/ships/ship-19.jpg'
+  },
+  {
+    id: 'ship-classic-tall-sailing-ship',
+    name: 'Classic Tall Sailing Ship',
+    category: 'ships',
+    tags: ['ships', 'sailing', 'tall ship', 'ocean'],
+    difficulty: 'Medium',
+    popularity: 92,
+    imageUrl: './assets/ships/ship-20.jpg'
+  },
+  {
+    id: 'ship-ocean-freighter-cargo',
+    name: 'Ocean Freight Cargo Ship',
+    category: 'ships',
+    tags: ['ships', 'freighter', 'cargo', 'container'],
+    difficulty: 'Medium',
+    popularity: 91,
+    imageUrl: './assets/ships/ship-21.jpg'
+  },
+  {
+    id: 'ship-luxury-superyacht',
+    name: 'Modern Luxury Superyacht',
+    category: 'ships',
+    tags: ['ships', 'yacht', 'luxury', 'superyacht'],
+    difficulty: 'Medium',
+    popularity: 90,
+    imageUrl: './assets/ships/ship-22.webp'
+  },
+  {
+    id: 'ship-historic-pirate-galleon',
+    name: 'Historic Pirate Galleon Ship',
+    category: 'ships',
+    tags: ['ships', 'galleon', 'pirate', 'historic'],
+    difficulty: 'Medium',
+    popularity: 89,
+    imageUrl: './assets/ships/ship-23.webp'
   }
 ];
 
@@ -1991,6 +2081,114 @@ const FISH_PRESETS = [
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/fish/fish-24.webp'
+  },
+  {
+    id: 'fish-tropical-clownfish-reef',
+    name: 'Tropical Clownfish Nemo Reef',
+    category: 'fish',
+    tags: ['fish', 'clownfish', 'reef', 'tropical'],
+    difficulty: 'Easy',
+    popularity: 96,
+    imageUrl: './assets/fish/fish-25.jpg'
+  },
+  {
+    id: 'fish-graceful-angelfish-swimming',
+    name: 'Graceful Angelfish Swimming',
+    category: 'fish',
+    tags: ['fish', 'angelfish', 'graceful', 'swimming'],
+    difficulty: 'Easy',
+    popularity: 95,
+    imageUrl: './assets/fish/fish-26.jpg'
+  },
+  {
+    id: 'fish-cute-ocean-seahorse-tail',
+    name: 'Cute Ocean Seahorse with Curled Tail',
+    category: 'fish',
+    tags: ['fish', 'seahorse', 'ocean', 'cute'],
+    difficulty: 'Easy',
+    popularity: 94,
+    imageUrl: './assets/fish/fish-27.webp'
+  },
+  {
+    id: 'fish-giant-blue-whale-breaching',
+    name: 'Giant Blue Whale Breaching Water',
+    category: 'fish',
+    tags: ['fish', 'blue whale', 'whale', 'ocean'],
+    difficulty: 'Medium',
+    popularity: 93,
+    imageUrl: './assets/fish/fish-28.jpg'
+  },
+  {
+    id: 'fish-friendly-dolphin-jumping-waves',
+    name: 'Friendly Dolphin Jumping Over Waves',
+    category: 'fish',
+    tags: ['fish', 'dolphin', 'ocean', 'waves'],
+    difficulty: 'Easy',
+    popularity: 92,
+    imageUrl: './assets/fish/fish-29.webp'
+  },
+  {
+    id: 'fish-little-goldfish-bubbles',
+    name: 'Little Goldfish with Bubbles',
+    category: 'fish',
+    tags: ['fish', 'goldfish', 'bubbles', 'pet'],
+    difficulty: 'Easy',
+    popularity: 91,
+    imageUrl: './assets/fish/fish-30.webp'
+  },
+  {
+    id: 'fish-great-white-shark-predator',
+    name: 'Great White Shark Ocean Predator',
+    category: 'fish',
+    tags: ['fish', 'shark', 'predator', 'ocean'],
+    difficulty: 'Medium',
+    popularity: 90,
+    imageUrl: './assets/fish/fish-31.jpg'
+  },
+  {
+    id: 'fish-deep-sea-anglerfish-glow',
+    name: 'Deep Sea Anglerfish',
+    category: 'fish',
+    tags: ['fish', 'anglerfish', 'deep sea', 'glow'],
+    difficulty: 'Medium',
+    popularity: 89,
+    imageUrl: './assets/fish/fish-32.webp'
+  },
+  {
+    id: 'fish-manta-ray-gliding',
+    name: 'Manta Ray Gliding in Ocean',
+    category: 'fish',
+    tags: ['fish', 'manta ray', 'ocean', 'ray'],
+    difficulty: 'Medium',
+    popularity: 88,
+    imageUrl: './assets/fish/fish-33.jpg'
+  },
+  {
+    id: 'fish-cute-round-pufferfish',
+    name: 'Cute Round Pufferfish',
+    category: 'fish',
+    tags: ['fish', 'pufferfish', 'cute', 'round'],
+    difficulty: 'Easy',
+    popularity: 87,
+    imageUrl: './assets/fish/fish-34.webp'
+  },
+  {
+    id: 'fish-tropical-coral-reef-fish',
+    name: 'Tropical Coral Reef Fish',
+    category: 'fish',
+    tags: ['fish', 'coral reef', 'tropical', 'reef'],
+    difficulty: 'Easy',
+    popularity: 86,
+    imageUrl: './assets/fish/fish-35.jpg'
+  },
+  {
+    id: 'fish-swimming-sea-turtle-friends',
+    name: 'Sea Turtle & Fish Swimming Together',
+    category: 'fish',
+    tags: ['fish', 'sea turtle', 'turtle', 'swimming'],
+    difficulty: 'Medium',
+    popularity: 85,
+    imageUrl: './assets/fish/fish-36.jpg'
   }
 ];
 
@@ -2504,58 +2702,166 @@ const FLOWER_PRESETS = [
     difficulty: 'Medium',
     popularity: 100,
     imageUrl: './assets/flowers/flower-20.webp'
+  },
+  {
+    id: 'flower-wild-sunflower-bloom',
+    name: 'Wild Sunflower in Full Bloom',
+    category: 'flowers',
+    tags: ['flowers', 'sunflower', 'bloom', 'summer'],
+    difficulty: 'Easy',
+    popularity: 95,
+    imageUrl: './assets/flowers/flower-21.webp'
+  },
+  {
+    id: 'flower-red-rose-blossom-stem',
+    name: 'Red Rose Blossom with Stem & Thorn',
+    category: 'flowers',
+    tags: ['flowers', 'rose', 'blossom', 'stem'],
+    difficulty: 'Easy',
+    popularity: 94,
+    imageUrl: './assets/flowers/flower-22.jpg'
+  },
+  {
+    id: 'flower-spring-tulip-garden-bunch',
+    name: 'Spring Tulip Garden Bunch',
+    category: 'flowers',
+    tags: ['flowers', 'tulip', 'spring', 'garden'],
+    difficulty: 'Easy',
+    popularity: 93,
+    imageUrl: './assets/flowers/flower-23.jpg'
+  },
+  {
+    id: 'flower-sakura-blossom-branch-japan',
+    name: 'Japanese Cherry Blossom Branch (Sakura)',
+    category: 'flowers',
+    tags: ['flowers', 'sakura', 'cherry blossom', 'japan'],
+    difficulty: 'Medium',
+    popularity: 92,
+    imageUrl: './assets/flowers/flower-24.webp'
+  },
+  {
+    id: 'flower-tropical-lotus-water-lily',
+    name: 'Tropical Lotus Flower / Water Lily',
+    category: 'flowers',
+    tags: ['flowers', 'lotus', 'water lily', 'tropical'],
+    difficulty: 'Medium',
+    popularity: 91,
+    imageUrl: './assets/flowers/flower-25.webp'
+  },
+  {
+    id: 'flower-daisy-bouquet-ribbon',
+    name: 'Daisy Flower Bouquet with Ribbon',
+    category: 'flowers',
+    tags: ['flowers', 'daisy', 'bouquet', 'ribbon'],
+    difficulty: 'Easy',
+    popularity: 90,
+    imageUrl: './assets/flowers/flower-26.webp'
+  },
+  {
+    id: 'flower-graceful-orchid-blossom',
+    name: 'Graceful Orchid Flower Blossom',
+    category: 'flowers',
+    tags: ['flowers', 'orchid', 'graceful', 'blossom'],
+    difficulty: 'Medium',
+    popularity: 89,
+    imageUrl: './assets/flowers/flower-27.jpg'
+  },
+  {
+    id: 'flower-water-lily-pad-pond',
+    name: 'Water Lily Pad on Pond',
+    category: 'flowers',
+    tags: ['flowers', 'water lily', 'lily pad', 'pond'],
+    difficulty: 'Easy',
+    popularity: 88,
+    imageUrl: './assets/flowers/flower-28.jpg'
+  },
+  {
+    id: 'flower-lavender-flowers-bunch',
+    name: 'Fresh Lavender Flowers Bunch',
+    category: 'flowers',
+    tags: ['flowers', 'lavender', 'bunch', 'fresh'],
+    difficulty: 'Easy',
+    popularity: 87,
+    imageUrl: './assets/flowers/flower-29.webp'
+  },
+  {
+    id: 'flower-wild-poppy-flower-leaves',
+    name: 'Wild Poppy Flower with Leaves',
+    category: 'flowers',
+    tags: ['flowers', 'poppy', 'wildflower', 'leaves'],
+    difficulty: 'Easy',
+    popularity: 86,
+    imageUrl: './assets/flowers/flower-30.webp'
+  },
+  {
+    id: 'flower-dahlia-blossom-petals',
+    name: 'Dahlia Flower Blossom Petals',
+    category: 'flowers',
+    tags: ['flowers', 'dahlia', 'blossom', 'petals'],
+    difficulty: 'Medium',
+    popularity: 85,
+    imageUrl: './assets/flowers/flower-31.webp'
+  },
+  {
+    id: 'flower-carnation-flower-stem',
+    name: 'Pretty Carnation Flower Stem',
+    category: 'flowers',
+    tags: ['flowers', 'carnation', 'stem', 'pretty'],
+    difficulty: 'Easy',
+    popularity: 84,
+    imageUrl: './assets/flowers/flower-32.webp'
+  },
+  {
+    id: 'flower-iris-flower-blossom',
+    name: 'Purple Iris Flower Blossom',
+    category: 'flowers',
+    tags: ['flowers', 'iris', 'blossom', 'purple'],
+    difficulty: 'Medium',
+    popularity: 83,
+    imageUrl: './assets/flowers/flower-33.webp'
+  },
+  {
+    id: 'flower-floral-garland-wreath',
+    name: 'Floral Garland Wreath',
+    category: 'flowers',
+    tags: ['flowers', 'garland', 'wreath', 'floral'],
+    difficulty: 'Medium',
+    popularity: 82,
+    imageUrl: './assets/flowers/flower-34.webp'
   }
 ];
 
 function generateCategorySketches(categoryId, count) {
-  count = count || 30;
-  var categoryObj = CATEGORIES.find(function(c) { return c.id === categoryId; }) || CATEGORIES[0];
+  var categoryObj = CATEGORIES.find(function(c) { return c.id === categoryId; }) || { id: categoryId, name: categoryId };
   var items = [];
 
-  if (categoryId === 'independence') {
-    return INDEPENDENCE_PRESETS.slice();
-  } else if (categoryId === 'anime') {
-    items = ANIME_PRESETS.slice();
-  } else if (categoryId === 'cars') {
-    return CAR_PRESETS.slice();
-  } else if (categoryId === 'aircraft') {
-    return AIRCRAFT_PRESETS.slice();
-  } else if (categoryId === 'cartoon') {
-    return CARTOON_PRESETS.slice();
-  } else if (categoryId === 'bikes') {
-    return BIKE_PRESETS.slice();
-  } else if (categoryId === 'trains') {
-    return TRAIN_PRESETS.slice();
-  } else if (categoryId === 'superheroes') {
-    return SUPERHERO_PRESETS.slice();
-  } else if (categoryId === 'ships') {
-    return SHIP_PRESETS.slice();
-  } else if (categoryId === 'fish') {
-    return FISH_PRESETS.slice();
-  } else if (categoryId === 'animals') {
-    return ANIMAL_PRESETS.slice();
-  } else if (categoryId === 'birds') {
-    return BIRD_PRESETS.slice();
-  } else if (categoryId === 'flowers') {
-    return FLOWER_PRESETS.slice();
-  }
+  if (categoryId === 'independence') items = INDEPENDENCE_PRESETS.slice();
+  else if (categoryId === 'anime') items = ANIME_PRESETS.slice();
+  else if (categoryId === 'cars') items = CAR_PRESETS.slice();
+  else if (categoryId === 'aircraft') items = AIRCRAFT_PRESETS.slice();
+  else if (categoryId === 'cartoon') items = CARTOON_PRESETS.slice();
+  else if (categoryId === 'bikes') items = BIKE_PRESETS.slice();
+  else if (categoryId === 'trains') items = TRAIN_PRESETS.slice();
+  else if (categoryId === 'superheroes') items = SUPERHERO_PRESETS.slice();
+  else if (categoryId === 'ships') items = SHIP_PRESETS.slice();
+  else if (categoryId === 'fish') items = FISH_PRESETS.slice();
+  else if (categoryId === 'animals') items = ANIMAL_PRESETS.slice();
+  else if (categoryId === 'birds') items = BIRD_PRESETS.slice();
+  else if (categoryId === 'flowers') items = FLOWER_PRESETS.slice();
 
-  var startIdx = items.length;
-  var adjectives = [
-    'Classic', 'Minimalist', 'Detailed', 'Dynamic', 'Artistic', 'Modern', 'Geometric',
-    'Studio', 'Pro Outline', 'Cyber', 'Neo', 'Vintage', 'Futuristic', 'Zen', 'Bold'
-  ];
+  if (items.length > 0) return items;
 
-  for (var i = startIdx; i < count; i++) {
+  count = count || 30;
+  for (var i = 0; i < count; i++) {
     var num = i + 1;
-    var adj = adjectives[i % adjectives.length];
+    var adj = 'Classic';
     var diff = (i % 3 === 0) ? 'Easy' : ((i % 3 === 1) ? 'Medium' : 'Hard');
 
     items.push({
       id: categoryId + '-sketch-' + num,
-      name: adj + ' ' + categoryObj.name + ' #' + num,
+      name: adj + ' ' + (categoryObj.name || categoryId) + ' #' + num,
       category: categoryId,
-      tags: [categoryId, categoryObj.name.toLowerCase(), adj.toLowerCase()],
+      tags: [categoryId, (categoryObj.name || categoryId).toLowerCase()],
       difficulty: diff,
       popularity: Math.max(65, 99 - (i % 30)),
       svgPath: createProceduralSVG(categoryId, num, i)
@@ -2574,9 +2880,7 @@ function createProceduralSVG(categoryId, num, index) {
 var catalogCache = new Map();
 
 function isIndependenceExpired() {
-  var now = new Date();
-  var cutoff = new Date(now.getFullYear(), 7, 15, 0, 0, 0); // 15 Aug 00:00:00 (end of 14 Aug)
-  return now >= cutoff;
+  return false;
 }
 
 function filterExpired(list) {
@@ -2606,39 +2910,75 @@ function getAllSketches() {
 
 function getFeaturedSketches() {
   var list = [
-    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad! Celebration
-    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
-    INDEPENDENCE_PRESETS[2], // Faisal Mosque
-    INDEPENDENCE_PRESETS[4], // Mazar-e-Quaid
-    CAR_PRESETS[0],  // Bugatti Chiron
-    CAR_PRESETS[1],  // Lamborghini
-    ANIME_PRESETS[0],  // Tanjiro
-    ANIME_PRESETS[1]   // Gabimaru
-  ];
+    ANIME_PRESETS[0],       // Tanjiro Kamado
+    SUPERHERO_PRESETS[0],   // Batman
+    CAR_PRESETS[0],         // Bugatti Chiron
+    CARTOON_PRESETS[0],     // Mickey Mouse
+    ANIMAL_PRESETS[0],      // Lion
+    INDEPENDENCE_PRESETS[0],// Quaid-e-Azam
+    ANIME_PRESETS[10],      // Satoru Gojo
+    FISH_PRESETS[0],        // Baby Shark
+    FLOWER_PRESETS[0],      // Rose
+    BIRD_PRESETS[0],        // Peacock
+    SUPERHERO_PRESETS[2],   // Spider-Man
+    CAR_PRESETS[1],         // Lamborghini
+    ANIME_PRESETS[13],      // Kakashi
+    SHIP_PRESETS[0],        // RMS Titanic
+    TRAIN_PRESETS[0],       // Bullet Train
+    BIKE_PRESETS[0],        // Yamaha R6
+    AIRCRAFT_PRESETS[0],    // F-15 Eagle Jet
+    ANIME_PRESETS[3],       // Naruto Baryon Mode
+    CARTOON_PRESETS[2],     // Pikachu
+    INDEPENDENCE_PRESETS[1],// Pakistan Zindabad
+    SUPERHERO_PRESETS[1],   // Iron Man
+    CAR_PRESETS[2],         // McLaren P1
+    ANIMAL_PRESETS[1],      // Tiger
+    FLOWER_PRESETS[1]       // Sunflower
+  ].filter(Boolean);
   return filterExpired(list);
 }
 
 function getTrendingSketches() {
   var list = [
-    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
-    INDEPENDENCE_PRESETS[3], // Waving Pakistan Flag
-    INDEPENDENCE_PRESETS[0], // Quaid-e-Azam
-    CAR_PRESETS[0],  // Bugatti Chiron
-    CAR_PRESETS[2],  // McLaren P1
-    ANIME_PRESETS[0]
-  ];
+    ANIME_PRESETS[8],       // Sukuna
+    CAR_PRESETS[3],         // Ferrari
+    SUPERHERO_PRESETS[5],   // Deadpool
+    CARTOON_PRESETS[1],     // SpongeBob
+    INDEPENDENCE_PRESETS[2],// Faisal Mosque
+    ANIME_PRESETS[6],       // Monkey D. Luffy
+    FISH_PRESETS[1],        // Blue Whale
+    BIRD_PRESETS[1],        // Eagle
+    FLOWER_PRESETS[2],      // Tulip
+    ANIMAL_PRESETS[2],      // Horse
+    BIKE_PRESETS[1],        // Batman Batcycle
+    AIRCRAFT_PRESETS[1],    // Fighter Jet
+    SHIP_PRESETS[1],        // Pirate Galleon
+    TRAIN_PRESETS[1],       // Thomas
+    ANIME_PRESETS[1],       // Gabimaru
+    SUPERHERO_PRESETS[3],   // Superman
+    CARTOON_PRESETS[3],     // Doraemon
+    CAR_PRESETS[4]          // BMW
+  ].filter(Boolean);
   return filterExpired(list);
 }
 
 function getNewSketches() {
   var list = [
-    INDEPENDENCE_PRESETS[1], // Pakistan Zindabad!
-    INDEPENDENCE_PRESETS[2], // Faisal Mosque
-    INDEPENDENCE_PRESETS[4], // Mazar-e-Quaid
-    INDEPENDENCE_PRESETS[3], // Waving Flag
-    CAR_PRESETS[0],  // Bugatti Chiron
-    ANIME_PRESETS[0]
-  ];
+    INDEPENDENCE_PRESETS[3], // Waving Pakistan Flag
+    ANIME_PRESETS[2],       // Zenitsu Agatsuma
+    SUPERHERO_PRESETS[4],   // Thor
+    CAR_PRESETS[5],         // Audi R8
+    CARTOON_PRESETS[4],     // Hello Kitty
+    FISH_PRESETS[2],        // Dolphin
+    FLOWER_PRESETS[3],      // Bouquet
+    ANIMAL_PRESETS[3],      // Cat
+    BIRD_PRESETS[2],        // Macaw Parrot
+    SHIP_PRESETS[2],        // Cruise Ship
+    TRAIN_PRESETS[2],       // Express Locomotive
+    BIKE_PRESETS[2],        // Vespa
+    AIRCRAFT_PRESETS[2],    // Helicopter
+    ANIME_PRESETS[7]        // Neji Hyuga
+  ].filter(Boolean);
   return filterExpired(list);
 }
 

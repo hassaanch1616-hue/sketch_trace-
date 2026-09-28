@@ -268,12 +268,16 @@ class SketchTraceApp {
   renderHome() {
     try {
       const sketchCatalog = window.SketchTrace.sketchCatalog;
-      if (!sketchCatalog) return;
+      if (!sketchCatalog) {
+        setTimeout(() => this.renderHome(), 100);
+        return;
+      }
 
       this.renderCategoriesGrid();
       this.renderSketchGrid('featuredGrid', sketchCatalog.getFeaturedSketches() || []);
       this.renderSketchGrid('trendingGrid', sketchCatalog.getTrendingSketches() || []);
       this.renderSketchGrid('newGrid', sketchCatalog.getNewSketches() || []);
+      this.renderSketchGrid('allSketchesGrid', sketchCatalog.getAllSketches() || []);
       this.renderRecentlyViewedSection();
       this.renderFavoritesSection();
     } catch (e) {
@@ -353,16 +357,16 @@ class SketchTraceApp {
       const isIndep = sketch.category === 'independence' || (sketch.id && String(sketch.id).startsWith('independence'));
       return `
       <div data-sketch-id="${sketch.id}" class="sketch-card cursor-pointer group rounded-2xl bg-white border border-slate-200 overflow-hidden hover:border-blue-600 hover:shadow-md transition-all relative">
-        <div class="bg-slate-50 p-6 aspect-square flex items-center justify-center relative overflow-hidden border-b border-slate-100">
+        <div class="sketch-card-media bg-slate-50 p-4 aspect-square flex items-center justify-center relative overflow-hidden border-b border-slate-100">
           ${isIndep ? `
             <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-gradient-to-r from-emerald-700 to-green-600 text-white text-[10px] font-extrabold shadow-lg border border-emerald-400/50 flex items-center gap-1 z-10">
               🇵🇰 14 August Special
             </span>
           ` : ''}
           ${(sketch.imageUrl || sketch.dataUrl) ? `
-            <img src="${sketch.imageUrl || sketch.dataUrl}" alt="${sketch.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+            <img src="${sketch.imageUrl || sketch.dataUrl}" alt="${sketch.name}" class="sketch-img max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-200 pointer-events-none" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23ffffff\\'/><text x=\\'50%\\' y=\\'50%\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-size=\\'14\\' fill=\\'%2364748b\\'>🖼️ Image Preview</text></svg>';" />
           ` : `
-            <svg viewBox="0 0 400 400" class="w-full h-full object-contain group-hover:scale-105 transition-transform">
+            <svg viewBox="0 0 400 400" class="sketch-svg max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-200">
               ${sketch.svgPath}
             </svg>
           `}
@@ -483,9 +487,9 @@ class SketchTraceApp {
 
     if (previewContainer) {
       if (sketch.imageUrl || sketch.dataUrl) {
-        previewContainer.innerHTML = `<img src="${sketch.imageUrl || sketch.dataUrl}" alt="${sketch.name}" class="w-full h-full object-contain" />`;
+        previewContainer.innerHTML = `<img src="${sketch.imageUrl || sketch.dataUrl}" alt="${sketch.name}" class="sketch-modal-img max-w-full max-h-full w-auto h-auto object-contain" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23ffffff\\'/><text x=\\'50%\\' y=\\'50%\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-size=\\'14\\' fill=\\'%2364748b\\'>🖼️ Image Preview</text></svg>';" />`;
       } else if (sketch.svgPath) {
-        previewContainer.innerHTML = `<svg viewBox="0 0 400 400" class="w-full h-full object-contain">${sketch.svgPath}</svg>`;
+        previewContainer.innerHTML = `<svg viewBox="0 0 400 400" class="sketch-modal-svg max-w-full max-h-full w-auto h-auto object-contain">${sketch.svgPath}</svg>`;
       }
     }
 
@@ -574,7 +578,10 @@ class SketchTraceApp {
       await this.traceEngine.loadSketch(sketch);
     }
     if (window.SketchTrace.cameraService && videoEl) {
-      await window.SketchTrace.cameraService.startCamera(videoEl);
+      const camStarted = await window.SketchTrace.cameraService.startCamera(videoEl);
+      if (!camStarted) {
+        this.showToast('📷 Camera inactive – Canvas overlay ready');
+      }
     }
     setTimeout(() => this.handleResize(), 50);
   }
